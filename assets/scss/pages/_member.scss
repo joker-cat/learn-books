@@ -1,83 +1,118 @@
-
-$memberGray: #cbcbcb;
-$memberLeft:#93d1e7;
+$memberGray1: #cbcbcb; //203 203 203
+$memberGray2: #bccbd3; //188 203 211
+$memberLeft: #93d1e7;
 $memberRight: #7191e0;
-$ls-2px:2px;
+$ls-2px: 2px;
+// font-family: Arial, Helvetica, sans-serif;
+// font-family: 'Noto Sans TC', sans-serif; //黑體字型
 
 body {
-    background: #f1f1f1;
-}
-
-main {
-
-    aside {
-        background: #ffffff;
-
-        .containerLeft {
-            padding: 50px 0 0 0;
-
-            .portfolioImg {
-                display: block;
-                width: 210px;
-                height: 210px;
-                margin: 0 auto;
-                border-radius: 50%;
-            }
-
-            .portfolioName {
-                padding-top: 28px;
-                font-size: 36px;
+    background: #f2f1f1;
+    font-family: 'Castoro', serif;
+    main {
+        .title-content{
+            height: 484px;
+            h1{
+                font-size: 68px;
                 letter-spacing: $ls-2px;
             }
-
-            .activityCount {
-                padding-top: 222px;
-                letter-spacing: $ls-2px;
-
-                .bookClub {
-                    width: 50%;
-
-                    .bookClubCount {
-                        margin-bottom: 30px;
-                        font-size: 98px;
-                        color: $memberGray;
-                    }
-
-                    .wordSet {
-                        font-size: 18px;
-                    }
-                }
-
-                .findTeacher {
-                    width: 50%;
-
-                    .findTeacherCount {
-                        margin-bottom: 30px;
-                        font-size: 98px;
-                        color: $memberGray;
-                    }
-
-                    .wordSet {
-                        font-size: 18px;
-                    }
-                }
+            span{
+                color: rgb(102, 102, 102);
+                font-size: 20px;
+                letter-spacing: 4px;
+                // font-family: ;
             }
-
-            .portfolioFollow {
-                .follow-set{
-                    color: $memberGray;
-                    font-size: 16px;
-                    letter-spacing: $ls-2px;
-                }
-                .icon-content {
-                    width: 190px;
-                }
+            .title-bg-set{
+                color: #ffffff33;
+                font-size: 160px;
+                letter-spacing: $ls-2px;
+                font-family: Arial, Helvetica, sans-serif;
+                &:nth-of-type(1){margin-top: -220px;}
+                &:nth-of-type(2){margin-top: -110px;}
+                &:nth-of-type(3){margin-top: 0px;}
+                &:nth-of-type(4){margin-top: 110px;}
+                &:nth-of-type(5){margin-top: 220px;}
             }
         }
+        aside {
+            background: #ffffff;
+            .containerLeft {
+                padding-top: 85px;
 
-        .containerRight {
-            padding: 50px 0 0 0;
+                .portfolioImg {
+                    display: block;
+                    width: 210px;
+                    height: 210px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
 
+                .portfolioName {
+                    padding-top: 28px;
+                    font-size: 36px;
+                    letter-spacing: $ls-2px;
+                }
+
+                .activityCount {
+                    padding: 222px 0 42px 0;
+                    letter-spacing: $ls-2px;
+                    border-bottom: 1px solid $memberGray1;
+
+                    .bookClub {
+                        width: 50%;
+
+                        .bookClubCount {
+                            margin-bottom: 30px;
+                            font-size: 98px;
+                            color: $memberGray1;
+                        }
+
+                        .wordSet {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .findTeacher {
+                        width: 50%;
+
+                        .findTeacherCount {
+                            margin-bottom: 30px;
+                            font-size: 98px;
+                            color: $memberGray2;
+                        }
+
+                        .wordSet {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .portfolioFollow {
+                    padding: 22px 0 40px 0;
+
+                    .follow-set {
+                        margin-bottom: 20px;
+                        color: $memberGray1;
+                        font-size: 16px;
+                        letter-spacing: $ls-2px;
+                    }
+
+                    .icon-content {
+                        margin: 0 auto;
+                        width: 190px;
+                        line-height: 30px;
+
+                        .portfolioIcon {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+            .containerRight {
+                padding: 50px 0 0 0;
+
+            }
         }
     }
 }

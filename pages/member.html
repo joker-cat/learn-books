@@ -1,17 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Castoro&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <nav></nav>
     </header>
     <main>
         <div class="container-lg">
-            <h1 class="text-center">PORTFOLIO</h1>
+            <!-- 
+    <header class="unitTitleArea">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="unitTitle">
+                        <h1>
+                            <b>BOOK CLUB</b>
+                            <span>揪團讀書會</span>
+                        </h1>
+                        <div class="textGroup">
+                            <small>BOOK CLUB</small>
+                            <small>BOOK CLUB</small>
+                            <small>BOOK CLUB</small>
+                            <small>BOOK CLUB</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+             -->
+            <div class="title-content d-flex flex-column justify-content-center align-items-center position-relative">
+                <h1 class="text-center">PORTFOLIO</h1>
+                <span>個人檔案</span>
+                <div class="title-bg-set position-absolute" data-num="1">PORTFOLIO</div>
+                <div class="title-bg-set position-absolute" data-num="2">PORTFOLIO</div>
+                <div class="title-bg-set position-absolute" data-num="3">PORTFOLIO</div>
+                <div class="title-bg-set position-absolute" data-num="4">PORTFOLIO</div>
+                <div class="title-bg-set position-absolute" data-num="5">PORTFOLIO</div>
+            </div>
             <aside class="row">
                 <div class="col-4 containerLeft">
                     <img class="portfolioImg" src="../assets/images/portfolioImg.png"></img>
@@ -29,10 +66,10 @@
                     <div class="portfolioFollow text-center">
                         <p class="follow-set">Follow</p>
                         <ul class="icon-content d-flex justify-content-between">
-                            <li><img src="../assets/images/ig.png" alt="ig"></li>
-                            <li><img src="../assets/images/yt.png" alt="yt"></li>
-                            <li><img src="../assets/images/in.png" alt="yt"></li>
-                            <li><img src="../assets/images/cs.png" alt="yt"></li>
+                            <li><img class="portfolioIcon" src="../assets/images/ig.png" alt="ig"></li>
+                            <li><img class="portfolioIcon" src="../assets/images/yt.png" alt="yt"></li>
+                            <li><img class="portfolioIcon" src="../assets/images/in.png" alt="yt"></li>
+                            <li><img class="portfolioIcon" src="../assets/images/cs.png" alt="yt"></li>
                         </ul>
                     </div>
                 </div>
@@ -47,4 +84,5 @@
     <script type="module" src="../main.js"></script>
 
 </body>
+
 </html>
