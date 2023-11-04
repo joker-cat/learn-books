@@ -1,0 +1,83 @@
+
+$memberGray: #cbcbcb;
+$memberLeft:#93d1e7;
+$memberRight: #7191e0;
+$ls-2px:2px;
+
+body {
+    background: #f1f1f1;
+}
+
+main {
+
+    aside {
+        background: #ffffff;
+
+        .containerLeft {
+            padding: 50px 0 0 0;
+
+            .portfolioImg {
+                display: block;
+                width: 210px;
+                height: 210px;
+                margin: 0 auto;
+                border-radius: 50%;
+            }
+
+            .portfolioName {
+                padding-top: 28px;
+                font-size: 36px;
+                letter-spacing: $ls-2px;
+            }
+
+            .activityCount {
+                padding-top: 222px;
+                letter-spacing: $ls-2px;
+
+                .bookClub {
+                    width: 50%;
+
+                    .bookClubCount {
+                        margin-bottom: 30px;
+                        font-size: 98px;
+                        color: $memberGray;
+                    }
+
+                    .wordSet {
+                        font-size: 18px;
+                    }
+                }
+
+                .findTeacher {
+                    width: 50%;
+
+                    .findTeacherCount {
+                        margin-bottom: 30px;
+                        font-size: 98px;
+                        color: $memberGray;
+                    }
+
+                    .wordSet {
+                        font-size: 18px;
+                    }
+                }
+            }
+
+            .portfolioFollow {
+                .follow-set{
+                    color: $memberGray;
+                    font-size: 16px;
+                    letter-spacing: $ls-2px;
+                }
+                .icon-content {
+                    width: 190px;
+                }
+            }
+        }
+
+        .containerRight {
+            padding: 50px 0 0 0;
+
+        }
+    }
+}

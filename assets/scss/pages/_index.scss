@@ -1,3 +1,9 @@
+*,
+*::before,
+*::after{
+  box-sizing: border-box;
+}
+
 .index-title {
   font-size: 100px;
 }
