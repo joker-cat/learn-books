@@ -1,19 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>index</title>
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
 
-    <h1 class="index-title">我是首頁</h1>
-    <img src="../assets/images/cat.jpg" style="width: 300px;" alt="cat">
-    
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/scss/all.scss">
+  <title>index</title>
+</head>
+
+<body>
+  <%- include('./layout/navbar'); -%>
+    <section class="bannerArea">
+      <div class="container">
+        <div class="row ">
+          <div class="col-lg-8">
+            <h1 class="mainTitle">
+              <b>Learn-Connect</b>
+              <span>個性化學習體驗</span>
+            </h1>
+          </div>
+          <div class="col-lg-4">
+            <h2 class="subTxt">
+              提供最適合的學習方式<br>
+              讓你的學習之旅更有效率
+            </h2>
+          </div>
+        </div>
+        <div class="row justify-content-end bannerLink">
+          <div class="col-lg-3 g-0" >
+            <a href="#" class="linkCard bg-primary text-white">
+              <h4 class="linkTitle">開始揪團</h4>
+              <div class="infoType">
+                <small>BOOK CLUB</small>
+                <span>揪團讀書會</span>
+              </div>
+            </a>
+          </div>
+          <div class="col-lg-3 g-0" >
+            <a href="#" class="linkCard bg-gray ">
+              <h4 class="linkTitle">徵求家教</h4>
+              <div class="infoType">
+                <small>TUTORING PLATFORM</small>
+                <span>家教社群</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page01">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="Txt text-center">
+              <h2 class="titleBox">
+                <b>4個在享讀，學習的理由</b>
+                <span>Learning Motivation</span>
+              </h2>
+            </div>
+          </div>
+        </div>
+        <div class="row row-cols-lg-4 row-cols-1 reasonsList">
+          <div class="col item">
+            <small>01</small>
+            <h4 class="h5 pt-4 mb-2">專屬你的課程</h4>
+            <p>
+              依照能力、需求、喜好<br>
+              你打造客製化 有效進度的課程
+            </p>
+          </div>
+          <div class="col item">
+            <small>02</small>
+            <h4 class="h5 pt-4 mb-2">自訂上堂時間</h4>
+            <p>
+              按自己需求要安排上堂時間<br>
+              隨時隨地 學習無壓力
+            </p>
+          </div>
+          <div class="col item">
+            <small>03</small>
+            <h4 class="h5 pt-4 mb-2">公平收費機制</h4>
+            <p>
+              無需預繳大筆中介費<br>
+              學生老師更有保障
+            </p>
+          </div>
+          <div class="col item">
+            <small>04</small>
+            <h4 class="h5 pt-4 mb-2">老師背景公開透明</h4>
+            <p>
+              影片 履歷 學生評價<br>
+              3大方向選老師 師資有信心
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="page02">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="Txt text-white">
+              <h2 class="titleBox">
+                <b>在享讀，不只是學習</b>
+                <span>New Experience</span>
+              </h2>
+              <h3 class="h5">全新的學習體驗 融入社群互動</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="serviceList">
+        <div class="container">
+          <div class="row serviceItem col-11">
+            <div class="col-lg-3 g-0">
+              <h4 class="subTitle">社群互動</h4>
+            </div>
+            <div class="col-lg-8 g-0">
+              <div class="Txt">
+                <div class="text">
+                  <p>
+                    <span>讀書會平台提供了一個聚集讀者的空間，</span>
+                    <span>讓他們可以互相交流、討論書籍，分享各自的閱讀心得和見解。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row serviceItem col-11">
+            <div class="col-lg-3 g-0">
+              <h4 class="subTitle">建立人際關係</h4>
+            </div>
+            <div class="col-lg-8 g-0">
+              <div class="Txt">
+                <div class="text">
+                  <p>
+                    <span>透過讀書會，你可以建立新的友誼和職場關係，</span>
+                    <span>這對於個人和職業生活都有正面的影響。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row serviceItem col-11">
+            <div class="col-lg-3 g-0">
+              <h4 class="subTitle">持續學習</h4>
+            </div>
+            <div class="col-lg-8 g-0">
+              <div class="Txt">
+                <div class="text">
+                  <p>
+                    <span>讀書會鼓勵持續學習和閱讀，</span>
+                    <span>讓你能夠保持在知識和思考上的成長。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row serviceItem col-11">
+            <div class="col-lg-3 g-0">
+              <h4 class="subTitle">擴展視野</h4>
+            </div>
+            <div class="col-lg-8 g-0">
+              <div class="Txt">
+                <div class="text">
+                  <p>
+                    <span>透過參與讀書會，你可以接觸到不同背景和興趣的人，</span>
+                    <span>進而擴展你的知識和觀點，瞭解更廣泛的議題。</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="page03">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="Txt text-center text-lg-start">
+              <h2 class="titleBox">
+                <span class="text-white">BOOK CLUB</span>
+                <b>發起讀書會</b>
+              </h2>
+
+              <div class="text mt-5 mb-4">
+                <h4> 促進使用者互動，激發深度思考</h4>
+                <p>
+                  <span>探索與志同道合的讀者一起閱讀的樂趣！</span>
+                  <span>在這裡，我們為你打開知識的大門，讓學習成為一種愉悅的享受。</span>
+                </p>
+              </div>
+              <a href="#" class="btn btn-primary px-5 py-3">開始揪團</a>
+            </div>
+          </div>
+          <div class="col-lg-6 p-5">
+            <img src="../assets/images/index/page03-pic-1.svg" width="100%" alt="BOOK CLUB發起讀書會">
+          </div>
+        </div>
+        <div class="row align-items-center flex-row-reverse">
+          <div class="col-lg-6" p-5>
+            <div class="Txt text-center text-lg-start">
+              <h2 class="titleBox">
+                <span class="text-white">
+                  Tutor <br> Recruitment
+                </span>
+                <b>家教招募</b>
+              </h2>
+
+              <div class="text mt-5 mb-4">
+                <h4> 提供優質的家教資源，促進學習成果</h4>
+                <p>
+                  <span>成為一名家教，用你的知識點亮他人的未來；</span>
+                  <span>或是尋找一位合適的家教，讓孩子的學習變得更加輕鬆愉快。</span>
+                </p>
+              </div>
+              <a href="#" class="btn btn-primary px-5 py-3">徵求家教</a>
+
+            </div>
+          </div>
+          <div class="col-lg-6 p-5">
+            <img src="../assets/images/index/page03-pic-2.svg" width="100%" alt="BOOK CLUB發起讀書會">
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="contactArea">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <div class="Txt text-center text-white">
+              <h2 class="titleBox mb-4">
+                開始你的學習之旅<br>
+                現在就加入吧
+              </h2>
+              <a href="#" class="btn btn-primary px-5 py-3">開始享讀</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <%- include('./layout/footer'); -%>
+      <script type="module" src="../main.js"></script>
+</body>
 
-    <script type="module" src="../main.js"></script>
-  </body>
 </html>
