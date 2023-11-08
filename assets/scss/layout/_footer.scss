@@ -1,4 +1,44 @@
-.footer{
-  background: #69F0AE;
-  font-size: 64px;
+//footer 選單樣式
+footer {
+    padding: 2rem 30px;
+    border-top: 1px solid #e5e5e5;
+    color: #333;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+
+    ul.linkGroup {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        @media (max-width:991px) {
+            flex-direction: column;
+            flex-wrap: wrap;
+            text-align: center;
+            line-height: 2;
+            margin-bottom: 2rem;
+        }
+
+        li {
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #333;
+                padding: 0 10px;
+            }
+        }
+
+        @media (min-width:991px) {
+            li+li:before {
+                content: '｜';
+                opacity: 0.6;
+            }
+        }
+
+    }
+
+    .copyright {
+        font-weight: normal;
+    }
 }

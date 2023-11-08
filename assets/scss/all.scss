@@ -1,7 +1,10 @@
-@import './layout/_header.scss';
+@import './reset.css';
+
+@import './layout/variables';
+@import './layout/_main';
 @import './layout/_footer';
 
-
 @import './pages/index';
+@import './pages/infoCard';
 @import './pages/member';
 @import './pages/bookChart';

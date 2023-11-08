@@ -1,83 +1,246 @@
-
-$memberGray: #cbcbcb;
-$memberLeft:#93d1e7;
+$memberGray1: #cbcbcb; //203 203 203
+$memberGray2: #bccbd3; //188 203 211
+$memberLeft: #93d1e7;
 $memberRight: #7191e0;
-$ls-2px:2px;
+$ls-2px: 2px;
+// font-family: Arial, Helvetica, sans-serif;
+// font-family: 'Noto Sans TC', sans-serif; //黑體字型
 
 body {
-    background: #f1f1f1;
-}
+    background: #f2f1f1;
+    font-family: 'Castoro', serif;
 
-main {
+    main {
+        width: 100%;
+        max-width: 1670px;
 
-    aside {
-        background: #ffffff;
+        .unitTitleArea {
+            height: 484px;
+            overflow: hidden;
 
-        .containerLeft {
-            padding: 50px 0 0 0;
+            .unitTitle {
+                margin: 10% 0 10%;
+                padding: 5% 0;
+                position: relative;
+                text-align: center;
 
-            .portfolioImg {
-                display: block;
-                width: 210px;
-                height: 210px;
-                margin: 0 auto;
-                border-radius: 50%;
-            }
+                h1 {
+                    b {
+                        display: block;
+                        margin-bottom: 15px;
+                        font-size: 3.6rem;
+                        font-family: Arial, Helvetica, sans-serif;
+                        line-height: 1;
 
-            .portfolioName {
-                padding-top: 28px;
-                font-size: 36px;
-                letter-spacing: $ls-2px;
-            }
-
-            .activityCount {
-                padding-top: 222px;
-                letter-spacing: $ls-2px;
-
-                .bookClub {
-                    width: 50%;
-
-                    .bookClubCount {
-                        margin-bottom: 30px;
-                        font-size: 98px;
-                        color: $memberGray;
+                        @media (max-width:991px) {
+                            font-size: 2.5rem;
+                        }
                     }
 
-                    .wordSet {
-                        font-size: 18px;
-                    }
-                }
+                    span {
+                        display: block;
+                        line-height: 1;
+                        font-size: 1.2rem;
+                        letter-spacing: 3px;
+                        color: #666666;
 
-                .findTeacher {
-                    width: 50%;
-
-                    .findTeacherCount {
-                        margin-bottom: 30px;
-                        font-size: 98px;
-                        color: $memberGray;
-                    }
-
-                    .wordSet {
-                        font-size: 18px;
+                        @media (max-width:991px) {
+                            font-size: 1rem;
+                        }
                     }
                 }
-            }
 
-            .portfolioFollow {
-                .follow-set{
-                    color: $memberGray;
-                    font-size: 16px;
-                    letter-spacing: $ls-2px;
-                }
-                .icon-content {
-                    width: 190px;
+                .textGroup {
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate(-50%, -50%);
+                    z-index: -1;
+                    opacity: 0.8;
+                    pointer-events: none;
+
+                    small {
+                        font-family: Arial, Helvetica, sans-serif;
+                        display: block;
+                        color: #fff;
+                        font-size: 8rem;
+                        line-height: 1;
+                        font-weight: bold;
+                        white-space: nowrap;
+
+                        @media (max-width:991px) {
+                            font-size: 4rem;
+                        }
+
+                    }
+
+                    small:nth-child(1) {
+                        transform: translateY(80%);
+                        opacity: 0.25;
+                    }
+
+                    small:nth-child(2) {
+                        transform: translateY(80%);
+                        opacity: 0.5;
+                    }
+
+                    small:nth-child(3) {
+                        transform: translateY(-80%);
+                        opacity: 0.5;
+                    }
+
+                    small:nth-child(4) {
+                        transform: translateY(-80%);
+                        opacity: 0.25;
+                    }
                 }
             }
         }
 
-        .containerRight {
-            padding: 50px 0 0 0;
+        aside {
+            background: #ffffff;
 
+            .container-left {
+                padding: 85px 0 0 0;
+
+                .portfolio-img {
+                    display: block;
+                    width: 210px;
+                    height: 210px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                }
+
+                .portfolio-name {
+                    padding-top: 28px;
+                    font-size: 36px;
+                    letter-spacing: $ls-2px;
+                }
+
+                .activity-count {
+                    padding: 222px 0 42px 0;
+                    letter-spacing: $ls-2px;
+                    border-bottom: 1px solid $memberGray1;
+
+                    .book-club {
+                        width: 50%;
+
+                        .book-club-count {
+                            margin-bottom: 30px;
+                            font-size: 98px;
+                            color: $memberGray1;
+                        }
+
+                        .word-set {
+                            font-size: 18px;
+                        }
+                    }
+
+                    .find-teacher {
+                        width: 50%;
+
+                        .find-teacher-count {
+                            margin-bottom: 30px;
+                            font-size: 98px;
+                            color: $memberGray2;
+                        }
+
+                        .word-set {
+                            font-size: 18px;
+                        }
+                    }
+                }
+
+                .portfolio-follow {
+                    padding: 22px 0 40px 0;
+
+                    .follow-set {
+                        margin-bottom: 20px;
+                        color: $memberGray1;
+                        font-size: 16px;
+                        letter-spacing: $ls-2px;
+                    }
+
+                    .icon-content {
+                        margin: 0 auto;
+                        width: 190px;
+                        line-height: 30pt;
+
+                        .portfolio-icon {
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+
+            .container-right {
+                padding: 100px 40px 0 40px;
+                .about-me-content {
+                    margin-bottom: 95px;
+
+                    .about-me {
+                        color: #333333;
+                        font-size: 20px;
+                        line-height: 52pt;
+                        letter-spacing: $ls-2px;
+                        border-bottom: 1px solid $memberGray1;
+
+                        &::after {
+                            content: 'About me';
+                            margin-left: 20px;
+                            letter-spacing: $ls-2px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .portfolio-introduce {
+                        padding-top: 48px;
+                        margin-bottom: 39px;
+                        font-size: 20px;
+                        font-family: 'Noto Sans TC', sans-serif;
+                        line-height: 36pt;
+                        vertical-align: text-top;
+                        letter-spacing: $ls-2px;
+                    }
+
+                    .portfolio-show-more {
+                        padding: 10px 48px;
+                        font-size: 20px;
+                        font-family: Arial, Helvetica, sans-serif;
+                        line-height: 36pt;
+                        letter-spacing: $ls-2px;
+                        border: none;
+                        background: linear-gradient(to right, $memberLeft 0%, $memberRight 100%);
+                    }
+
+                }
+
+                .learn-tag-content {
+                    padding-bottom: 122px;
+                    border-bottom: 1px solid $memberGray1;
+                    .learn-tag {
+                        color: #333333;
+                        font-size: 20px;
+                        line-height: 52pt;
+                        letter-spacing: $ls-2px;
+                        &::after {
+                            content: '';
+                            margin-left: 20px;
+                            letter-spacing: $ls-2px;
+                            font-weight: bold;
+                        }
+                    }
+
+                    .portfolio-svgtag-set {
+                        width: 132px;
+                        margin-right: 15px;
+
+                        &:last-of-type {
+                            margin: none;
+                        }
+                    }
+                }
+            }
         }
     }
 }
