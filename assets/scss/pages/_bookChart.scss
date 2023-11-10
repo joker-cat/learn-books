@@ -3,7 +3,6 @@ hr {
     width: 100%;
 }
 
-
 .showInfo {
     background-color: #fff;
 
@@ -19,6 +18,9 @@ hr {
             height: 100px;
             width: 100px;
         }
+    }
+    .identity{
+        font-size: 12px;
     }
 
     .grade {
@@ -38,6 +40,11 @@ hr {
     }
 
     .chartInfo {
+        // overflow: hidden;
+        // text-overflow: ellipsis;
+        // display: -webkit-box;
+        // -webkit-line-clamp:15;
+        // -webkit-box-orient: vertical;
         p {
             padding-top: 10px;
             line-height: 1.5;
@@ -48,7 +55,11 @@ hr {
         .chartTag,
         .chartSkill {
             padding-top: 10px;
-
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp:5;
+            -webkit-box-orient: vertical;
             button {
                 margin-bottom: 5px;
             }
@@ -60,21 +71,17 @@ hr {
     }
 }
 
-.chatBoard {
-    .chatBoardTitle {
+.chartBoard {
+    .chartBoardTitle {
         height: 50px;
         padding-top: 25px;
     }
 
-    .chatBoardContent {
+    .chartBoardContent {
         height: 540px;
         overflow-y: auto;
         overflow-x: visible;
-        .chatBoardMessage{
-            .chatBoardSplit{
-                max-width: 430px;
-            }
-
+        .chartBoardMessage{
             .pictureBackground {
                 border-radius: 50%;
                 background-image: linear-gradient(to right, #93D1E7, #7191E0);
@@ -88,9 +95,17 @@ hr {
                     width: 50px;
                 }
             }
+            .chartBoardSplit{
+                max-width: 430px;
+                .chartBoardText{
+                    text-align: justify;
+                }
+            }
+            
+
         }
     }
-    .chatBoardEmit{
+    .chartBoardEmit{
         img{
             height: 30px;
             width: 30px;
@@ -98,13 +113,13 @@ hr {
     }
 }
 
-.chatMember {
-    .chatMemberTitle {
+.chartMember {
+    .chartMemberTitle {
         height: 50px;
         padding-top: 25px;
     }
 
-    .chatMemberList {
+    .chartMemberList {
         height: 578px;
         overflow-y: auto;
     }
