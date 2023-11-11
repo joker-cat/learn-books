@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>享讀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="../assets/scss/all.scss" />
+  </head>
+  <body>
+    <script type="module" src="../main.js"></script>
+    <%- include('./layout/navbar'); -%> <%- include('./layout/banner'); -%>
+    <aside class="row">
+      <div class="container">
+        <div>
+          <div>
+            <h1>JavaScript 夏季學習會：精通前端開發</h1>
+            <p>發文時間：2023.10.10 01:10</p>
+          </div>
+          <div>
+            <button>關注讀書會</button>
+            <button>參加讀書會</button>
+          </div>
+        </div>
+        <div>
+          <div><h2>讀書會主揪</h2></div>
+          <div>
+            <img src="" alt="" />
+            <p>喵喵糖</p>
+          </div>
+        </div>
+        <div>
+          <div><h2>讀書會主題</h2></div>
+          <div>
+            <div>
+              <h3>讀書會標題</h3>
+              <p>JavaScript 夏季學習會：精通前端開發</p>
+            </div>
+            <div>
+              <h3>敘述說明</h3>
+              <p>
+                希望隊JavaScript有興趣的人一起來討論！加入我們的夏季學習會，一同探索前端開發的奇妙世界。涼爽夏日，熱情掌握JavaScript技能！
+              </p>
+            </div>
+            <div>
+              <h3>學習標籤</h3>
+              <ul>
+                <li><img src="" alt="" /></li>
+              </ul>
+              <ul>
+                <li><img src="" alt="" /></li>
+              </ul>
+              <ul>
+                <li><img src="" alt="" /></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div><h2>讀奢會資訊</h2></div>
+          <div>
+            <div>
+              <h3>約定日期</h3>
+              <p>2023.09.09</p>
+            </div>
+            <div>
+              <h3>約定時間</h3>
+              <p>10:00 am</p>
+            </div>
+            <div>
+              <h3>約定地點</h3>
+              <p>星巴克喵喵門市</p>
+            </div>
+            <div>
+              <h3>開團人數</h3>
+              <p>剩下<p class="quota"></p>名額</p>
+            </div>
+          </div>
+        </div>
+        <div>
+          <h2>參加讀書會成員</h2>
+        </div>
+        <div></div>
+      </div>
+    </aside>
+    <%-include('./layout/footer'); -%>
+  </body>
+</html>
