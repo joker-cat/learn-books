@@ -1,244 +1,361 @@
-$memberGray1: #cbcbcb; //203 203 203
-$memberGray2: #bccbd3; //188 203 211
-$memberLeft: #93d1e7;
-$memberRight: #7191e0;
+$memberGray1: #CBCBCB; //203 203 203
+$memberGray2: #BBCAD3; //188 203 211
+$memberGray3: #666666; //102 102 102
+$memberLeft: #93D1E7;
+$memberRight: #7191E0;
 $ls-2px: 2px;
 // font-family: Arial, Helvetica, sans-serif;
 // font-family: 'Noto Sans TC', sans-serif; //黑體字型
 
 body {
     background: #f2f1f1;
-    font-family: 'Castoro', serif;
 
     main {
-        width: 100%;
-        max-width: 1670px;
+        .member {
+            padding-bottom: 0px;
 
-        .unitTitleArea {
-            height: 484px;
-            overflow: hidden;
+            .unitTitleArea {
+                height: 484px;
+                overflow: hidden;
 
-            .unitTitle {
-                margin: 10% 0 10%;
-                padding: 5% 0;
-                position: relative;
-                text-align: center;
+                .unitTitle {
+                    margin: 10% 0 10%;
+                    padding: 5% 0;
+                    position: relative;
+                    text-align: center;
 
-                h1 {
-                    b {
-                        display: block;
-                        margin-bottom: 15px;
-                        font-size: 3.6rem;
-                        font-family: Arial, Helvetica, sans-serif;
-                        line-height: 1;
+                    h1 {
+                        b {
+                            display: block;
+                            margin-bottom: 15px;
+                            font-size: 3.6rem;
+                            font-family: Arial, Helvetica, sans-serif;
+                            line-height: 1;
 
-                        @media (max-width:991px) {
-                            font-size: 2.5rem;
+                            @media (max-width:991px) {
+                                font-size: 2.5rem;
+                            }
+                        }
+
+                        span {
+                            display: block;
+                            line-height: 1;
+                            font-size: 1.2rem;
+                            letter-spacing: 3px;
+                            color: #666666;
+
+                            @media (max-width:991px) {
+                                font-size: 1rem;
+                            }
                         }
                     }
 
-                    span {
-                        display: block;
-                        line-height: 1;
-                        font-size: 1.2rem;
-                        letter-spacing: 3px;
-                        color: #666666;
+                    .textGroup {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        z-index: -1;
+                        opacity: 0.8;
+                        pointer-events: none;
 
-                        @media (max-width:991px) {
-                            font-size: 1rem;
-                        }
-                    }
-                }
+                        small {
+                            font-family: Arial, Helvetica, sans-serif;
+                            display: block;
+                            color: #fff;
+                            font-size: 8rem;
+                            line-height: 1;
+                            font-weight: bold;
+                            white-space: nowrap;
 
-                .textGroup {
-                    position: absolute;
-                    top: 50%;
-                    left: 50%;
-                    transform: translate(-50%, -50%);
-                    z-index: -1;
-                    opacity: 0.8;
-                    pointer-events: none;
+                            @media (max-width:991px) {
+                                font-size: 4rem;
+                            }
 
-                    small {
-                        font-family: Arial, Helvetica, sans-serif;
-                        display: block;
-                        color: #fff;
-                        font-size: 8rem;
-                        line-height: 1;
-                        font-weight: bold;
-                        white-space: nowrap;
-
-                        @media (max-width:991px) {
-                            font-size: 4rem;
                         }
 
-                    }
+                        small:nth-child(1) {
+                            transform: translateY(80%);
+                            opacity: 0.25;
+                        }
 
-                    small:nth-child(1) {
-                        transform: translateY(80%);
-                        opacity: 0.25;
-                    }
+                        small:nth-child(2) {
+                            transform: translateY(80%);
+                            opacity: 0.5;
+                        }
 
-                    small:nth-child(2) {
-                        transform: translateY(80%);
-                        opacity: 0.5;
-                    }
+                        small:nth-child(3) {
+                            transform: translateY(-80%);
+                            opacity: 0.5;
+                        }
 
-                    small:nth-child(3) {
-                        transform: translateY(-80%);
-                        opacity: 0.5;
-                    }
-
-                    small:nth-child(4) {
-                        transform: translateY(-80%);
-                        opacity: 0.25;
+                        small:nth-child(4) {
+                            transform: translateY(-80%);
+                            opacity: 0.25;
+                        }
                     }
                 }
             }
-        }
 
-        aside {
-            background: #ffffff;
+            aside {
+                background: #ffffff;
 
-            .container-left {
-                padding: 85px 0 0 0;
+                .container-left {
+                    padding: 85px 0 0 0;
 
-                .portfolio-img {
-                    display: block;
-                    width: 210px;
-                    height: 210px;
-                    margin: 0 auto;
-                    border-radius: 50%;
-                }
-
-                .portfolio-name {
-                    padding-top: 28px;
-                    font-size: 36px;
-                    letter-spacing: $ls-2px;
-                }
-
-                .activity-count {
-                    padding: 222px 0 42px 0;
-                    letter-spacing: $ls-2px;
-                    border-bottom: 1px solid $memberGray1;
-
-                    .book-club {
-                        width: 50%;
-
-                        .book-club-count {
-                            margin-bottom: 30px;
-                            font-size: 98px;
-                            color: $memberGray1;
-                        }
-
-                        .word-set {
-                            font-size: 18px;
-                        }
+                    .portfolio-img {
+                        display: block;
+                        width: 210px;
+                        height: 210px;
+                        margin: 0 auto;
+                        border-radius: 50%;
                     }
 
-                    .find-teacher {
-                        width: 50%;
-
-                        .find-teacher-count {
-                            margin-bottom: 30px;
-                            font-size: 98px;
-                            color: $memberGray2;
-                        }
-
-                        .word-set {
-                            font-size: 18px;
-                        }
-                    }
-                }
-
-                .portfolio-follow {
-                    padding: 22px 0 40px 0;
-
-                    .follow-set {
-                        margin-bottom: 20px;
-                        color: $memberGray1;
-                        font-size: 16px;
+                    .portfolio-name {
+                        padding-top: 28px;
+                        font-size: 36px;
                         letter-spacing: $ls-2px;
                     }
 
-                    .icon-content {
-                        margin: 0 auto;
-                        width: 190px;
-                        line-height: 30pt;
-
-                        .portfolio-icon {
-                            vertical-align: middle;
-                        }
-                    }
-                }
-            }
-
-            .container-right {
-                padding: 100px 40px 0 40px;
-                .about-me-content {
-                    margin-bottom: 95px;
-
-                    .about-me {
-                        color: #333333;
-                        font-size: 20px;
-                        line-height: 52pt;
+                    .activity-count {
+                        padding: 222px 0 42px 0;
                         letter-spacing: $ls-2px;
                         border-bottom: 1px solid $memberGray1;
 
-                        &::after {
-                            content: 'About me';
-                            margin-left: 20px;
-                            letter-spacing: $ls-2px;
-                            font-weight: bold;
+                        .book-club {
+                            width: 50%;
+
+                            .book-club-count {
+                                margin-bottom: 30px;
+                                font-size: 98px;
+                                color: $memberGray1;
+                            }
+
+                            .word-set {
+                                font-size: 18px;
+                            }
+                        }
+
+                        .find-teacher {
+                            width: 50%;
+
+                            .find-teacher-count {
+                                margin-bottom: 30px;
+                                font-size: 98px;
+                                color: $memberGray2;
+                            }
+
+                            .word-set {
+                                font-size: 18px;
+                            }
                         }
                     }
 
-                    .portfolio-introduce {
-                        padding-top: 48px;
-                        margin-bottom: 39px;
-                        font-size: 20px;
-                        font-family: 'Noto Sans TC', sans-serif;
-                        line-height: 36pt;
-                        vertical-align: text-top;
-                        letter-spacing: $ls-2px;
-                    }
+                    .portfolio-follow {
+                        padding: 22px 0 40px 0;
 
-                    .portfolio-show-more {
-                        padding: 10px 48px;
-                        font-size: 20px;
-                        font-family: Arial, Helvetica, sans-serif;
-                        line-height: 36pt;
-                        letter-spacing: $ls-2px;
-                        border: none;
-                        background: linear-gradient(to right, $memberLeft 0%, $memberRight 100%);
-                    }
+                        .follow-set {
+                            margin-bottom: 20px;
+                            color: $memberGray1;
+                            font-size: 16px;
+                            letter-spacing: $ls-2px;
+                        }
 
+                        .icon-content {
+                            margin: 0 auto;
+                            width: 190px;
+                            line-height: 30pt;
+
+                            .portfolio-icon {
+                                vertical-align: middle;
+                            }
+                        }
+                    }
                 }
 
-                .learn-tag-content {
-                    padding-bottom: 122px;
+                .container-right {
+                    padding: 100px 40px 0 40px;
+
+                    .about-me-content,
+                    .tutor-introduction-content {
+                        margin-bottom: 95px;
+
+                        .about-me {
+                            color: #333333;
+                            font-size: 20px;
+                            line-height: 52pt;
+                            letter-spacing: $ls-2px;
+                            border-bottom: 1px solid $memberGray1;
+
+                            &::after {
+                                content: 'About me';
+                                margin-left: 20px;
+                                letter-spacing: $ls-2px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .portfolio-introduce {
+                            padding-top: 48px;
+                            margin-bottom: 39px;
+                            font-size: 20px;
+                            font-family: 'Noto Sans TC', sans-serif;
+                            line-height: 36pt;
+                            vertical-align: text-top;
+                            letter-spacing: $ls-2px;
+                        }
+
+                        .portfolio-show-more {
+                            padding: 10px 48px;
+                            font-size: 20px;
+                            font-family: Arial, Helvetica, sans-serif;
+                            line-height: 36pt;
+                            letter-spacing: $ls-2px;
+                            border: none;
+                            background: linear-gradient(to right, $memberLeft 0%, $memberRight 100%);
+                        }
+
+                    }
+
+                    .learn-tag-content,
+                    .teacher-tag-content {
+                        padding-bottom: 120px;
+                        border-bottom: 1px solid $memberGray1;
+
+                        .learn-tag {
+                            margin-bottom: 30px;
+                            color: #333333;
+                            font-size: 20px;
+                            letter-spacing: $ls-2px;
+
+                            &::after {
+                                content: '';
+                                margin-left: 20px;
+                                letter-spacing: $ls-2px;
+                                font-weight: bold;
+                            }
+                        }
+
+                        .portfolio-svgtag-set {
+                            width: 132px;
+                            margin-right: 15px;
+
+                            &:last-of-type {
+                                margin: none;
+                            }
+                        }
+                    }
+
+                    .tutor-introduction-content {
+                        padding-top: 110px;
+                    }
+
+                    .teacher-tag-content {
+                        padding-bottom: 165px;
+                        border-bottom: none;
+                    }
+                }
+            }
+
+            .create-content {
+                padding-bottom: 60px;
+
+                .my-book-club,
+                .my-fing-teacher {
+                    padding-bottom: 40px;
+                    margin-bottom: 50px;
                     border-bottom: 1px solid $memberGray1;
-                    .learn-tag {
-                        color: #333333;
-                        font-size: 20px;
-                        line-height: 52pt;
-                        letter-spacing: $ls-2px;
+                    color: #333333;
+                    font-size: 24px;
+                    font-family: 'Noto Sans TC', sans-serif;
+                }
+
+                .infoCardList {
+                    .infoCard {
+                        display: block;
+                        text-decoration: none;
+                        color: #333;
+                        background-color: rgba(255, 255, 255, 0.7);
+                        padding: 20% 0 10%;
+                        border-radius: 30px 30px 0 0;
+                        margin-bottom: 30px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+
                         &::after {
                             content: '';
-                            margin-left: 20px;
-                            letter-spacing: $ls-2px;
-                            font-weight: bold;
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 10px;
+                            background: $primary-gradient;
                         }
+
+                        .infoState {
+                            font-size: 1rem;
+
+                            .cardType {
+                                padding: 10px;
+                                padding-left: 8%;
+                                padding-right: 15px;
+                                margin-right: 10px;
+                                background: $primary-gradient;
+                                color: #fff;
+                            }
+                        }
+
+                        .profile-pic {
+                            width: 50px;
+                            position: absolute;
+                            right: 5%;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+
+                        .TxtCard {
+                            padding: 0 5%;
+                            padding-top: 3rem;
+
+                            .infoTitle {
+                                font-size: 1.2rem;
+                                margin-bottom: 1rem;
+                                overflow: hidden;
+                                text-overflow: ellipsis;
+                                display: -webkit-box;
+                                -webkit-line-clamp: 2;
+                                -webkit-box-orient: vertical;
+                            }
+
+                            ul.infoDetail {
+                                list-style: none;
+                                margin: 0;
+                                padding: 0;
+                                line-height: 1.6;
+
+                                li {
+                                    position: relative;
+                                    padding-left: 2.8rem;
+                                    font-size: 0.8rem;
+
+                                    span {
+                                        position: absolute;
+                                        left: 0;
+                                        letter-spacing: 2px;
+
+                                        &:after {
+                                            content: '｜';
+                                            opacity: 0.6;
+                                            color: #666;
+                                            font-size: 0.7rem;
+                                        }
+                                    }
+
+                                }
+                            }
+                        }
+
                     }
 
-                    .portfolio-svgtag-set {
-                        width: 132px;
-                        margin-right: 15px;
-
-                        &:last-of-type {
-                            margin: none;
-                        }
-                    }
                 }
             }
         }
