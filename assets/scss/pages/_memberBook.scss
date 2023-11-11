@@ -1,6 +1,8 @@
 body {
     main {
         .member-book {
+            padding-bottom: 60px;
+
             .unitTitleArea {
                 height: 484px;
                 overflow: hidden;
@@ -171,6 +173,7 @@ body {
                         padding-top: 70px;
                         padding-bottom: 60px;
                         border-bottom: 1px solid $memberGray1;
+
                         .my-book-club,
                         .my-create-club,
                         .my-collect-club {
@@ -178,6 +181,7 @@ body {
                             font-size: 24px;
                             font-family: 'Noto Sans TC', sans-serif;
                         }
+
                         .nav-set {
                             li {
                                 a {
@@ -186,6 +190,7 @@ body {
                                 }
                             }
                         }
+
                         .infoCardList {
                             .infoCard {
                                 display: block;
@@ -212,9 +217,9 @@ body {
 
                                     .cardType {
                                         padding: 10px;
-                                        padding-left: 8%;
-                                        padding-right: 15px;
-                                        margin-right: 10px;
+                                        padding-left: 5%;
+                                        padding-right: 10px;
+                                        margin-right: 5px;
                                         background: $primary-gradient;
                                         color: #fff;
                                     }
@@ -271,7 +276,8 @@ body {
                                 }
                             }
                         }
-                        &:last-child{
+
+                        &:last-child {
                             border-bottom: none;
                         }
                     }

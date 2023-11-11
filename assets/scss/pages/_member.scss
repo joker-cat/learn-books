@@ -1,6 +1,6 @@
 $memberGray1: #CBCBCB; //203 203 203
-$memberGray2: #BBCAD3;//188 203 211
-$memberGray3: #666666;//102 102 102
+$memberGray2: #BBCAD3; //188 203 211
+$memberGray3: #666666; //102 102 102
 $memberLeft: #93D1E7;
 $memberRight: #7191E0;
 $ls-2px: 2px;
@@ -12,6 +12,8 @@ body {
 
     main {
         .member {
+            padding-bottom: 0px;
+
             .unitTitleArea {
                 height: 484px;
                 overflow: hidden;
