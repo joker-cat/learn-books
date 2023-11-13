@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/scss/all.scss">
+    <title>享讀｜會員登入</title>
+</head>
+
+<body>
+
+    <section class="loginArea settingArea">
+        <%- include('./layout/navbar'); -%>
+            <div class="container-fluid">
+                <div class="row settingBox">
+                    <div class="col-lg-5">
+                        <div class="subTxt">
+                            <h1>
+                                <small>Complete Your Profile</small>
+                                <span>會員資料填寫</span>
+                            </h1>
+                        </div>
+                    </div>
+                    <div class="col-lg-6">
+                        <form action="" class="formBox">
+                            <article>
+                                <div class="row">
+                                    <label class="col-3 col-form-label">電子郵件</label>
+                                    <div class="col-9 ">
+                                        <input for="" type="mail" id="" class="form-control" value="test@mail.com.tw"
+                                            disabled>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-6 form-floating mb-3">
+                                        <input type="text" class="form-control" id="memberName" placeholder="會員姓名">
+                                        <label for="memberName">會員姓名</label>
+                                    </div>
+                                    <div class="col-lg-6 form-floating mb-3">
+                                        <input type="text" class="form-control" id="memberPhone" placeholder="手機號碼">
+                                        <label for="memberPhone">手機號碼</label>
+                                    </div>
+                                </div>
+                            </article>
+                            <article>
+                                <label>社群連結 <small> 你可以分享外部連結，這會顯示在個人資料和「簡介」頁面上。</small></label>
+
+                                <div class="row mb-3">
+                                    <label for="social-Instagram" class="d-flex col-3 col-form-label">
+                                        <img src="../assets/images/icon/social-logo-1.svg" alt="Instagram"
+                                            class="social-icon">
+                                        <small>Instagram</small>
+                                    </label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="請輸入網址"
+                                            id="social-Instagram">
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <label for="social-YouTube" class="d-flex col-3 col-form-label">
+                                        <img src="../assets/images/icon/social-logo-2.svg" alt="YouTube"
+                                            class="social-icon">
+                                        <small>YouTube</small>
+                                    </label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="請輸入網址" id="social-YouTube">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="social-LinkedIn" class="d-flex col-3 col-form-label">
+                                        <img src="../assets/images/icon/social-logo-3.svg" alt="LinkedIn"
+                                            class="social-icon">
+                                        <small>LinkedIn</small>
+                                    </label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="請輸入網址"
+                                            id="social-Instagram">
+                                    </div>
+                                </div>
+                                <div class="row mb-3">
+                                    <label for="social-CakeResume" class="d-flex col-3 col-form-label">
+                                        <img src="../assets/images/icon/social-logo-1.svg" alt="CakeResume"
+                                            class="social-icon">
+                                        <small>CakeResume</small>
+                                    </label>
+                                    <div class="col-9">
+                                        <input type="text" class="form-control" placeholder="請輸入網址"
+                                            id="social-CakeResume">
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="mt-4">
+                                <label for="mamberIntro" class="form-label">自我簡介</label>
+                                <textarea class="form-control" id="mamberIntro" rows="5"></textarea>
+                            </article>
+
+                            <article>
+                                <div class="title mb-3">
+                                    <label>學習標籤 <small>選擇你有興趣學習的標籤</small></label>
+                                </div>
+                                <div class="row row-cols-lg-6 row-cols-md-3 row-cols-2 g-2">
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagAngularJS">
+                                                <input class="form-check-input" type="checkbox" id="tagAngularJS"
+                                                    value="AngularJS">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>AngularJS</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagBootstrap">
+                                                <input class="form-check-input" type="checkbox" id="tagBootstrap"
+                                                    value="Bootstrap">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Bootstrap.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Bootstrap</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagC">
+                                                <input class="form-check-input" type="checkbox" id="tagC" value="C">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-C.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>C</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagCSS3">
+                                                <input class="form-check-input" type="checkbox" id="tagCSS3"
+                                                    value="CSS3">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-CSS3.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>CSS3</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagGit">
+                                                <input class="form-check-input" type="checkbox" id="tagGit" value="Git">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Git.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Git</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagGitHub">
+                                                <input class="form-check-input" type="checkbox" id="tagGitHub"
+                                                    value="GitHub">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-GitHub.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>GitHub</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagHTML5">
+                                                <input class="form-check-input" type="checkbox" id="tagHTML5"
+                                                    value="HTML5">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-HTML5.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>HTML5</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagJavaScript">
+                                                <input class="form-check-input" type="checkbox" id="tagJavaScript"
+                                                    value="JavaScript">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-JavaScript.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>JavaScript</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagMySQL">
+                                                <input class="form-check-input" type="checkbox" id="tagMySQL"
+                                                    value="MySQL">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-MySQL.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>MySQL</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagNET">
+                                                <input class="form-check-input" type="checkbox" id="tagNET" value="NET">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-NET.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>.NET</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagNode">
+                                                <input class="form-check-input" type="checkbox" id="tagNode"
+                                                    value="Node">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Node.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Node</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagPHP">
+                                                <input class="form-check-input" type="checkbox" id="tagPHP" value="PHP">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-PHP.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>PHP</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagPostgreSQL">
+                                                <input class="form-check-input" type="checkbox" id="tagPostgreSQL"
+                                                    value="PostgreSQL">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-PostgreSQL.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>PostgreSQL</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagReact">
+                                                <input class="form-check-input" type="checkbox" id="tagReact"
+                                                    value="React">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-React.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>React</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagSass">
+                                                <input class="form-check-input" type="checkbox" id="tagSass"
+                                                    value="Sass">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Sass.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Sass</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagTypeScript">
+                                                <input class="form-check-input" type="checkbox" id="tagTypeScript"
+                                                    value="TypeScript">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-TypeScript.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>TypeScript</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagVue">
+                                                <input class="form-check-input" type="checkbox" id="tagVue" value="Vue">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Vue.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Vue</small>
+                                            </label>
+                                        </div>
+                                    </div>
+
+
+
+                                </div>
+                            </article>
+
+                            <article class="mt-4">
+                                <label for="mamberIntro" class="form-label">
+                                    家教簡介
+                                    <small>有填寫家教資料才有，擔任家教資格唷！</small>
+                                </label>
+
+                                <textarea class="form-control" id="mamberIntro" rows="5"></textarea>
+                            </article>
+
+                            <article>
+                                <div class="title mb-3">
+                                    <label>家教標籤<small>選擇你有能力家教的標籤</small></label>
+                                </div>
+                                <div class="row row-cols-lg-6 row-cols-md-3 row-cols-2 g-2">
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagAngularJS">
+                                                <input class="form-check-input" type="checkbox" id="tagAngularJS"
+                                                    value="AngularJS">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>AngularJS</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagBootstrap">
+                                                <input class="form-check-input" type="checkbox" id="tagBootstrap"
+                                                    value="Bootstrap">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Bootstrap.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Bootstrap</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagC">
+                                                <input class="form-check-input" type="checkbox" id="tagC" value="C">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-C.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>C</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagCSS3">
+                                                <input class="form-check-input" type="checkbox" id="tagCSS3"
+                                                    value="CSS3">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-CSS3.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>CSS3</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagGit">
+                                                <input class="form-check-input" type="checkbox" id="tagGit" value="Git">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Git.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Git</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagGitHub">
+                                                <input class="form-check-input" type="checkbox" id="tagGitHub"
+                                                    value="GitHub">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-GitHub.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>GitHub</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagHTML5">
+                                                <input class="form-check-input" type="checkbox" id="tagHTML5"
+                                                    value="HTML5">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-HTML5.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>HTML5</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagJavaScript">
+                                                <input class="form-check-input" type="checkbox" id="tagJavaScript"
+                                                    value="JavaScript">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-JavaScript.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>JavaScript</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagMySQL">
+                                                <input class="form-check-input" type="checkbox" id="tagMySQL"
+                                                    value="MySQL">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-MySQL.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>MySQL</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagNET">
+                                                <input class="form-check-input" type="checkbox" id="tagNET" value="NET">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-NET.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>.NET</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagNode">
+                                                <input class="form-check-input" type="checkbox" id="tagNode"
+                                                    value="Node">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Node.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Node</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagPHP">
+                                                <input class="form-check-input" type="checkbox" id="tagPHP" value="PHP">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-PHP.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>PHP</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagPostgreSQL">
+                                                <input class="form-check-input" type="checkbox" id="tagPostgreSQL"
+                                                    value="PostgreSQL">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-PostgreSQL.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>PostgreSQL</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagReact">
+                                                <input class="form-check-input" type="checkbox" id="tagReact"
+                                                    value="React">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-React.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>React</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagSass">
+                                                <input class="form-check-input" type="checkbox" id="tagSass"
+                                                    value="Sass">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Sass.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Sass</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagTypeScript">
+                                                <input class="form-check-input" type="checkbox" id="tagTypeScript"
+                                                    value="TypeScript">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-TypeScript.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>TypeScript</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="form-check tagBtn">
+                                            <label class="form-check-label image-checkbox" for="tagVue">
+                                                <input class="form-check-input" type="checkbox" id="tagVue" value="Vue">
+                                                <div class="innerImg">
+                                                    <div class="image"
+                                                        style="background-image: url(../assets/images/icon/tag-Vue.svg);">
+                                                    </div>
+                                                </div>
+                                                <small>Vue</small>
+                                            </label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </article>
+                            <div class="d-grid mb-5">
+                                <input type="submit" value="送出" class="btn btn-primary">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layout/footer'); -%>
+    </section>
+    <script type="module" src="../main.js"></script>
+    <!-- Add this to your HTML file -->
+    <script>
+        // image gallery
+        // init the state from the input
+        document.querySelectorAll(".image-checkbox").forEach(function (checkbox) {
+            var inputCheckbox = checkbox.querySelector('input[type="checkbox"]');
+            if (inputCheckbox.checked) {
+                checkbox.classList.add('image-checkbox-checked');
+            } else {
+                checkbox.classList.remove('image-checkbox-checked');
+            }
+        });
+
+        // sync the state to the input
+        document.querySelectorAll(".image-checkbox").forEach(function (checkbox) {
+            checkbox.addEventListener("click", function (e) {
+                checkbox.classList.toggle('image-checkbox-checked');
+                var inputCheckbox = checkbox.querySelector('input[type="checkbox"]');
+                inputCheckbox.checked = !inputCheckbox.checked;
+                e.preventDefault();
+            });
+        });
+    </script>
+
+</body>
+
+</html>
