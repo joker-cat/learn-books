@@ -1,0 +1,160 @@
+.bookChart {
+    hr {
+        border: 1px solid black;
+        width: 100%;
+    }
+
+}
+
+.showInfo {
+    background-color: #fff;
+    min-height: calc(100vh - 66px);
+
+    .pictureBackground {
+        border-radius: 50%;
+        background-image: linear-gradient(to right, #93D1E7, #7191E0);
+
+        a {
+            background: #fff;
+        }
+
+        img {
+            height: 100px;
+            width: 100px;
+        }
+    }
+
+    .identity {
+        font-size: 12px;
+    }
+
+    .grade {
+        a {
+            position: absolute;
+            width: 125px;
+            height: 30px;
+            display: block;
+            text-align: center;
+            padding-top: 6.5px;
+            text-decoration: none;
+            color: #fff;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            background-image: linear-gradient(to right, #93D1E7, #7191E0);
+
+        }
+    }
+
+    .chartInfo {
+        text-align: justify;
+
+        p {
+            padding-top: 10px;
+            line-height: 1.5;
+        }
+        .chartTitle,
+        .chartContentTitle,
+        .chartTag{
+            font-size: 12px;
+            margin-bottom: 15px;
+        }
+
+
+        .chartContent,
+        .chartSkill {
+            font-size: 16px;
+            color: #000;
+            padding-top: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 10;
+            -webkit-box-orient: vertical;
+
+            button {
+                margin-bottom: 5px;
+            }
+
+            img {
+                width: 75px;
+            }
+        }
+    }
+}
+
+.chartBoard {
+    min-height: calc(100vh - 66px);
+
+    .chartBoardTitle {
+        height: 50px;
+        padding-top: 25px;
+    }
+
+    .chartBoardContent {
+        height: 740px;
+        overflow-y: auto;
+        overflow-x: visible;
+
+        .chartBoardMessage {
+            .pictureBackground {
+                border-radius: 50%;
+                background-image: linear-gradient(to right, #93D1E7, #7191E0);
+
+                a {
+                    background: #fff;
+                }
+
+                img {
+                    height: 50px;
+                    width: 50px;
+                }
+            }
+
+            .chartBoardSplit {
+                max-width: 500px;
+
+                .chartBoardText {
+                    text-align: justify;
+                }
+            }
+
+
+        }
+    }
+
+    .chartBoardEmit {
+        img {
+            height: 30px;
+            width: 30px;
+        }
+    }
+}
+
+.chartMember {
+    min-height: calc(100vh - 66px);
+
+    .chartMemberTitle {
+        height: 50px;
+        padding-top: 25px;
+    }
+
+    .chartMemberList {
+        height: 578px;
+        overflow-y: auto;
+    }
+
+    .showMember {
+        .pictureBackground {
+            border-radius: 50%;
+            background-image: linear-gradient(to right, #93D1E7, #7191E0);
+
+            a {
+                background: #fff;
+            }
+
+            img {
+                height: 50px;
+                width: 50px;
+            }
+        }
+    }
+}
