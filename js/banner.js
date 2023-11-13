@@ -14,15 +14,17 @@ const updateBannerTitle = (route) => {
   let subTitle = document.getElementById('subTitle');
 
   switch (route) {
-    case '/index.html':
+    case 'index.html':
       title.innerText = 'Learn-Connect';
       subTitle.innerText = '個性化學習體驗';
       break;
-    case '/bookClub.html' || '/bookClubGroup.html' || '/member.html':
+    case 'bookClub.html':
+    case 'bookClubGroup.html':
+    case 'member.html':
       title.innerText = 'BOOK CLUB';
       subTitle.innerText = '揪團讀書會';
       break;
-    case '/Tutoring.html':
+    case 'Tutoring.html':
       title.innerText = 'TUTORING PLATFORM';
       subTitle.innerText = '家教社群';
       break;
