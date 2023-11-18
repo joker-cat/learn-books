@@ -1,14 +1,18 @@
-<nav class="navbar navbar-expand-lg navbar-light">
+<nav class="navbar navbar-expand-lg navbar-light px-lg-3">
     <div class="container-fluid">
         <a class="navbar-brand" href="./">
             <img src="../assets/images/logo.svg" alt="享讀" style="height: 2rem;">
+        </a>
+        <a href="./notifications.html" class="ms-auto me-4 btn-notify d-lg-none">
+            <i class="bi bi-bell"></i>
+            <small class="notifyNum">2</small>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="bookClub.html">揪團讀書會</a>
                 </li>
@@ -16,15 +20,83 @@
                     <a class="nav-link" href="Tutoring.html">家教社群</a>
                 </li>
             </ul>
-            <div class="d-flex nav-member">
-                <a href="login.html">會員登入</a>
-                <a href="">會員註冊</a>
-                <a href="" class="btn-notify h4"><i class="bi bi-bell"></i></a>
-                <a href="memberTeacher.html" class="d-inline-block">
-                    <div class="profile-pic">
-                        <div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);"></div>
-                    </div>
-                </a>
+            <ul class="navbar-nav d-lg-none">
+                <li class="nav-item"><a class="nav-link" href="memberBook.html">會員中心</a></li>
+                <li class="nav-item"><a class="nav-link" href="setting.html">帳號設定</a></li>
+                <li class="nav-item"><a class="nav-link" href="member.html">個人檔案</a></li>
+                <li class="nav-item"><a class="nav-link" href="memberBook.html">我的揪團</a></li>
+                <li class="nav-item"><a class="nav-link" href="memberTeacher.html">我的家教</a></li>
+                <hr>
+                <li class="nav-item"><a class="nav-link text-white btn btn-primary px-5 mb-3" href="./">登出</a></li>
+            </ul>
+            <div class="nav-member">
+                <!-- 未登入顯示 -->
+                <a href="./login.html" class="btn btn-outline-primary me-2 px-4">登入</a>
+                <a href="./register.html" class="btn btn-primary px-4">註冊</a>
+                <div class="dropdown btn d-lg-inline-block d-none">
+                    <a href="" class="btn-notify dropdown-toggle" id="dropdownNotify" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-bell"></i>
+                        <small class="notifyNum">2</small>
+                    </a>
+                    <ul class="dropdown-menu text-small notifyList" aria-labelledby="dropdownNotify">
+                        <li class="notify-item">
+                            <a class="dropdown-item" href="#">
+                                <div class="profile-pic">
+                                    <div class="innerImg"
+                                        style="background-image: url(../assets/images/profile-pic.jpg);">
+                                    </div>
+                                </div>
+                                <div class="notifyInfo">
+                                    <span>家教課程 應徵通知</span>
+                                    <h6 class="uaerName">糖糖喵</h6>
+                                    <p class="notifContent">
+                                        應徵成為您的家教課程『徵JavaScript 準備面試』的家教老師。
+                                    </p>
+                                    <small>通知時間<time>2020.01.01 00:00 </time></small>
+                                </div>
+                            </a>
+                        </li>
+                        <li class="notify-item">
+                            <a class="dropdown-item" href="#">
+                                <div class="profile-pic">
+                                    <div class="innerImg"
+                                        style="background-image: url(../assets/images/profile-pic.jpg);">
+                                    </div>
+                                </div>
+                                <div class="notifyInfo">
+                                    <span>家教課程 應徵通知</span>
+                                    <h6 class="uaerName">糖糖喵</h6>
+                                    <p class="notifContent">
+                                        應徵成為您的家教課程『徵JavaScript 準備面試』的家教老師。
+                                    </p>
+                                    <small>通知時間<time>2020.01.01 00:00 </time></small>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="dropdown btn brn-User d-lg-inline-block d-none">
+                    <a href="#" class="dropdown-toggle d-flex align-items-center" id="dropdownUser1"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="profile-pic">
+                            <div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);">
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="dropdown-menu text-small" aria-labelledby="dropdownUser1">
+                        <li><a class="dropdown-item" href="memberTeacher.html"><i class="bi bi-person-fill"></i>會員中心</a></li>
+                        <li><a class="dropdown-item" href="setting.html"><i class="bi bi-gear"></i>帳號設定</a></li>
+                        <li><a class="dropdown-item" href="member.html"><i class="bi bi-people"></i>個人檔案</a></li>
+                        <li><a class="dropdown-item" href="memberBook.html"><i class="bi bi-book"></i>我的揪團</a></li>
+                        <li><a class="dropdown-item" href="memberTeacher.html"><i class="bi bi-highlighter"></i>我的家教</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-power"></i> 登出</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
     </div>
