@@ -31,7 +31,7 @@
                                 <div class="row">
                                     <label class="col-3 col-form-label">電子郵件</label>
                                     <div class="col-9 ">
-                                        <input for="" type="mail" id="" class="form-control" value="test@mail.com.tw"
+                                        <input type="mail" id="sessionEmail" class="form-control" value=""
                                             disabled>
                                     </div>
                                 </div>
@@ -625,6 +625,18 @@
                 e.preventDefault();
             });
         });
+
+
+        function text(email){
+            document.querySelector('#sessionEmail').value = email;
+        }
+        function hrefIndex() {
+            window.location.href = '/learn-project/pages/index.html';
+        }
+        window.onload = ()=>{
+            const isTokenNull = sessionStorage.getItem("token");
+            isTokenNull!==null?text(sessionStorage.getItem("email")):hrefIndex();
+        }
     </script>
 
 </body>

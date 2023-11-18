@@ -1,8 +1,9 @@
 // BS引用
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap"
+import "bootstrap" // <-也許可以拿掉
 
-// import './assets/resetCSS/reset.css'; //初始化CSS
 import './assets/scss/all.scss';
+import axios from 'axios';
 
-console.log("Hello world!");
+export {axios};
+console.log("Hello world!, start");

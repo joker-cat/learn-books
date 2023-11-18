@@ -12,7 +12,7 @@
 </head>
 
 <body>
- 
+
   <%- include('./layout/navbar'); -%>
     <section class="bannerArea">
       <div class="container">
@@ -31,7 +31,7 @@
           </div>
         </div>
         <div class="row justify-content-end bannerLink">
-          <div class="col-lg-3 g-0" >
+          <div class="col-lg-3 g-0">
             <a href="#" class="linkCard bg-primary text-white">
               <h4 class="linkTitle">開始揪團</h4>
               <div class="infoType">
@@ -40,7 +40,7 @@
               </div>
             </a>
           </div>
-          <div class="col-lg-3 g-0" >
+          <div class="col-lg-3 g-0">
             <a href="#" class="linkCard bg-gray ">
               <h4 class="linkTitle">徵求家教</h4>
               <div class="infoType">
@@ -247,7 +247,9 @@
       </div>
     </section>
     <%- include('./layout/footer'); -%>
-      <script type="module" src="../main.js"></script>
+      <script type="module">
+        import { axios } from "../main.js";
+      </script>
 </body>
 
 </html>

@@ -1,234 +1,191 @@
 {
-    "users": [
-      {
-        "account": "max@gmail.com",
-        "password": "max123456",
-        "infoConfirm": 1,
-        "resetPassword": 0,
-        "level": 2,
-        "id": 1
-      },
-      {
-        "account": "mary@gmail.com",
-        "password": "mary123456",
-        "infoConfirm": 0,
-        "resetPassword": 0,
-        "level": 1,
-        "id": 2
-      },
-      {
-        "account": "tom@gmail.com",
-        "password": "tom123456",
-        "infoConfirm": 1,
-        "resetPassword": 0,
-        "level": 1,
-        "id": 3
-      },
-      {
-        "account": "risa@gmail.com",
-        "password": "risa123456",
-        "infoConfirm": 1,
-        "resetPassword": 0,
-        "level": 1,
-        "id": 4
-      },
-      {
-        "account": "olivia@gmail.com",
-        "password": "olivia123456",
-        "infoConfirm": 1,
-        "resetPassword": 0,
-        "level": 2,
-        "id": 5
-      },
-      {
-        "account": "ethan@gmail.com",
-        "password": "ethan123456",
-        "infoConfirm": 1,
-        "resetPassword": 1,
-        "level": 1,
-        "id": 6
-      }
-    ],
-    "information": [
-      {
-        "photo": "",
-        "userName": "max",
-        "phoneNumber": "0900000000",
-        "shortInfo": "大家好，我叫Max，是一位熱愛學習的程式設計初學者。我迫不及待地想要探索JavaScript這門令人著迷的程式語言。我相信，透過學習JavaScript，我將能夠開發出令人驚嘆的網頁應用程式，並且將這門技能應用於現實生活中。我希望能夠與各位一起學習、成長，並且在這個數位時代展現自己的創造力。期待與大家共同探索JavaScript的奇妙世界！",
-        "learningTag": "JavaScript",
-        "youtubeLink": "https://www.youtube.com/",
-        "igLink": "https://www.instagram.com/",
-        "githubLink": "https://github.com/",
-        "linkedinLink": "https://tw.linkedin.com/",
-        "cakeresumeLink": "https://www.cakeresume.com/zh-TW",
-        "teacherInfo": "大家好，我是Max，一位熱愛程式設計且具有豐富Python經驗的家教。我對於教育充滿熱情，並且樂於分享我的知識與技能。我擅長使用Python進行軟體開發、數據分析和人工智慧領域的應用。我曾參與過多個Python專案，具有豐富的實戰經驗，並且擁有良好的問題解決能力。    我相信，程式設計不僅僅是一門技能，更是一種思維方式，可以培養邏輯思維和問題解決能力。在教學上，我致力於幫助學生建立堅實的程式基礎，激發他們的創造力和自信心。我喜歡用實例和互動的方式教學，讓學習過程不再枯燥，而是充滿趣味性和挑戰性。    除了Python，我也能夠輔導學生學習相關的數學和計算機科學知識，以及其他程式語言如JavaScript和Java等。我希望能夠成為學生學習路上的良師益友，一起探索程式設計的奧秘，實現學術和職業上的成功。期待與您的合作！",
-        "tutoringTags": "Python",
-        "userId": 1,
-        "id": 1
-      },
-      {
-        "photo": "先傳到images那邊去(?",
-        "userName": "",
-        "phoneNumber": "",
-        "shortInfo": "",
-        "learningTag": "",
-        "youtubeLink": "",
-        "igLink": "",
-        "githubLink": "",
-        "linkedinLink": "",
-        "cakeresumeLink": "",
-        "teacherInfo": "",
-        "tutoringTags": "",
-        "userId": 2,
-        "id": 2
-      },
-      {
-        "photo": "",
-        "userName": "Tom",
-        "phoneNumber": "0911223344",
-        "shortInfo": "我是Tom。我是一位剛剛接觸網頁開發的初學者，目前正在學習HTML、CSS和JavaScript。我對這些技術充滿興趣，並且渴望深入了解它們。我希望參加這個讀書會，與他人交流、學習，共同增強我在網頁開發方面的能力。我相信這將是一個充滿學習和成長機會的旅程，期待在這裡遇到志同道合的夥伴，一起探索JavaScript的奧秘。",
-        "learningTag": "HTML、CSS、JavaScript",
-        "youtubeLink": "",
-        "igLink": "",
-        "githubLink": "",
-        "linkedinLink": "",
-        "cakeresumeLink": "",
-        "teacherInfo": "",
-        "tutoringTags": "",
-        "userId": 3,
-        "id": 3
-      },
-      {
-        "photo": "",
-        "userName": "Risa",
-        "phoneNumber": "0912345678",
-        "shortInfo": "嗨，大家好！我是RISA，一位對JavaScript充滿熱情的新手。我迫切希望學會這門語言，以便能夠開發出令人驚嘆的網頁和應用程式。對於編程的探索是我的熱愛，我相信這不僅僅是學習，更是一個充滿挑戰和樂趣的冒險旅程。期待與各位一起努力學習，一同突破技術的界限，創造出令人驚嘆的數位作品！",
-        "learningTag": "JavaScript",
-        "youtubeLink": "",
-        "igLink": "",
-        "githubLink": "",
-        "linkedinLink": "",
-        "cakeresumeLink": "",
-        "teacherInfo": "",
-        "tutoringTags": "",
-        "userId": 4,
-        "id": 4
-      },
-      {
-        "photo": "",
-        "userName": "olivia",
-        "phoneNumber": "0977777777",
-        "shortInfo": "我是Olivia，一位JS初學者，對程式世界充滿好奇與熱情。我相信，JavaScript是實現我的創意和網頁開發夢想的鑰匙。這是我踏入編程旅程的開始，期待學習新技能，與各位一同探索、成長。讓我們一起開啟這段奇妙的學習之旅吧！",
-        "learningTag": "JavaScript",
-        "youtubeLink": "https://www.youtube.com/",
-        "igLink": "https://www.instagram.com/",
-        "githubLink": "https://github.com/",
-        "linkedinLink": "https://tw.linkedin.com/",
-        "cakeresumeLink": "https://www.cakeresume.com/zh-TW",
-        "teacherInfo": "您好，我是Olivia！儘管我是JavaScript的新手，但在Python方面，我已經有兩年的深入學習和實踐經驗。這段時間裡，我成功地建立了各種應用程式和專案，積累了豐富的開發經驗。這些年的學習讓我能夠深入理解編程邏輯和問題解決能力，並且能夠將這些知識傳授給他人。我相信，我的Python經驗使我具備了成為一位優秀教師的資格。我擅長將複雜的概念轉化為易於理解的形式，並以互動和實例為基礎，幫助學生深入理解編程的核心概念。我熱愛教學，並且相信激發學生的學習興趣和培養他們的編程技能是作為教師的最大使命。我期待著在教學中，與學生們分享我的知識和熱情，一同在編程的世界中茁壯成長。謝謝您的考慮！",
-        "tutoringTags": "Python",
-        "userId": 5,
-        "id": 5
-      },
-      {
-        "photo": "",
-        "userName": "ethan",
-        "phoneNumber": "0987654321",
-        "shortInfo": "我是Ethan！我來自創意的世界，對JavaScript充滿好奇。程式語言是我探索的新大陸，我期待用它來打造具有互動性和美感的網頁。學習JS是我掌握數位藝術和網頁開發技能的第一步。在這個旅程中，我渴望遇到志同道合的夥伴，一起創造出令人驚艷的數位作品。期待與各位一同學習、共同進步！",
-        "learningTag": "HTML",
-        "youtubeLink": "",
-        "igLink": "",
-        "githubLink": "",
-        "linkedinLink": "",
-        "cakeresumeLink": "",
-        "teacherInfo": "",
-        "tutoringTags": "",
-        "userId": 6,
-        "id": 6
-      }
-    ],
-    "bookClub": [
-      {
-        "title": "JavaScript",
-        "date": "2023/10/18",
-        "time": "18:00",
-        "location": "台中市北區館前路1號",
-        "number": 4,
-        "learningTag": "JavaScript",
-        "description": "一同探索JavaScript的奇妙世界！我們誠摯邀請您參加我們的JavaScript學習小組。無論您是初學者還是有經驗的開發者，我們都歡迎您加入。在這個團體裡，您將與同好分享知識、解決問題，一同進步。讓我們攜手學習，掌握JavaScript的精髓！",
-        "userId": 1,
-        "id": 1
-      },
-      {
-        "title": "JavaScript",
-        "date": "2023/10/23",
-        "time": "18:00",
-        "location": "台北市中正區忠孝西路一段49號",
-        "number": 3,
-        "learningTag": "JavaScript、HTML、CSS",
-        "description": "歡迎參加我們的JavaScript、HTML和CSS讀書會！這是一個致力於分享、學習和討論前端開發技術的讀書會。我們將在2023年10月23日晚上8:00舉辦，提供一個互動式的學習環境，讓您與其他熱愛網頁開發的人交流心得，共同進步。無論您是初學者還是有經驗的開發者，都歡迎參加！",
-        "userId": 6,
-        "id": 2
-      }
-  
-    ],
-    "tutoringPlatform": [
-      {
-        "title": "徵求Python教師",
-        "date": "2023/10/19",
-        "time": "21:00",
-        "location": "線上視訊",
-        "cost": 600,
-        "learningTag": "Python",
-        "description": "我正在尋找一位Python教師，需要1對1的個人家教，從基礎的零開始學習，計劃共進行2個小時的課程。我渴望找到一位有耐心，專業且能夠針對我的需求提供量身訂製教學的教師。我希望在這兩個小時內，能夠建立起扎實的Python程式設計基礎。如果您具備這些特質，請與我聯繫，期待開啟這段學習旅程！",
-        "userId": 1,
-        "id": 1
-      }
-    ],
-    "messageBoards": [
-      {
-        "bookClubId": 1,
-        "tutoringPlatformId": 0,
-        "userId": 3,
-        "content": "第一個留言讀書會，想參加",
-        "id": 1
-      },
-      {
-        "bookClubId": 1,
-        "tutoringPlatformId": 0,
-        "userId": 4,
-        "content": "第二個留言讀書會，想參加",
-        "id": 2
-      },
-      {
-        "bookClubId": 0,
-        "tutoringPlatformId": 1,
-        "userId": 1,
-        "content": "第一個應徵家教，想應徵",
-        "id": 3
-      },
-      {
-        "bookClubId": 1,
-        "tutoringPlatformId": 0,
-        "userId": 6,
-        "content": "第三個留言讀書會，想參加",
-        "id": 4
-      },
-      {
-        "bookClubId": 0,
-        "tutoringPlatformId": 1,
-        "userId": 5,
-        "content": "第二個應徵家教，想應徵",
-        "id": 5
-      },
-      {
-        "bookClubId": 2,
-        "tutoringPlatformId": 0,
-        "userId": 4,
-        "content": "第二團讀書會，想參加",
-        "id": 6
-      }
-  
-    ]
-  }
-  
+  "users": [
+    {
+      "email": "joker@gmail.com",
+      "password": "$2a$10$RTPaCPx704Qsbjp/3JKMAO3nduwFS5aUZmilN5A39PnnxQG.5IXa.",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 1
+    }
+  ],
+  "information": [
+    {
+      "photo": "",
+      "userName": "max",
+      "phoneNumber": "0900000000",
+      "shortInfo": "大家好，我叫Max，是一位熱愛學習的程式設計初學者。我迫不及待地想要探索JavaScript這門令人著迷的程式語言。我相信，透過學習JavaScript，我將能夠開發出令人驚嘆的網頁應用程式，並且將這門技能應用於現實生活中。我希望能夠與各位一起學習、成長，並且在這個數位時代展現自己的創造力。期待與大家共同探索JavaScript的奇妙世界！",
+      "learningTag": "JavaScript",
+      "youtubeLink": "https://www.youtube.com/",
+      "igLink": "https://www.instagram.com/",
+      "githubLink": "https://github.com/",
+      "linkedinLink": "https://tw.linkedin.com/",
+      "cakeresumeLink": "https://www.cakeresume.com/zh-TW",
+      "teacherInfo": "大家好，我是Max，一位熱愛程式設計且具有豐富Python經驗的家教。我對於教育充滿熱情，並且樂於分享我的知識與技能。我擅長使用Python進行軟體開發、數據分析和人工智慧領域的應用。我曾參與過多個Python專案，具有豐富的實戰經驗，並且擁有良好的問題解決能力。    我相信，程式設計不僅僅是一門技能，更是一種思維方式，可以培養邏輯思維和問題解決能力。在教學上，我致力於幫助學生建立堅實的程式基礎，激發他們的創造力和自信心。我喜歡用實例和互動的方式教學，讓學習過程不再枯燥，而是充滿趣味性和挑戰性。    除了Python，我也能夠輔導學生學習相關的數學和計算機科學知識，以及其他程式語言如JavaScript和Java等。我希望能夠成為學生學習路上的良師益友，一起探索程式設計的奧秘，實現學術和職業上的成功。期待與您的合作！",
+      "tutoringTags": "Python",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "photo": "先傳到images那邊去(?",
+      "userName": "",
+      "phoneNumber": "",
+      "shortInfo": "",
+      "learningTag": "",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "photo": "",
+      "userName": "Tom",
+      "phoneNumber": "0911223344",
+      "shortInfo": "我是Tom。我是一位剛剛接觸網頁開發的初學者，目前正在學習HTML、CSS和JavaScript。我對這些技術充滿興趣，並且渴望深入了解它們。我希望參加這個讀書會，與他人交流、學習，共同增強我在網頁開發方面的能力。我相信這將是一個充滿學習和成長機會的旅程，期待在這裡遇到志同道合的夥伴，一起探索JavaScript的奧秘。",
+      "learningTag": "HTML、CSS、JavaScript",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 3,
+      "id": 3
+    },
+    {
+      "photo": "",
+      "userName": "Risa",
+      "phoneNumber": "0912345678",
+      "shortInfo": "嗨，大家好！我是RISA，一位對JavaScript充滿熱情的新手。我迫切希望學會這門語言，以便能夠開發出令人驚嘆的網頁和應用程式。對於編程的探索是我的熱愛，我相信這不僅僅是學習，更是一個充滿挑戰和樂趣的冒險旅程。期待與各位一起努力學習，一同突破技術的界限，創造出令人驚嘆的數位作品！",
+      "learningTag": "JavaScript",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "photo": "",
+      "userName": "olivia",
+      "phoneNumber": "0977777777",
+      "shortInfo": "我是Olivia，一位JS初學者，對程式世界充滿好奇與熱情。我相信，JavaScript是實現我的創意和網頁開發夢想的鑰匙。這是我踏入編程旅程的開始，期待學習新技能，與各位一同探索、成長。讓我們一起開啟這段奇妙的學習之旅吧！",
+      "learningTag": "JavaScript",
+      "youtubeLink": "https://www.youtube.com/",
+      "igLink": "https://www.instagram.com/",
+      "githubLink": "https://github.com/",
+      "linkedinLink": "https://tw.linkedin.com/",
+      "cakeresumeLink": "https://www.cakeresume.com/zh-TW",
+      "teacherInfo": "您好，我是Olivia！儘管我是JavaScript的新手，但在Python方面，我已經有兩年的深入學習和實踐經驗。這段時間裡，我成功地建立了各種應用程式和專案，積累了豐富的開發經驗。這些年的學習讓我能夠深入理解編程邏輯和問題解決能力，並且能夠將這些知識傳授給他人。我相信，我的Python經驗使我具備了成為一位優秀教師的資格。我擅長將複雜的概念轉化為易於理解的形式，並以互動和實例為基礎，幫助學生深入理解編程的核心概念。我熱愛教學，並且相信激發學生的學習興趣和培養他們的編程技能是作為教師的最大使命。我期待著在教學中，與學生們分享我的知識和熱情，一同在編程的世界中茁壯成長。謝謝您的考慮！",
+      "tutoringTags": "Python",
+      "userId": 5,
+      "id": 5
+    },
+    {
+      "photo": "",
+      "userName": "ethan",
+      "phoneNumber": "0987654321",
+      "shortInfo": "我是Ethan！我來自創意的世界，對JavaScript充滿好奇。程式語言是我探索的新大陸，我期待用它來打造具有互動性和美感的網頁。學習JS是我掌握數位藝術和網頁開發技能的第一步。在這個旅程中，我渴望遇到志同道合的夥伴，一起創造出令人驚艷的數位作品。期待與各位一同學習、共同進步！",
+      "learningTag": "HTML",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 6,
+      "id": 6
+    }
+  ],
+  "bookClub": [
+    {
+      "title": "JavaScript",
+      "date": "2023/10/18",
+      "time": "18:00",
+      "location": "台中市北區館前路1號",
+      "number": 4,
+      "learningTag": "JavaScript",
+      "description": "一同探索JavaScript的奇妙世界！我們誠摯邀請您參加我們的JavaScript學習小組。無論您是初學者還是有經驗的開發者，我們都歡迎您加入。在這個團體裡，您將與同好分享知識、解決問題，一同進步。讓我們攜手學習，掌握JavaScript的精髓！",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "JavaScript",
+      "date": "2023/10/23",
+      "time": "18:00",
+      "location": "台北市中正區忠孝西路一段49號",
+      "number": 3,
+      "learningTag": "JavaScript、HTML、CSS",
+      "description": "歡迎參加我們的JavaScript、HTML和CSS讀書會！這是一個致力於分享、學習和討論前端開發技術的讀書會。我們將在2023年10月23日晚上8:00舉辦，提供一個互動式的學習環境，讓您與其他熱愛網頁開發的人交流心得，共同進步。無論您是初學者還是有經驗的開發者，都歡迎參加！",
+      "userId": 6,
+      "id": 2
+    }
+  ],
+  "tutoringPlatform": [
+    {
+      "title": "徵求Python教師",
+      "date": "2023/10/19",
+      "time": "21:00",
+      "location": "線上視訊",
+      "cost": 600,
+      "learningTag": "Python",
+      "description": "我正在尋找一位Python教師，需要1對1的個人家教，從基礎的零開始學習，計劃共進行2個小時的課程。我渴望找到一位有耐心，專業且能夠針對我的需求提供量身訂製教學的教師。我希望在這兩個小時內，能夠建立起扎實的Python程式設計基礎。如果您具備這些特質，請與我聯繫，期待開啟這段學習旅程！",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "messageBoards": [
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 3,
+      "content": "第一個留言讀書會，想參加",
+      "id": 1
+    },
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 4,
+      "content": "第二個留言讀書會，想參加",
+      "id": 2
+    },
+    {
+      "bookClubId": 0,
+      "tutoringPlatformId": 1,
+      "userId": 1,
+      "content": "第一個應徵家教，想應徵",
+      "id": 3
+    },
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 6,
+      "content": "第三個留言讀書會，想參加",
+      "id": 4
+    },
+    {
+      "bookClubId": 0,
+      "tutoringPlatformId": 1,
+      "userId": 5,
+      "content": "第二個應徵家教，想應徵",
+      "id": 5
+    },
+    {
+      "bookClubId": 2,
+      "tutoringPlatformId": 0,
+      "userId": 4,
+      "content": "第二團讀書會，想參加",
+      "id": 6
+    }
+  ]
+}
