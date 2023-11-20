@@ -68,8 +68,9 @@
     </section>
     <!-- <script type="module" src="../main.js"></script> -->
     <script type="module">
+        console.log('---註冊頁---');
         import { axios } from "../main.js";
-        import { jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
+        import { newSignup, alreadySignupEmail, jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
         let signupBtn = document.querySelector('.signup-btn');
         signupBtn.addEventListener('click', () => {
             let inputEmail = document.querySelector('#floatingInput').value;
@@ -84,26 +85,13 @@
                 inputCheckPassword === '' ||
                 inputPassword !== inputCheckPassword) return;
             if (!(emailTest.test(inputEmail) && passwordTest.test(inputPassword))) return;
+            console.log('---輸入狀態---');
             console.log(inputEmail, inputPassword, inputCheckPassword, inputPassword === inputCheckPassword, emailTest.test(inputEmail), passwordTest.test(inputPassword));
 
-            axios
-                .post(`${jsonUrl}/users`, {
-                    email: inputEmail,
-                    password: inputPassword,
-                    infoConfirm: 0, //1為有填寫完成基本資料
-                    resetPassword: 0, //如果是1個話要賺去修改密碼畫面
-                    level: 1, //切換家教跟學生的頁面(暫不確定是否用到)
-                })
-                .then((res) => {
-                    
-                    console.log(res);
-                    console.log(res.status);
-                    console.log(res.data);
-                    if (res.status === 201) mySessionStorage(res.data, "setting", res.status);
-                })
-                .catch(err => {
-                    console.error(err.response.data);
-                });
+            console.log('---檢測是否重複註冊信箱---');
+            alreadySignupEmail(inputEmail).then((resBoolen) => {
+                if (!resBoolen) newSignup(inputEmail, inputPassword);
+            })
         })
     </script>
 </body>

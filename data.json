@@ -1,12 +1,20 @@
 {
   "users": [
     {
-      "email": "joker@gmail.com",
-      "password": "$2a$10$RTPaCPx704Qsbjp/3JKMAO3nduwFS5aUZmilN5A39PnnxQG.5IXa.",
+      "email": "ss@gmail.com",
+      "password": "123456",
       "infoConfirm": 0,
       "resetPassword": 0,
       "level": 1,
       "id": 1
+    },
+    {
+      "email": "dd@gmail.com",
+      "password": "123456",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 2
     }
   ],
   "information": [

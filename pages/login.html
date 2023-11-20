@@ -66,7 +66,7 @@
     <!-- <script type="module" src="../main.js"></script> -->
     <script type="module">
         import { axios } from "../main.js";
-        import { jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
+        import { comparison, alreadySignupEmail, jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
 
         let signinBtn = document.querySelector('.signin-btn');
 
@@ -76,34 +76,27 @@
             let inputAccount = document.querySelector('#floatingInput').value;
             let inputPassword = document.querySelector('#floatingPassword').value;
             if (inputAccount === '' || inputPassword === '') return;
+
+            comparison(inputAccount).then((resPassword) => {
+                (resPassword === inputPassword) ?
+                    mySessionStorage({ "password": inputPassword, "email": inputAccount }, "index") :
+                    null;
+            });
             //註冊完的當下會在session寫入token，所以回到首頁會用是否當前有token來判斷有沒有登入
-            axios.get(`${jsonUrl}/users?email=${inputAccount}`)
-                .then(res => {
-    
-                    /*
-                        由於json-server-auth的關係 註冊當下就會進行密碼加密，
-                        假設輸入欄位 joker@gmail 123456
-                        但是json的密碼為加密後 $2a$10$RTPaCPx704Qsbjp/3JKMAO3nduwFS5aUZmilN5A39PnnxQG.5IXa.
-                        所以 如果寫利用信箱撈密碼跟輸入框比對是否吻合的話會變成
-                        我明明密碼輸入為123456 但是他會跟加密後的123456比對
-                        也就導致變成密碼打隊卻燈不進去的情況
+            /*
+                由於json-server-auth的關係 註冊當下就會進行密碼加密，
+                假設輸入欄位 joker@gmail.com 123456
+                但是json的密碼為加密後 $2a$10$RTPaCPx704Qsbjp/3JKMAO3nduwFS5aUZmilN5A39PnnxQG.5IXa.
+                所以 如果寫利用信箱撈密碼跟輸入框比對是否吻合的話會變成
+                我明明密碼輸入為123456 但是他會跟加密後的123456比對
+                也就導致變成密碼打隊卻燈不進去的情況
 
-                        解決方法: 多開個欄位儲存未加密的密碼，並拿它來比對登入
-                    */
+                解決方法: 多開個欄位儲存未加密的密碼，並拿它來比對登入
 
-                    return
-                    console.log(res);
-                    console.log(res.data[0]);
-                    console.log(inputPassword === res.data[0].password);
-                    inputPassword === res.data[0].password &&
-                        res.status === 200 ?
-                        console.log(654321) : null;
-                })
-                .catch(error => {
-                    console.error(error);
-                });
+                注意 : 不使用json-server-auth了
+            */
         })
     </script>
 </body>
-<!-- mySessionStorage(res.data[0], "setting", res.data[0].status) -->
+
 </html>
