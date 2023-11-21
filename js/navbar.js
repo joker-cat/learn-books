@@ -24,11 +24,8 @@ function needSignin() {
     `;
 }
 
-window.onload = () => {
+window.addEventListener("load", function () {
     console.log('window.onload...');
     console.log(isTokenNull);
     isTokenNull ? isSignin() : needSignin();
-}
-
-
-
+});

@@ -19,6 +19,7 @@
             width: 80vw;
             height: 100%;
             box-shadow: $primary-shadow;
+
             @media (max-width:991px) {
                 width: 100%;
                 border-radius: 0;
@@ -36,7 +37,7 @@
                 z-index: 2;
             }
 
-            
+
 
 
             &::before {
@@ -55,7 +56,7 @@
                 padding: 25px 0;
                 margin: 0 auto;
 
-                small{
+                small {
                     font-size: 1rem;
                 }
             }
@@ -65,22 +66,27 @@
 
         .formBox {
             padding: 5vw;
-            
+
             @media (min-width:992px) {
                 padding-right: 0;
-                
+
+            }
+
+            span.need-star {
+                color: #FF0000;
             }
 
             article {
                 margin-bottom: 2rem;
 
                 label.HeadImg {
-                    input[type="file" i] {
-                        position: absolute;
-                        /*width: 100%;*/
-                        opacity: 0;
-                        // border: 1px solid red;
-                    }
+
+                    // input[type="file" i] {
+                    //     position: absolute;
+                    //     /*width: 100%;*/
+                    //     opacity: 0;
+                    //     // border: 1px solid red;
+                    // }
 
                     .innerImg {
                         border-radius: 50%;

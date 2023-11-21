@@ -69,8 +69,7 @@
     <!-- <script type="module" src="../main.js"></script> -->
     <script type="module">
         console.log('---註冊頁---');
-        import { axios } from "../main.js";
-        import { newSignup, alreadySignupEmail, jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
+        import { newSignup, alreadySignupEmail, mySessionStorage } from "../js/_sharedvariables.js";
         let signupBtn = document.querySelector('.signup-btn');
         signupBtn.addEventListener('click', () => {
             let inputEmail = document.querySelector('#floatingInput').value;

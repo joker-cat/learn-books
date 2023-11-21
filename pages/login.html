@@ -65,11 +65,9 @@
 
     <!-- <script type="module" src="../main.js"></script> -->
     <script type="module">
-        import { axios } from "../main.js";
+        console.log('---登入頁---');
         import { comparison, alreadySignupEmail, jsonUrl, mySessionStorage } from "../js/_sharedvariables.js";
-
         let signinBtn = document.querySelector('.signin-btn');
-
 
         signinBtn.addEventListener('click', function (event) {
             event.preventDefault();
@@ -78,8 +76,8 @@
             if (inputAccount === '' || inputPassword === '') return;
 
             comparison(inputAccount).then((resPassword) => {
-                (resPassword === inputPassword) ?
-                    mySessionStorage({ "password": inputPassword, "email": inputAccount }, "index") :
+                (resPassword.password === inputPassword) ?
+                    mySessionStorage({ "password": inputPassword, "email": inputAccount, "id": resPassword.id }, "index") :
                     null;
             });
             //註冊完的當下會在session寫入token，所以回到首頁會用是否當前有token來判斷有沒有登入
