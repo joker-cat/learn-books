@@ -1,9 +1,8 @@
-// BS引用
-import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap" // <-也許可以拿掉
+//BS的JS
+import "bootstrap";
 
-import './assets/scss/all.scss';
+//引用axios
 import axios from 'axios';
 
-export {axios};
+export { axios };
 console.log("Hello world!, start");

@@ -1,7 +1,11 @@
 import { axios } from "../main.js";
-
 //json-server:port
 export const jsonUrl = "http://localhost:3000";
+
+//密碼找回寄信
+export function sendEmail(obj){
+    axios.post('http://localhost:3001/sendemail', obj);
+}
 
 //註冊
 export function newSignup(inputEmail, inputPassword) {
@@ -95,7 +99,7 @@ export async function comparison(returnPassword) {
     }
 }
 
-//
+//更新基本資料欄位
 export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     console.log('---填寫完畢開始更新---');
     const updateObj = {};

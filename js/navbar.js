@@ -5,7 +5,7 @@ const isTokenNull = sessionStorage.getItem("token") !== null;
 function isSignin() {
     controlRender.innerHTML = `
         <a href="" class="btn-notify h4"><i class="bi bi-bell"></i></a>
-        <a href="memberTeacher.html" class="d-inline-block">
+        <a href="memberBook.html" class="d-inline-block">
             <div class="profile-pic">
                 <div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);"></div>
             </div>
