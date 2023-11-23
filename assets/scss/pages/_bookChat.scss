@@ -8,7 +8,7 @@
 
 .showInfo {
     background-color: #fff;
-    min-height: calc(100vh - 66px);
+    min-height: calc(100vh - 107px);
 
     .pictureBackground {
         border-radius: 50%;
@@ -67,7 +67,7 @@
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 10;
+            -webkit-line-clamp: 6;
             -webkit-box-orient: vertical;
 
             button {
@@ -82,7 +82,7 @@
 }
 
 .chatBoard {
-    min-height: calc(100vh - 66px);
+    min-height: calc(100vh - 116px);
 
     .chatBoardTitle {
         height: 50px;
@@ -90,7 +90,7 @@
     }
 
     .chatBoardContent {
-        height: 740px;
+        height: calc(100vh - 229px);
         overflow-y: auto;
         overflow-x: visible;
 
@@ -130,7 +130,7 @@
 }
 
 .chatMember {
-    min-height: calc(100vh - 66px);
+    min-height: calc(100vh - 116px);
 
     .chatMemberTitle {
         height: 50px;
@@ -138,7 +138,7 @@
     }
 
     .chatMemberList {
-        height: 578px;
+        height: calc(100vh - 191px);
         overflow-y: auto;
     }
 
