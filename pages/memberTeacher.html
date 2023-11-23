@@ -36,7 +36,7 @@
                             <li class="link-set"><a href="">家教社群</a></li>
                             <li class="link-set"><a href="./setting.html">帳號設定</a></li>
                             <li class="link-set"><a href="./member.html">查看個人檔案</a></li>
-                            <li class="link-set"><a href="">登出</a></li>
+                            <li class="link-set"><a class="sign-out">登出</a></li>
                         </ul>
                     </div>
                     <div class="col-lg-8 container-right">
@@ -384,8 +384,12 @@
         </main>
 
         <%- include('./layout/footer'); -%>
-
-        <script type="module" src="../main.js"></script>
+        <script type="module">
+        import { clearSessionStorage } from "../js/_sharedvariables.js";
+            console.log('--- 會員中心/教師 ---');
+            const signOut = document.querySelector('.sign-out');
+            signOut.addEventListener('click',()=>clearSessionStorage());
+        </script>
 </body>
 
 </html>

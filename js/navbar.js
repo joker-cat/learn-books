@@ -1,11 +1,6 @@
 //判斷當前有沒有token來顯示登入前後的navber
 const controlRender = document.querySelector('.control-render');
 const isTokenNull = sessionStorage.getItem("token") !== null;
-window.onload = () => {
-    console.log('window.onload...');
-    console.log(isTokenNull);
-    isTokenNull ? isSignin() : needSignin();
-}
 
 function isSignin() {
     controlRender.innerHTML = `
@@ -17,6 +12,7 @@ function isSignin() {
         </a>
     `;
 }
+
 function needSignin() {
     controlRender.innerHTML = `
         <a href="login.html">會員登入</a>
@@ -25,7 +21,7 @@ function needSignin() {
 }
 
 window.addEventListener("load", function () {
-    console.log('window.onload...');
-    console.log(isTokenNull);
+    console.log('navbar window.onload...');
+    console.log('目前有Token?', isTokenNull);
     isTokenNull ? isSignin() : needSignin();
 });

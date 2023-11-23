@@ -133,3 +133,15 @@ export function mySessionStorage(inputRes, hrefPage, id) {
         window.location.href = `/learn-project/pages/${hrefPage}.html`;
     }, 600);
 }
+
+//清除設定SessionStorage
+export function clearSessionStorage() {
+    console.log('---清除sessionStorage---');
+    sessionStorage.removeItem('token');
+    sessionStorage.removeItem('email');
+    sessionStorage.removeItem('id');
+    console.log('---清除完畢，準備跳轉---');
+    setTimeout(() => {
+        window.location.href = `/learn-project/pages/index.html`;
+    }, 200);
+}
