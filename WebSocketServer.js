@@ -19,13 +19,13 @@ wss.on("connection", (ws) => {
     console.log("接收消息", data.toString());
     const text = data.toString();
     let clients = wss.clients;
-    //循環，发送消息至每个客户端
-    // clients.forEach((client) => {
-    //   client.send(text)
-    // });
+    // 循環，发送消息至每个客户端
+    clients.forEach((client) => {
+      client.send(text)
+    });
   });
 
-//   ws.on("close", (code, reason) => {
-//     console.log("使用者連接關閉", code, reason);
-//   });
+  ws.on("close", (code, reason) => {
+    console.log("使用者連接關閉", code, reason);
+  });
 });
