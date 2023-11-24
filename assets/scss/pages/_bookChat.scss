@@ -1,4 +1,4 @@
-.bookChart {
+.bookChat {
     hr {
         border: 1px solid black;
         width: 100%;
@@ -8,7 +8,7 @@
 
 .showInfo {
     background-color: #fff;
-    min-height: calc(100vh - 66px);
+    min-height: calc(100vh - 107px);
 
     .pictureBackground {
         border-radius: 50%;
@@ -44,30 +44,30 @@
         }
     }
 
-    .chartInfo {
+    .chatInfo {
         text-align: justify;
 
         p {
             padding-top: 10px;
             line-height: 1.5;
         }
-        .chartTitle,
-        .chartContentTitle,
-        .chartTag{
+        .chatTitle,
+        .chatContentTitle,
+        .chatTag{
             font-size: 12px;
             margin-bottom: 15px;
         }
 
 
-        .chartContent,
-        .chartSkill {
+        .chatContent,
+        .chatSkill {
             font-size: 16px;
             color: #000;
             padding-top: 10px;
             overflow: hidden;
             text-overflow: ellipsis;
             display: -webkit-box;
-            -webkit-line-clamp: 10;
+            -webkit-line-clamp: 6;
             -webkit-box-orient: vertical;
 
             button {
@@ -81,20 +81,20 @@
     }
 }
 
-.chartBoard {
-    min-height: calc(100vh - 66px);
+.chatBoard {
+    min-height: calc(100vh - 116px);
 
-    .chartBoardTitle {
+    .chatBoardTitle {
         height: 50px;
         padding-top: 25px;
     }
 
-    .chartBoardContent {
-        height: 740px;
+    .chatBoardContent {
+        height: calc(100vh - 229px);
         overflow-y: auto;
         overflow-x: visible;
 
-        .chartBoardMessage {
+        .chatBoardMessage {
             .pictureBackground {
                 border-radius: 50%;
                 background-image: linear-gradient(to right, #93D1E7, #7191E0);
@@ -109,10 +109,10 @@
                 }
             }
 
-            .chartBoardSplit {
+            .chatBoardSplit {
                 max-width: 500px;
 
-                .chartBoardText {
+                .chatBoardText {
                     text-align: justify;
                 }
             }
@@ -121,7 +121,7 @@
         }
     }
 
-    .chartBoardEmit {
+    .chatBoardEmit {
         img {
             height: 30px;
             width: 30px;
@@ -129,16 +129,16 @@
     }
 }
 
-.chartMember {
-    min-height: calc(100vh - 66px);
+.chatMember {
+    min-height: calc(100vh - 116px);
 
-    .chartMemberTitle {
+    .chatMemberTitle {
         height: 50px;
         padding-top: 25px;
     }
 
-    .chartMemberList {
-        height: 578px;
+    .chatMemberList {
+        height: calc(100vh - 191px);
         overflow-y: auto;
     }
 

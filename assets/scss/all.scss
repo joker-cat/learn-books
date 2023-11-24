@@ -1,3 +1,6 @@
+@import './reset.css';
+
+@import "node_modules/bootstrap/scss/bootstrap.scss";
 @import './layout/variables';
 @import './layout/_banner';
 @import './layout/_main';
@@ -10,5 +13,5 @@
 @import './pages/member';
 @import './pages/memberBook';
 @import './pages/memberTeacher';
-@import './pages/bookChart';
 @import './pages/bookClubGroup';
+@import './pages/bookChat';
