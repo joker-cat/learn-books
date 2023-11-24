@@ -19,15 +19,9 @@ const updateBannerTitle = (route) => {
       title.innerText = 'Learn-Connect';
       subTitle.innerText = '個性化學習體驗';
       break;
-<<<<<<< HEAD
     case 'bookClub.html':
     case 'bookClubGroup.html':
     case 'member.html':
-=======
-
-
-    case 'bookClub.html':
->>>>>>> dev
       title.innerText = 'BOOK CLUB';
       subTitle.innerText = '揪團讀書會';
       rendering([...smallTag], title.textContent);
