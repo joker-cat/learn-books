@@ -1,11 +1,12 @@
-@import './reset.css';
-
 @import './layout/variables';
+@import './layout/_banner';
 @import './layout/_main';
 @import './layout/_footer';
 
 @import './pages/index';
 @import './pages/infoCard';
+@import './pages/login';
+@import './pages/setting';
 @import './pages/member';
 @import './pages/memberBook';
 @import './pages/memberTeacher';
