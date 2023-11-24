@@ -1,15 +1,20 @@
-<script type="module" src="../js/navbar.js" type="text/javascript"></script>
-<nav class="navbar navbar-expand-lg navbar-light">
+<script type="module" src="/js/navbar.js" type="text/javascript"></script>
+<nav class="navbar navbar-expand-lg navbar-light px-lg-3">
+
     <div class="container-fluid">
         <a class="navbar-brand" href="./">
-            <img src="../assets/images/logo.svg" alt="享讀" style="height: 2rem;">
+            <img src="/assets/images/logo.svg" alt="享讀" style="height: 2rem;">
+        </a>
+        <a href="./notifications.html" class="ms-auto me-4 btn-notify d-lg-none">
+            <i class="bi bi-bell"></i>
+            <small class="notifyNum">2</small>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul class="navbar-nav me-auto">
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="bookClub.html">揪團讀書會</a>
                 </li>
@@ -17,6 +22,7 @@
                     <a class="nav-link" href="Tutoring.html">家教社群</a>
                 </li>
             </ul>
+
             <div class="d-flex nav-member control-render"></div>
         </div>
     </div>
