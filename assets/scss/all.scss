@@ -1,13 +1,19 @@
-@import './reset.css';
+// BS的CSS
+@import "bootstrap/dist/css/bootstrap.min.css";
 
 @import "node_modules/bootstrap/scss/bootstrap.scss";
 @import './layout/variables';
+@import './layout/_banner';
 @import './layout/_main';
+@import './layout/_navbar';
 @import './layout/_footer';
 
 @import './pages/index';
 @import './pages/infoCard';
+@import './pages/login';
+@import './pages/setting';
 @import './pages/member';
 @import './pages/memberBook';
 @import './pages/memberTeacher';
 @import './pages/bookChat';
+@import './pages/bookClubGroup';

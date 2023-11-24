@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/scss/all.scss">
+
+    <title>享讀｜會員登入</title>
+</head>
+
+<body>
+
+    <section class="loginArea">
+        <%- include('./layout/navbar'); -%>
+            <div class="container-fluid">
+                <div class="row loginBox">
+                    <div class="subTxt">
+                        <h1>
+                            <small>Let's Read Now!</small>
+                            <span>開始您的學習吧！</span>
+                        </h1>
+                    </div>
+                    <div class="col-lg-5 col-11 g-0">
+                        <div class="formBox bg-white row">
+                            <h2 class="unitTitle">
+                                <span>LOG UP</span>
+                                <small>會員註冊</small>
+                            </h2>
+                            <div class="col-12 form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">電子郵件</label>
+                            </div>
+                            <div class="col-12 form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword" placeholder="密碼">
+                                <label for="floatingPassword">密碼</label>
+                            </div>
+                            <div class="col-12 form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingCheckPassword"
+                                    placeholder="確認密碼">
+                                <label for="floatingCheckPassword">確認密碼</label>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary py-3 signup-btn">註冊</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <a href="forgot_password.html" class="text-primary">忘記密碼?</a>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-end">
+                                            已經註冊，<a href="login.html" class="text-primary">會員登入</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layout/footer'); -%>
+    </section>
+    <!-- <script type="module" src="../main.js"></script> -->
+    <script type="module">
+        console.log('---註冊頁---');
+        import { newSignup, alreadySignupEmail, mySessionStorage } from "/js/_sharedvariables.js";
+        let signupBtn = document.querySelector('.signup-btn');
+        signupBtn.addEventListener('click', () => {
+            let inputEmail = document.querySelector('#floatingInput').value;
+            let inputPassword = document.querySelector('#floatingPassword').value;
+            let inputCheckPassword = document.querySelector('#floatingCheckPassword').value;
+            const emailTest = /^[a-zA-Z][a-zA-Z0-9_.]*(?<![_\.])@[a-zA-Z0-9]+(\.[a-zA-Z]+)+$/;
+            const passwordTest = /[a-zA-Z0-9]{6,10}/;
+            console.log(emailTest.test(inputEmail));
+            console.log(passwordTest.test(inputPassword));
+            if (inputEmail === '' ||
+                inputPassword === '' ||
+                inputCheckPassword === '' ||
+                inputPassword !== inputCheckPassword) return;
+            if (!(emailTest.test(inputEmail) && passwordTest.test(inputPassword))) return;
+            console.log('---輸入狀態---');
+            console.log(inputEmail, inputPassword, inputCheckPassword, inputPassword === inputCheckPassword, emailTest.test(inputEmail), passwordTest.test(inputPassword));
+
+            console.log('---檢測是否重複註冊信箱---');
+            alreadySignupEmail(inputEmail).then((resBoolen) => {
+                if (!resBoolen) newSignup(inputEmail, inputPassword);
+            })
+        })
+    </script>
+</body>
+
+</html>

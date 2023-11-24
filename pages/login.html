@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/scss/all.scss">
+    <title>享讀｜會員登入</title>
+</head>
+
+<body>
+
+    <section class="loginArea">
+        <%- include('./layout/navbar'); -%>
+            <div class="container-fluid">
+                <div class="row loginBox">
+                    <div class="subTxt">
+                        <h1>
+                            <small>Let's Read Now!</small>
+                            <span>開始您的學習吧！</span>
+                        </h1>
+                    </div>
+                    <div class="col-lg-4 col-11 g-0">
+                        <div class="formBox bg-white row">
+                            <h2 class="unitTitle">
+                                <span>LOG IN</span>
+                                <small>會員登入</small>
+                            </h2>
+                            <div class="col-12 form-floating mb-3">
+                                <input type="email" class="form-control" id="floatingInput"
+                                    placeholder="name@example.com">
+                                <label for="floatingInput">電子郵件</label>
+                            </div>
+                            <div class="col-12 form-floating mb-3">
+                                <input type="password" class="form-control" id="floatingPassword"
+                                    placeholder="Password">
+                                <label for="floatingPassword">密碼</label>
+                            </div>
+                            <div class="col-12 mb-3">
+                                <div class="d-grid">
+                                    <button class="btn btn-primary py-3 signin-btn">登入</button>
+                                </div>
+                            </div>
+                            <div class="col-12">
+                                <div class="row">
+                                    <div class="col-auto">
+                                        <a href="forgot_password.html" class="text-primary">忘記密碼?</a>
+                                    </div>
+                                    <div class="col">
+                                        <p class="text-end">
+                                            沒有帳號嗎？ <a href="register.html" class="text-primary"> 快速註冊</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <%- include('./layout/footer'); -%>
+    </section>
+
+    <!-- <script type="module" src="../main.js"></script> -->
+    <script type="module">
+        console.log('---登入頁---');
+        import { comparison, alreadySignupEmail, jsonUrl, mySessionStorage } from "/js/_sharedvariables.js";
+        let signinBtn = document.querySelector('.signin-btn');
+
+        signinBtn.addEventListener('click', function (event) {
+            event.preventDefault();
+            let inputAccount = document.querySelector('#floatingInput').value;
+            let inputPassword = document.querySelector('#floatingPassword').value;
+            if (inputAccount === '' || inputPassword === '') return;
+
+            comparison(inputAccount).then((resPassword) => {
+                (resPassword.password === inputPassword) ?
+                    mySessionStorage({ "password": inputPassword, "email": inputAccount, "id": resPassword.id }, "index") :
+                    null;
+            });
+            //註冊完的當下會在session寫入token，所以回到首頁會用是否當前有token來判斷有沒有登入
+            /*
+                由於json-server-auth的關係 註冊當下就會進行密碼加密，
+                假設輸入欄位 joker@gmail.com 123456
+                但是json的密碼為加密後 $2a$10$RTPaCPx704Qsbjp/3JKMAO3nduwFS5aUZmilN5A39PnnxQG.5IXa.
+                所以 如果寫利用信箱撈密碼跟輸入框比對是否吻合的話會變成
+                我明明密碼輸入為123456 但是他會跟加密後的123456比對
+                也就導致變成密碼打隊卻燈不進去的情況
+
+                解決方法: 多開個欄位儲存未加密的密碼，並拿它來比對登入
+
+                注意 : 不使用json-server-auth了
+            */
+        })
+    </script>
+</body>
+
+</html>

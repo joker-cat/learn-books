@@ -1,0 +1,159 @@
+{
+  "users": [
+    {
+      "email": "aa@gmail.com",
+      "password": "123456",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 1
+    },
+    {
+      "email": "ff@gmail.com",
+      "password": "123456",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 2
+    },
+    {
+      "email": "hh@gmail.com",
+      "password": "123456",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 3
+    }
+  ],
+  "information": [
+    {
+      "photo": "",
+      "userName": "米其林",
+      "phoneNumber": "0912121212",
+      "shortInfo": "666",
+      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub",
+      "youtubeLink": "bb",
+      "igLink": "aa",
+      "githubLink": "",
+      "linkedinLink": "cc",
+      "cakeresumeLink": "dd",
+      "teacherInfo": "1111111111",
+      "tutoringTags": "PostgreSQL,React,Sass,TypeScript,Vue",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "photo": "",
+      "userName": "王大陸",
+      "phoneNumber": "0900111222",
+      "shortInfo": "認真好學生",
+      "learningTag": "Git,GitHub",
+      "youtubeLink": "yooo",
+      "igLink": "iggg",
+      "githubLink": "",
+      "linkedinLink": "liii",
+      "cakeresumeLink": "caaa",
+      "teacherInfo": "嗨 我是專門教JS的",
+      "tutoringTags": "JavaScript,TypeScript",
+      "userId": 2,
+      "id": 2
+    },
+    {
+      "photo": "",
+      "userName": "六角",
+      "phoneNumber": "09666666",
+      "shortInfo": "六角六角六角",
+      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
+      "youtubeLink": "六角",
+      "igLink": "六角",
+      "githubLink": "",
+      "linkedinLink": "六角",
+      "cakeresumeLink": "六角",
+      "teacherInfo": "六角六角六角六角六角六角",
+      "tutoringTags": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
+      "userId": 3,
+      "id": 3
+    }
+  ],
+  "bookClub": [
+    {
+      "title": "JavaScript",
+      "date": "2023/10/18",
+      "time": "18:00",
+      "location": "台中市北區館前路1號",
+      "number": 4,
+      "learningTag": "JavaScript",
+      "description": "一同探索JavaScript的奇妙世界！我們誠摯邀請您參加我們的JavaScript學習小組。無論您是初學者還是有經驗的開發者，我們都歡迎您加入。在這個團體裡，您將與同好分享知識、解決問題，一同進步。讓我們攜手學習，掌握JavaScript的精髓！",
+      "userId": 1,
+      "id": 1
+    },
+    {
+      "title": "JavaScript",
+      "date": "2023/10/23",
+      "time": "18:00",
+      "location": "台北市中正區忠孝西路一段49號",
+      "number": 3,
+      "learningTag": "JavaScript、HTML、CSS",
+      "description": "歡迎參加我們的JavaScript、HTML和CSS讀書會！這是一個致力於分享、學習和討論前端開發技術的讀書會。我們將在2023年10月23日晚上8:00舉辦，提供一個互動式的學習環境，讓您與其他熱愛網頁開發的人交流心得，共同進步。無論您是初學者還是有經驗的開發者，都歡迎參加！",
+      "userId": 6,
+      "id": 2
+    }
+  ],
+  "tutoringPlatform": [
+    {
+      "title": "徵求Python教師",
+      "date": "2023/10/19",
+      "time": "21:00",
+      "location": "線上視訊",
+      "cost": 600,
+      "learningTag": "Python",
+      "description": "我正在尋找一位Python教師，需要1對1的個人家教，從基礎的零開始學習，計劃共進行2個小時的課程。我渴望找到一位有耐心，專業且能夠針對我的需求提供量身訂製教學的教師。我希望在這兩個小時內，能夠建立起扎實的Python程式設計基礎。如果您具備這些特質，請與我聯繫，期待開啟這段學習旅程！",
+      "userId": 1,
+      "id": 1
+    }
+  ],
+  "messageBoards": [
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 3,
+      "content": "第一個留言讀書會，想參加",
+      "id": 1
+    },
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 4,
+      "content": "第二個留言讀書會，想參加",
+      "id": 2
+    },
+    {
+      "bookClubId": 0,
+      "tutoringPlatformId": 1,
+      "userId": 1,
+      "content": "第一個應徵家教，想應徵",
+      "id": 3
+    },
+    {
+      "bookClubId": 1,
+      "tutoringPlatformId": 0,
+      "userId": 6,
+      "content": "第三個留言讀書會，想參加",
+      "id": 4
+    },
+    {
+      "bookClubId": 0,
+      "tutoringPlatformId": 1,
+      "userId": 5,
+      "content": "第二個應徵家教，想應徵",
+      "id": 5
+    },
+    {
+      "bookClubId": 2,
+      "tutoringPlatformId": 0,
+      "userId": 4,
+      "content": "第二團讀書會，想參加",
+      "id": 6
+    }
+  ]
+}

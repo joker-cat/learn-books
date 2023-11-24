@@ -93,7 +93,7 @@
             width: 20px;
             height: 20px;
             display: block;
-            background-image: url(../images/index/banner-subTxt-pic.svg);
+            background-image: url(/assets/images/index/banner-subTxt-pic.svg);
             margin-bottom: 3rem;
 
             @media (max-width:991px) {
@@ -364,7 +364,7 @@
         position: absolute;
         top: 0;
         left: 0;
-        background-image: url(../assets/images/index/texture.png);
+        background-image: url(/assets/images/index/texture.png);
         background-size: 50px;
 
         @media (min-width:991px) {
