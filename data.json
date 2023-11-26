@@ -23,6 +23,22 @@
       "resetPassword": 0,
       "level": 1,
       "id": 3
+    },
+    {
+      "email": "ww@gmail.com",
+      "password": "$2a$10$6ZlpM8xTlxtN50C8m1w2P.CFyynakwqKYzChsYC5Pay5sLUFX52qe",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 4
+    },
+    {
+      "email": "xx@gmail.com",
+      "password": "$2a$10$CR/8i57F5uMuKfr/X/W7Q.aguYJ9OUnrEl5q/aotJfhQEVol/wvr.",
+      "infoConfirm": 0,
+      "resetPassword": 0,
+      "level": 1,
+      "id": 5
     }
   ],
   "information": [

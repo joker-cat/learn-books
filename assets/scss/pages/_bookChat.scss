@@ -95,6 +95,16 @@
         overflow-x: visible;
 
         .chatBoardMessage {
+            p{
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+
+
             .pictureBackground {
                 border-radius: 50%;
                 background-image: linear-gradient(to right, #93D1E7, #7191E0);
