@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>享讀</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="/assets/scss/all.scss">
+</head>
+
+<body>
+    <script type="module" src="../main.js"></script>
+    <%- include('./layout/navbar'); -%>
+        <%- include('./layout/banner'); -%>
+            <main class="Learn-detail mb-5 pb-lg-5 p-0">
+                <form class="formBox">
+                    <section class="Learn-detail-header">
+                        <div class="container border-bottom bg-white p-lg-5 p-3 pt-5">
+                            <div class="row  align-items-end">
+                                <div class="col-lg-8 mb-lg-2 mb-4 text-lg-start text-center">
+                                    <h1 class="Learn-title h3">發起讀書會</h1>
+                                </div>
+                                <div class="col-lg-4 text-lg-end  text-center mb-2">
+                                    <a href="#" class="btn px-5 btn-light">取消</a>
+                                    <a href="#" class="btn px-5 btn-primary">發布</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Learn-detail-info">
+                        <div class="container bg-white p-lg-5 px-3 py-3 pb-5">
+
+                            <div class="row ">
+                                <div class="col-lg-3">
+                                    <h3 class="sub-title h5">讀書會主題</h3>
+                                </div>
+                                <div class="col-lg-8">
+
+                                    <div class="mb-3">
+                                        <label for="leanTitle" class="form-label">讀書會標題</label>
+                                        <input type="text" class="form-control" id="leanTitle"
+                                            aria-describedby="textHelp">
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="exampleFormControlTextarea1" class="form-label">敘述說明</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1"
+                                            rows="6"></textarea>
+                                    </div>
+
+                                    <article>
+                                        <div class="title mb-3">
+                                            <label>家教標籤<small>選取的學習標籤會作為讀書會標籤使用。如果新增需要到 帳號設定 新增學習標籤</small></label>
+                                        </div>
+                                        <div class="row row-cols-lg-6 row-cols-md-3 row-cols-3 g-2">
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagAngularJS">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagAngularJS"
+                                                            value="AngularJS">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-AngularJS.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>AngularJS</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagBootstrap">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagBootstrap"
+                                                            value="Bootstrap">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-Bootstrap.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>Bootstrap</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagC">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagC" value="C">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-C.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>C</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagCSS3">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagCSS3"
+                                                            value="CSS3">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-CSS3.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>CSS3</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagGit">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagGit" value="Git">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-Git.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>Git</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagGitHub">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagGitHub"
+                                                            value="GitHub">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-GitHub.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>GitHub</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagHTML5">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagHTML5"
+                                                            value="HTML5">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-HTML5.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>HTML5</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagJavaScript">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagJavaScript"
+                                                            value="JavaScript">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-JavaScript.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>JavaScript</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagMySQL">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagMySQL"
+                                                            value="MySQL">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-MySQL.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>MySQL</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagNET">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagNET" value="NET">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-NET.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>.NET</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagNode">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagNode"
+                                                            value="Node">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-Node.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>Node</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagPHP">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagPHP" value="PHP">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-PHP.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>PHP</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagPostgreSQL">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagPostgreSQL"
+                                                            value="PostgreSQL">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-PostgreSQL.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>PostgreSQL</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagReact">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagReact"
+                                                            value="React">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-React.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>React</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagSass">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagSass"
+                                                            value="Sass">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-Sass.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>Sass</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagTypeScript">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagTypeScript"
+                                                            value="TypeScript">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-TypeScript.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>TypeScript</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                            <div class="col">
+                                                <div class="form-check tagBtn">
+                                                    <label class="form-check-label image-checkbox" for="tagVue">
+                                                        <input class="form-check-input teacher-will-input"
+                                                            name="tutoringTags" type="checkbox" id="tagVue" value="Vue">
+                                                        <div class="innerImg">
+                                                            <div class="image"
+                                                                style="background-image: url(/assets/images/icon/tag-Vue.svg);">
+                                                            </div>
+                                                        </div>
+                                                        <small>Vue</small>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </article>
+
+                                </div>
+                            </div>
+                            <div class="row border-top pt-5 mt-5">
+                                <div class="col-lg-3">
+                                    <h3 class="sub-title h5">讀書會資訊設定</h3>
+                                </div>
+                                <div class="col-lg-7">
+                                    <article>
+                                        <div class="mb-3">
+                                            <label for="leanTitle" class="form-label">約定日期</label>
+                                            <input type="date" class="form-control" id="leanTitle"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="leanTitle" class="form-label">約定時間</label>
+                                            <input type="time" value="13:30" min="09:00" max="18:00" class="form-control" id="leanTitle"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="leanTitle" class="form-label">約定地點</label>
+                                            
+
+                                            <input type="text" class="form-control" id="leanTitle"
+                                                aria-describedby="textHelp">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="leanTitle" class="form-label">開團人數</label>
+                                            <input type="number" class="form-control" id="leanTitle" min="1" max="5"
+                                                aria-describedby="textHelp">
+                                        </div>
+
+
+                                    </article>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="Learn-detail-header ">
+                        <div class="container border-top bg-white p-lg-5 p-3 pt-5">
+                            <div class="row  align-items-end">
+                                <div class="col-lg-6 mb-lg-2 mb-5 text-lg-start text-center ">
+                                    <a href="#" class="btn px-5 btn-danger">刪除讀書會</a>
+                                </div>
+                                <div class="col-lg-6 text-lg-end text-center mb-2">
+                                    <a href="#" class="btn px-5 btn-light">取消</a>
+                                    <a href="#" class="btn px-5 btn-primary">發布</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </form>
+            </main>
+            <%- include('./layout/footer'); -%>
+                <script>
+                    const imageCheckbox = document.querySelectorAll(".image-checkbox");
+
+                    imageCheckbox.forEach(function (checkbox) {
+                        checkbox.addEventListener("click", function (e) {
+                            checkbox.classList.toggle('image-checkbox-checked');
+                            let inputCheckbox = checkbox.querySelector('input[type="checkbox"]');
+                            inputCheckbox.checked = !inputCheckbox.checked;
+                            e.preventDefault();
+                        });
+                    });
+                </script>
+</body>
+
+</html>
