@@ -17,14 +17,17 @@ wss.on("connection", (ws) => {
   ws.uuid = uuid;
   const user = {
     context: 'user',
-    uuid
+    uuid,
   }
+  console.log(ws);
   ws.send(JSON.stringify(user))
 
   //接收消息
   ws.on("message", (msg) => {
     //data為客户端發送的消息，將消息返回
     const message = JSON.parse(msg)
+    const room = message.room       // 房間id
+
     // console.log(message);
     const newMessage = {
         context: 'message',
@@ -49,5 +52,12 @@ function sendAllUser(msg){
           client.send(JSON.stringify(msg));
         }
       });
-
 }
+// function sendRoomUser(msg){
+//   wss.clients.forEach(function (client) {
+//       // 已建立連線，  未排除自身    排除自身---->(&& client.uuid !== msg.uuid)
+//       if (client.readyState === WebSocket.OPEN && ) {
+//         client.send(JSON.stringify(msg));
+//       }
+//     });
+// }

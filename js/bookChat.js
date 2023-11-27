@@ -9,12 +9,19 @@ const sendBtn = document.querySelector("#sendBtn");
 // 發送訊息
 sendBtn.addEventListener("click", () => {
   const Input = document.querySelector(".form-control");
-  let messageEmit = {
-    user: sessionStorage.getItem("email"),
-    content: Input.value,
-  };
-  ws.send(JSON.stringify(messageEmit));
-  Input.value = "";
+    // 如果未輸入字不發送
+    if(Input.value === ''){
+
+    }else{
+        let messageEmit = {
+          user: sessionStorage.getItem("email"),
+          content: Input.value,
+          room: 1
+        };
+        ws.send(JSON.stringify(messageEmit));
+        Input.value = "";
+    }
+
 });
 
 // 接收server訊息
@@ -50,7 +57,6 @@ ws.onmessage = (event) => {
     // 滾動，不確定是不是這樣寫
     cahtBoard.scrollTo(0, cahtBoard.scrollHeight)
   } else if (data.context === "message" && data.uuid === sessionStorage.getItem("uuid")) {    // 接收訊息，並判斷身分(自己) 
-    console.log(sessionStorage.getItem("uuid"));
     let chatModel = `
     <div class="chatBoardPhoto d-flex h-25">
         <div class="pictureBackground d-flex justify-content-center align-content-center p-1">

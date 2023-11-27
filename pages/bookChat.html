@@ -225,22 +225,25 @@
                         console.log(err);
                     });
             }
-            function login(name) {
+            function login(name, room) {
                 axios
                     .post("http://localhost:3000/login", {
                         email: `${name}@gmail.com`,
                         password: "123456",
                     })
                     .then((res) => {
+                        console.log(res);
                         sessionStorage.setItem('token', res.data.accessToken);
                         sessionStorage.setItem('id', res.data.user.id);
                         sessionStorage.setItem('email', res.data.user.email);
+                        sessionStorage.setItem('room', room);
                     })
                     .catch((err) => {
                         console.log(err);
                     });
             }
-            login('ww')
+            login('ww', 1)
+            
         </script>
 </body>
 

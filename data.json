@@ -171,5 +171,25 @@
       "content": "第二團讀書會，想參加",
       "id": 6
     }
-  ]
+  ],
+  "usuallyForm": [
+    {
+      "nickname": "米其林",
+      "userId": 1,
+      "img": ""
+    }
+  ],
+  "chatBoard": [{
+    "room": 1,
+    "userName": "米其林",
+    "content": "初次見面，很高興認識你們。",
+    "id": 1
+  },
+  {
+    "room": 1,
+    "userName": "米其林",
+    "content": "初次見面，很高興認識你們。",
+    "id": 2
+  }
+]
 }
