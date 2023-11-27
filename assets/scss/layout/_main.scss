@@ -1,3 +1,5 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css");
+
 *,
 *::before,
 *::after {
@@ -32,6 +34,23 @@ a {
 .btn-primary {
     border: none;
     background: $primary-gradient;
+    transition: background 1s;
+
+
+    &:hover {
+        background: $primary-gradient-2;
+        transition: background 1s;
+    }
+}
+
+.btn-outline-primary {
+    border-color: $primary-color-2 ;
+    color: $primary-color-2;
+
+    &:hover {
+        background: $primary-gradient;
+        border-color: transparent;
+    }
 }
 
 .form-control {
