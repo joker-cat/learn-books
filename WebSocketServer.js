@@ -2,7 +2,7 @@ import express from "express";
 import { WebSocketServer } from 'ws';
 
 
-const PORT = 3000;
+const PORT = 4000;
 
 const server = express().listen(PORT, () =>
   console.log(`Listening on ${PORT}`)

@@ -8,6 +8,12 @@
         @media (min-width:991px) {
             padding: 20px 30px;
         }
+        @media (max-width:991px) {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
 
         .nav-member {
             display: none !important;
@@ -27,22 +33,24 @@
             width: 100%;
         }
     }
+
     .subTxt {
         color: #fff;
-        white-space:nowrap;
-    
+        white-space: nowrap;
+
         small {
             font-size: 2.5rem;
             font-weight: 100;
             font-family: Arial, Helvetica, sans-serif;
         }
+
         span {
             display: block;
             font-size: 1.2rem;
             line-height: 2;
             letter-spacing: 2px;
         }
-    
+
         @media (min-width:991px) {
             position: absolute;
             padding: 50px;
@@ -50,11 +58,11 @@
             top: 50%;
             transform: translateY(-50%);
         }
-    
+
         @media (max-width:991px) {
             text-align: center;
             margin-bottom: 1rem;
-    
+
             small {
                 font-size: 2.5rem;
             }
@@ -68,7 +76,7 @@
         align-content: center;
 
         .formBox {
-            padding:10%;
+            padding: 10%;
             border-radius: 50px 0 0 50px;
             overflow: hidden;
             box-shadow: $primary-shadow;
@@ -118,8 +126,9 @@
         width: 100%;
 
         img {
-            filter: invert(100%);
-
+            @media (min-width:991px) {
+                filter: invert(100%);
+            }
         }
 
         .navbar-nav {
@@ -168,4 +177,3 @@
         padding-bottom: 30%;
     }
 }
-

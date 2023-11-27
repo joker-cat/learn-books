@@ -77,9 +77,9 @@
             if (inputAccount === '' || inputPassword === '') return;
 
             comparison(inputAccount).then((resPassword) => {
-                (resPassword.password === inputPassword) ?
-                    mySessionStorage({ "password": inputPassword, "email": inputAccount, "id": resPassword.id }, "index") :
-                    null;
+                (resPassword.infoConfirm === 0 && resPassword.password === inputPassword) ?
+                    mySessionStorage({ "password": inputPassword, "email": inputAccount, "id": resPassword.id }, "setting") :
+                    mySessionStorage({ "password": inputPassword, "email": inputAccount, "id": resPassword.id }, "index");
             });
             //註冊完的當下會在session寫入token，所以回到首頁會用是否當前有token來判斷有沒有登入
             /*

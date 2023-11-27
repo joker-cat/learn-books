@@ -3,7 +3,7 @@ import { axios } from "../main.js";
 export const jsonUrl = "http://localhost:3000";
 
 //密碼找回寄信
-export function sendEmail(obj){
+export function sendEmail(obj) {
     axios.post('http://localhost:3001/sendemail', obj);
 }
 
@@ -85,7 +85,7 @@ export async function comparison(returnPassword) {
         return new Promise((resolve, reject) => {
             axios.get(`${jsonUrl}/users?email=${str}`)
                 .then(res => {
-                    resolve(res.data.length === 1 ? { "password": res.data[0].password, "id": res.data[0].id } : false);
+                    resolve(res.data.length === 1 ? { "password": res.data[0].password, "id": res.data[0].id, "infoConfirm": res.data[0].infoConfirm } : false);
                 })
                 .catch(error => {
                     reject(error);
@@ -99,6 +99,23 @@ export async function comparison(returnPassword) {
     }
 }
 
+//更新是否有填寫基本資料狀態
+function infoConfirm(getId) {
+    axios.patch(`${jsonUrl}/users/${sessionStorage.getItem("id")}`, { "infoConfirm": 1 })
+        .then(function (res) {
+            if (res.status === 200) console.log('---更新成功---');
+        })
+        .then(function (res) {
+            setTimeout(() => {
+                window.location.href = `/learn-project/pages/index.html`;
+            }, 600);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
+}
+
+
 //更新基本資料欄位
 export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     console.log('---填寫完畢開始更新---');
@@ -109,20 +126,14 @@ export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     }
     updateObj.learningTag = isStudentTag.map(e => e.value).join(','); // 學生標籤
     updateObj.tutoringTags = isTeacherTag.map(e => e.value).join(','); // 老師標籤
-    //-----結束更新基本資料-----
     axios.patch(`${jsonUrl}/information/${sessionStorage.getItem("id")}`, updateObj)
         .then(function (res) {
-            res.status === 200 ?
-                function updateSuccess() {
-                    console.log('---更新成功---');
-                    setTimeout(() => {
-                        window.location.href = `/learn-project/pages/index.html`;
-                    }, 600);
-                }() :
-                console.log('---更新失敗---');
-        }).catch(function (error) {
+            if (res.status === 200) infoConfirm(`${sessionStorage.getItem("id")}`);
+        })
+        .catch(function (error) {
             console.log(error);
         });
+    //-----結束更新基本資料-----
 }
 
 //設定SessionStorage
@@ -135,7 +146,7 @@ export function mySessionStorage(inputRes, hrefPage, id) {
     console.log('---設定完畢，準備跳轉---');
     setTimeout(() => {
         window.location.href = `/learn-project/pages/${hrefPage}.html`;
-    }, 600);
+    }, 500);
 }
 
 //清除設定SessionStorage

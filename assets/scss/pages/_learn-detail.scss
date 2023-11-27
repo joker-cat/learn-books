@@ -1,0 +1,215 @@
+.Learn-detail {
+  overflow: hidden;
+}
+
+.card-info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  .card-info-item {
+    padding-left: 6rem;
+    margin-bottom: 1.5rem;
+
+    +.card-info-item {
+      border-top: 1px solid #dee2e6;
+      padding-top: 15px;
+
+    }
+
+    .card-subTitle {
+      position: absolute;
+      left: 0;
+      font-size: 0.9rem;
+    }
+  }
+}
+
+.tag-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  flex-wrap: wrap;
+
+  .tag-item {
+    width: calc(100% / 6);
+    text-align: center;
+    margin-bottom: 10px;
+
+    @media (max-width:991px) {
+      width: calc(100% / 2);
+    }
+
+    span {
+      display: block;
+      text-align: center;
+      font-size: 0.7rem;
+      padding: 5px 0;
+      width: 100%;
+      color: #999;
+    }
+
+    .innerImg {
+      width: 90%;
+      padding-top: 90%;
+      background-color: #a8a8a8;
+
+
+
+      .image {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-size: 50%;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: brightness(0) invert(1);
+      }
+    }
+  }
+}
+
+
+.progress-container {
+  display: flex;
+  align-items: center;
+
+  .progress {
+    display: inline-block;
+    width: 300px;
+    height: 15px;
+    background-color: #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-right: 10px;
+
+    .progress-bar {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: $primary-gradient;
+      border-radius: 15px;
+      width: 0;
+      /* 初始宽度为0，随着开团人数增加而增加 */
+      transition: width 0.5s ease;
+      /* 添加过渡效果 */
+    }
+
+
+  }
+
+  .progressDot-group {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 300px;
+    padding: 5px;
+
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+    .dot {
+      border-radius: 50%;
+      width: 5px;
+      height: 5px;
+      display: inline-block;
+      background-color: #dddddd;
+    }
+  }
+
+  .progress-text {
+    display: inline-block;
+    @media (max-width:991px) {
+      position: absolute;
+      top: calc(100% + 1.5rem);
+    }
+  }
+}
+
+.member-group {
+
+  .member-item {
+    display: flex;
+    padding: 10px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .profile-name {
+      padding-top: 10px;
+    }
+  }
+}
+
+
+// QA-Area
+
+.QA-Area {
+  padding-bottom: 5%;
+
+  .QA-Box {
+    margin-top: 20px;
+    padding: 30px;
+    padding-left: 85px;
+    border: 1px solid #e5e5e5;
+    border-radius: 20px;
+
+    .userName {
+      display: flex;
+      align-items: center;
+      transform: translateX(-65px);
+
+      .profile-name {
+        padding-left: 15px;
+      }
+    }
+
+    time {
+      font-size: 0.7rem;
+      font-family: Arial, Helvetica, sans-serif;
+      margin-left: 10px;
+      display: inline-block;
+    }
+
+    textarea.form-control {
+      border: none;
+
+      &.form-control:focus {
+        border: 1px solid $primary-color-2;
+      }
+    }
+
+    .mess-content {
+      font-weight: 300;
+      font-size: 0.9rem;
+    }
+
+    .btn-reply {
+      color: #788896;
+      margin-bottom: 20px;
+      display: inline-block;
+    }
+
+    .replyContent {
+      background-color: #f1f1f1;
+      padding: 20px;
+      margin-bottom: 10px;
+    }
+
+  }
+
+
+}
+
+@media (max-width:991px) {
+  .Learn-detail-info {
+    .sub-title {
+      text-align: center;
+      padding-bottom: 1.5rem;
+    }
+  }
+}
