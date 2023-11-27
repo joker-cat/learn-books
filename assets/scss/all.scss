@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-@import './reset.css';
-
-@import "node_modules/bootstrap/scss/bootstrap.scss";
-=======
 // BS的CSS
 @import "bootstrap/dist/css/bootstrap.min.css";
 
->>>>>>> dev
 @import './layout/variables';
 @import './layout/_banner';
 @import './layout/_main';
@@ -20,10 +14,5 @@
 @import './pages/member';
 @import './pages/memberBook';
 @import './pages/memberTeacher';
-<<<<<<< HEAD
-@import './pages/bookClubGroup';
-@import './pages/bookChat';
-=======
 @import './pages/bookChart';
 @import './pages/bookClubGroup';
->>>>>>> dev
