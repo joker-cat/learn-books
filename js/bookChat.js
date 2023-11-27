@@ -1,6 +1,6 @@
-import { axios } from "../main.js";
 const host = "ws://localhost:4000/ws";
 
+// 建立host連線，更改伺服器，更改後面route
 const ws = new WebSocket(host);
 
 const sendBtn = document.querySelector("#sendBtn");
@@ -16,12 +16,10 @@ sendBtn.addEventListener("click", () => {
         let messageEmit = {
           user: sessionStorage.getItem("email"),
           content: Input.value,
-          room: 1
         };
         ws.send(JSON.stringify(messageEmit));
         Input.value = "";
     }
-
 });
 
 // 接收server訊息
