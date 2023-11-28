@@ -3,13 +3,13 @@ import { axios } from "../main.js";
 export const jsonUrl = "http://localhost:3000";
 
 //密碼找回寄信
-export function sendEmail(obj){
+export function sendEmail(obj) {
     axios.post('http://localhost:3001/sendemail', obj);
 }
 
 //註冊
 export function newSignup(inputEmail, inputPassword) {
-    console.log('---帳號沒註冊過---');
+    console.log('---檢測是否重複註冊信箱---');
     axios
         .post(`${jsonUrl}/users`, {
             email: inputEmail,
@@ -19,14 +19,16 @@ export function newSignup(inputEmail, inputPassword) {
             level: 1, //切換家教跟學生的頁面(暫不確定是否用到)
         })
         .then((res) => {
+            console.log('---帳號沒註冊過---');
             console.log(res);
+            debugger
             if (res.status === 201) {
-                newInfomation(res.data.id);
-                mySessionStorage(res.data, "setting", res.data.id);
+                newInfomation(res.data.user.id);
+                mySessionStorage(res.data.user, "setting", res.data.accessToken);
             }
         })
         .catch(err => {
-            console.error(err);
+            console.error(err.response.data);
         });
 }
 
@@ -60,7 +62,6 @@ function newInfomation(getId) {
 //檢查信箱是否重複
 export async function alreadySignupEmail(userInput) {
     function checkEmail(str) {
-        // 返回 Promise
         return new Promise((resolve, reject) => {
             axios.get(`${jsonUrl}/users?email=${str}`)
                 .then(res => {
@@ -74,18 +75,17 @@ export async function alreadySignupEmail(userInput) {
     try {
         return await checkEmail(userInput);
     } catch (error) {
-        console.error(error.message); // 錯誤拋出
+        console.error(error.message);
     }
 }
 
 //登入檢查
 export async function comparison(returnPassword) {
     function checkEmail(str) {
-        // 返回 Promise
         return new Promise((resolve, reject) => {
-            axios.get(`${jsonUrl}/users?email=${str}`)
+            axios.post(`${jsonUrl}/login`, str)
                 .then(res => {
-                    resolve(res.data.length === 1 ? { "password": res.data[0].password, "id": res.data[0].id } : false);
+                    (res.status === 200) ? resolve(res) : null;
                 })
                 .catch(error => {
                     reject(error);
@@ -95,8 +95,24 @@ export async function comparison(returnPassword) {
     try {
         return await checkEmail(returnPassword);
     } catch (error) {
-        console.error(error.message); // 錯誤拋出
+        console.error(error.message);
     }
+}
+
+//更新是否有填寫基本資料狀態
+function infoConfirm(getId) {
+    axios.patch(`${jsonUrl}/users/${sessionStorage.getItem("id")}`, { "infoConfirm": 1 })
+        .then(function (res) {
+            if (res.status === 200) console.log('---更新成功---');
+        })
+        .then(function (res) {
+            setTimeout(() => {
+                window.location.href = `/learn-project/pages/index.html`;
+            }, 600);
+        })
+        .catch(function (error) {
+            console.log(error);
+        });
 }
 
 //更新基本資料欄位
@@ -109,33 +125,28 @@ export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     }
     updateObj.learningTag = isStudentTag.map(e => e.value).join(','); // 學生標籤
     updateObj.tutoringTags = isTeacherTag.map(e => e.value).join(','); // 老師標籤
-    //-----結束更新基本資料-----
     axios.patch(`${jsonUrl}/information/${sessionStorage.getItem("id")}`, updateObj)
         .then(function (res) {
-            res.status === 200 ?
-                function updateSuccess() {
-                    console.log('---更新成功---');
-                    setTimeout(() => {
-                        window.location.href = `/learn-project/pages/index.html`;
-                    }, 600);
-                }() :
-                console.log('---更新失敗---');
-        }).catch(function (error) {
+            if (res.status === 200) infoConfirm(`${sessionStorage.getItem("id")}`);
+        })
+        .catch(function (error) {
             console.log(error);
         });
+    //-----結束更新基本資料-----
 }
 
 //設定SessionStorage
-export function mySessionStorage(inputRes, hrefPage, id) {
+export function mySessionStorage(inputRes, hrefPage, token) {
+
     console.log('---設定sessionStorage---');
-    console.log(inputRes, hrefPage, id);
-    sessionStorage.setItem('token', inputRes.password);
+    console.log(inputRes, hrefPage, token);
+    sessionStorage.setItem('token', token);
     sessionStorage.setItem('email', inputRes.email);
     sessionStorage.setItem('id', inputRes.id);
     console.log('---設定完畢，準備跳轉---');
     setTimeout(() => {
         window.location.href = `/learn-project/pages/${hrefPage}.html`;
-    }, 600);
+    }, 500);
 }
 
 //清除設定SessionStorage

@@ -1,5 +1,5 @@
 //判斷當前有沒有token來顯示登入前後的navber
-import { clearSessionStorage } from "/js/_sharedvariables.js";
+import { clearSessionStorage } from "/api/_sharedvariables.js";
 
 const controlRender = document.querySelector('.control-render');
 const isTokenNull = sessionStorage.getItem("token") !== null;

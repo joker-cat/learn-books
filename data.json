@@ -2,93 +2,53 @@
   "users": [
     {
       "email": "aa@gmail.com",
-      "password": "123456",
-      "infoConfirm": 0,
+      "password": "$2a$10$uBgOjBMPn/WwMphkT9lJr.P3GsnCdlHIfE4WUi7m0P43Hjj28/e1G",
+      "infoConfirm": 1,
       "resetPassword": 0,
       "level": 1,
       "id": 1
     },
     {
-      "email": "ff@gmail.com",
-      "password": "123456",
-      "infoConfirm": 0,
+      "email": "bb@gmail.com",
+      "password": "$2a$10$0TXd4clTZocrFCv9kAOhH.Z1ACth6jCc0KhNTflfwyjzVjpxIYbMy",
+      "infoConfirm": 1,
       "resetPassword": 0,
       "level": 1,
       "id": 2
-    },
-    {
-      "email": "hh@gmail.com",
-      "password": "123456",
-      "infoConfirm": 0,
-      "resetPassword": 0,
-      "level": 1,
-      "id": 3
-    },
-    {
-      "email": "ww@gmail.com",
-      "password": "$2a$10$6ZlpM8xTlxtN50C8m1w2P.CFyynakwqKYzChsYC5Pay5sLUFX52qe",
-      "infoConfirm": 0,
-      "resetPassword": 0,
-      "level": 1,
-      "id": 4
-    },
-    {
-      "email": "xx@gmail.com",
-      "password": "$2a$10$CR/8i57F5uMuKfr/X/W7Q.aguYJ9OUnrEl5q/aotJfhQEVol/wvr.",
-      "infoConfirm": 0,
-      "resetPassword": 0,
-      "level": 1,
-      "id": 5
     }
   ],
   "information": [
     {
       "photo": "",
-      "userName": "米其林",
-      "phoneNumber": "0912121212",
-      "shortInfo": "666",
-      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub",
-      "youtubeLink": "bb",
-      "igLink": "aa",
+      "userName": "阿毛",
+      "phoneNumber": "123456789",
+      "shortInfo": "阿毛喔",
+      "learningTag": "Bootstrap,C,MySQL",
+      "youtubeLink": "",
+      "igLink": "",
       "githubLink": "",
-      "linkedinLink": "cc",
-      "cakeresumeLink": "dd",
-      "teacherInfo": "1111111111",
-      "tutoringTags": "PostgreSQL,React,Sass,TypeScript,Vue",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
       "userId": 1,
       "id": 1
     },
     {
       "photo": "",
-      "userName": "王大陸",
-      "phoneNumber": "0900111222",
-      "shortInfo": "認真好學生",
-      "learningTag": "Git,GitHub",
-      "youtubeLink": "yooo",
-      "igLink": "iggg",
+      "userName": "小b",
+      "phoneNumber": "123666",
+      "shortInfo": "哈囉",
+      "learningTag": "Bootstrap,C",
+      "youtubeLink": "",
+      "igLink": "",
       "githubLink": "",
-      "linkedinLink": "liii",
-      "cakeresumeLink": "caaa",
-      "teacherInfo": "嗨 我是專門教JS的",
-      "tutoringTags": "JavaScript,TypeScript",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
       "userId": 2,
       "id": 2
-    },
-    {
-      "photo": "",
-      "userName": "六角",
-      "phoneNumber": "09666666",
-      "shortInfo": "六角六角六角",
-      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
-      "youtubeLink": "六角",
-      "igLink": "六角",
-      "githubLink": "",
-      "linkedinLink": "六角",
-      "cakeresumeLink": "六角",
-      "teacherInfo": "六角六角六角六角六角六角",
-      "tutoringTags": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
-      "userId": 3,
-      "id": 3
     }
   ],
   "bookClub": [
@@ -171,25 +131,5 @@
       "content": "第二團讀書會，想參加",
       "id": 6
     }
-  ],
-  "usuallyForm": [
-    {
-      "nickname": "米其林",
-      "userId": 1,
-      "img": ""
-    }
-  ],
-  "chatBoard": [{
-    "room": 1,
-    "userName": "米其林",
-    "content": "初次見面，很高興認識你們。",
-    "id": 1
-  },
-  {
-    "room": 1,
-    "userName": "米其林",
-    "content": "初次見面，很高興認識你們。",
-    "id": 2
-  }
-]
+  ]
 }
