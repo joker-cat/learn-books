@@ -2,44 +2,28 @@
   "users": [
     {
       "email": "aa@gmail.com",
-      "password": "123456",
+      "password": "$2a$10$uBgOjBMPn/WwMphkT9lJr.P3GsnCdlHIfE4WUi7m0P43Hjj28/e1G",
       "infoConfirm": 1,
       "resetPassword": 0,
       "level": 1,
       "id": 1
     },
     {
-      "email": "ff@gmail.com",
-      "password": "123456",
+      "email": "bb@gmail.com",
+      "password": "$2a$10$0TXd4clTZocrFCv9kAOhH.Z1ACth6jCc0KhNTflfwyjzVjpxIYbMy",
       "infoConfirm": 1,
       "resetPassword": 0,
       "level": 1,
       "id": 2
-    },
-    {
-      "email": "hh@gmail.com",
-      "password": "123456",
-      "infoConfirm": 0,
-      "resetPassword": 0,
-      "level": 1,
-      "id": 3
-    },
-    {
-      "email": "bobo524000@gmail.com",
-      "password": "qq11111",
-      "infoConfirm": 0,
-      "resetPassword": 0,
-      "level": 1,
-      "id": 4
     }
   ],
   "information": [
     {
       "photo": "",
-      "userName": "阿佑",
-      "phoneNumber": "123456",
-      "shortInfo": "我是阿佑佑",
-      "learningTag": "AngularJS,Bootstrap,GitHub",
+      "userName": "阿毛",
+      "phoneNumber": "123456789",
+      "shortInfo": "阿毛喔",
+      "learningTag": "Bootstrap,C,MySQL",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -52,10 +36,10 @@
     },
     {
       "photo": "",
-      "userName": "我填寫了",
-      "phoneNumber": "123456666",
-      "shortInfo": "嗨嗨",
-      "learningTag": "AngularJS,HTML5,PostgreSQL",
+      "userName": "小b",
+      "phoneNumber": "123666",
+      "shortInfo": "哈囉",
+      "learningTag": "Bootstrap,C",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -65,38 +49,6 @@
       "tutoringTags": "",
       "userId": 2,
       "id": 2
-    },
-    {
-      "photo": "",
-      "userName": "六角",
-      "phoneNumber": "09666666",
-      "shortInfo": "六角六角六角",
-      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
-      "youtubeLink": "六角",
-      "igLink": "六角",
-      "githubLink": "",
-      "linkedinLink": "六角",
-      "cakeresumeLink": "六角",
-      "teacherInfo": "六角六角六角六角六角六角",
-      "tutoringTags": "AngularJS,Bootstrap,C,CSS3,Git,GitHub,HTML5,JavaScript,MySQL,NET,Node,PHP,PostgreSQL,React,Sass,TypeScript,Vue",
-      "userId": 3,
-      "id": 3
-    },
-    {
-      "photo": "",
-      "userName": "棠棠",
-      "phoneNumber": "0978175172",
-      "shortInfo": "我是棠棠",
-      "learningTag": "Bootstrap,React,TypeScript",
-      "youtubeLink": "",
-      "igLink": "",
-      "githubLink": "",
-      "linkedinLink": "",
-      "cakeresumeLink": "",
-      "teacherInfo": "嗨嗨",
-      "tutoringTags": "Git",
-      "userId": 4,
-      "id": 4
     }
   ],
   "bookClub": [

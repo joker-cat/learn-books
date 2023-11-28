@@ -68,10 +68,9 @@
             </div>
             <%- include('./layout/footer'); -%>
     </section>
-    <!-- <script type="module" src="../main.js"></script> -->
     <script type="module">
         console.log('---註冊頁---');
-        import { newSignup, alreadySignupEmail, mySessionStorage } from "/js/_sharedvariables.js";
+        import { newSignup, alreadySignupEmail, mySessionStorage } from "/api/_sharedvariables.js";
         let signupBtn = document.querySelector('.signup-btn');
         signupBtn.addEventListener('click', () => {
             let inputEmail = document.querySelector('#floatingInput').value;
@@ -88,11 +87,8 @@
             if (!(emailTest.test(inputEmail) && passwordTest.test(inputPassword))) return;
             console.log('---輸入狀態---');
             console.log(inputEmail, inputPassword, inputCheckPassword, inputPassword === inputCheckPassword, emailTest.test(inputEmail), passwordTest.test(inputPassword));
-
-            console.log('---檢測是否重複註冊信箱---');
-            alreadySignupEmail(inputEmail).then((resBoolen) => {
-                if (!resBoolen) newSignup(inputEmail, inputPassword);
-            })
+            console.log('--註冊流程開始--');
+            newSignup(inputEmail, inputPassword);
         })
     </script>
 </body>

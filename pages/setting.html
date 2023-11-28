@@ -609,9 +609,8 @@
             </div>
             <%- include('./layout/footer'); -%>
     </section>
-    <script type="module" src="../main.js"></script>
     <script type="module">
-        import { updateInfo } from "/js/_sharedvariables.js";
+        import { updateInfo } from "/api/_sharedvariables.js";
 
         const imageCheckbox = document.querySelectorAll(".image-checkbox");
         const sendOut = document.querySelector('.send-out');
