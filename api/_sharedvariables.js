@@ -1,4 +1,4 @@
-import { axios } from "../main.js";
+import { axios } from "/main.js";
 //json-server:port
 export const jsonUrl = "http://localhost:3000";
 
@@ -15,7 +15,7 @@ export function newSignup(inputEmail, inputPassword) {
             email: inputEmail,
             password: inputPassword,
             infoConfirm: 0, //1為有填寫完成基本資料
-            resetPassword: 0, //如果是1個話要賺去修改密碼畫面
+            teacherInfo: 0, //家教的部分是否有填寫
             level: 1, //切換家教跟學生的頁面(暫不確定是否用到)
         })
         .then((res) => {

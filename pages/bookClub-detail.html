@@ -13,7 +13,6 @@
 </head>
 
 <body>
-    <script type="module" src="../main.js"></script>
     <%- include('./layout/navbar'); -%>
         <%- include('./layout/banner'); -%>
             <main class="Learn-detail mb-5 pb-lg-5 p-0">
@@ -37,7 +36,6 @@
                             <div class="col-lg-3">
                                 <h3 class="sub-title h5">讀書會主揪</h3>
                             </div>
-
                             <div class="col-lg-9 d-flex flex-lg-row flex-column align-items-center">
                                 <div class="profile-pic">
                                     <div class="innerImg"
@@ -300,20 +298,20 @@
 
                                 <a href="#" class="btn-reply"><i class="bi bi-reply-fill"></i>回覆</a>
 
-                                
-                                    <hr>
-                                    <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                    <textarea class="form-control" rows="5"></textarea>
-                                    <div class="row mt-3">
-                                        <div class="col-auto">
-                                            <small>0 / 300</small>
-                                        </div>
-                                        <div class="col text-lg-end text-end">
-                                            <a href="#" class="btn px-5 btn-light">取消</a>
-                                            <a href="#" class="btn px-5 btn-primary">留言</a>
-                                        </div>
+
+                                <hr>
+                                <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
+                                <textarea class="form-control" rows="5"></textarea>
+                                <div class="row mt-3">
+                                    <div class="col-auto">
+                                        <small>0 / 300</small>
                                     </div>
-                                
+                                    <div class="col text-lg-end text-end">
+                                        <a href="#" class="btn px-5 btn-light">取消</a>
+                                        <a href="#" class="btn px-5 btn-primary">留言</a>
+                                    </div>
+                                </div>
+
                             </div>
 
                         </div>
@@ -321,6 +319,10 @@
                 </section>
             </main>
             <%- include('./layout/footer'); -%>
+
+                <script type="module">
+                    
+                </script>
 </body>
 
 </html>

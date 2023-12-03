@@ -13,7 +13,7 @@
 </head>
 
 <body>
-    <script type="module" src="../main.js"></script>
+
     <%- include('./layout/navbar'); -%>
         <%- include('./layout/banner'); -%>
             <main class="Learn-detail mb-5 pb-lg-5 p-0">
@@ -24,42 +24,42 @@
                                 <div class="col-lg-8 mb-lg-2 mb-4 text-lg-start text-center">
                                     <h1 class="Learn-title h3">發起讀書會</h1>
                                 </div>
-                                <div class="col-lg-4 text-lg-end  text-center mb-2">
+                                <!-- <div class="col-lg-4 text-lg-end  text-center mb-2">
                                     <a href="bookClub.html" class="btn px-5 btn-light">取消</a>
                                     <a href="#" class="btn px-5 btn-primary">發布</a>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </section>
                     <section class="Learn-detail-info">
                         <div class="container bg-white p-lg-5 px-3 py-3 pb-5">
-
                             <div class="row ">
                                 <div class="col-lg-3">
                                     <h3 class="sub-title h5">讀書會主題</h3>
                                 </div>
                                 <div class="col-lg-8">
-
                                     <div class="mb-3">
-                                        <label for="leanTitle" class="form-label">讀書會標題</label>
-                                        <input type="text" class="form-control" id="leanTitle"
-                                            aria-describedby="textHelp">
+                                        <label for="leanTitle" class="form-label">讀書會標題<span
+                                                class="need-star">*</span></label>
+                                        <input type="text" class="form-control" id="leanTitle" name="title"
+                                            maxlength="20" onkeydown="return event.key !== 'Enter';">
                                     </div>
                                     <div class="mb-3">
-                                        <label for="exampleFormControlTextarea1" class="form-label">敘述說明</label>
-                                        <textarea class="form-control" id="exampleFormControlTextarea1"
-                                            rows="6"></textarea>
+                                        <label for="exampleFormControlTextarea1" class="form-label">敘述說明<span
+                                                class="need-star">*</span></label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="6"
+                                            name="description"></textarea>
                                     </div>
-
                                     <article>
                                         <div class="title mb-3">
-                                            <label>家教標籤<small>選取的學習標籤會作為讀書會標籤使用。如果新增需要到 帳號設定 新增學習標籤</small></label>
+                                            <label>學習標籤<span
+                                                    class="need-star">*</span><small>選取的學習標籤會作為文章標籤使用。</small></label>
                                         </div>
                                         <div class="row row-cols-lg-6 row-cols-md-3 row-cols-3 g-2">
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagAngularJS">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagAngularJS"
                                                             value="AngularJS">
                                                         <div class="innerImg">
@@ -74,7 +74,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagBootstrap">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagBootstrap"
                                                             value="Bootstrap">
                                                         <div class="innerImg">
@@ -89,7 +89,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagC">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagC" value="C">
                                                         <div class="innerImg">
                                                             <div class="image"
@@ -103,7 +103,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagCSS3">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagCSS3"
                                                             value="CSS3">
                                                         <div class="innerImg">
@@ -118,7 +118,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagGit">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagGit" value="Git">
                                                         <div class="innerImg">
                                                             <div class="image"
@@ -132,7 +132,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagGitHub">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagGitHub"
                                                             value="GitHub">
                                                         <div class="innerImg">
@@ -147,7 +147,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagHTML5">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagHTML5"
                                                             value="HTML5">
                                                         <div class="innerImg">
@@ -162,7 +162,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagJavaScript">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagJavaScript"
                                                             value="JavaScript">
                                                         <div class="innerImg">
@@ -177,7 +177,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagMySQL">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagMySQL"
                                                             value="MySQL">
                                                         <div class="innerImg">
@@ -192,7 +192,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagNET">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagNET" value="NET">
                                                         <div class="innerImg">
                                                             <div class="image"
@@ -206,7 +206,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagNode">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagNode"
                                                             value="Node">
                                                         <div class="innerImg">
@@ -221,7 +221,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagPHP">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagPHP" value="PHP">
                                                         <div class="innerImg">
                                                             <div class="image"
@@ -235,7 +235,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagPostgreSQL">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagPostgreSQL"
                                                             value="PostgreSQL">
                                                         <div class="innerImg">
@@ -250,7 +250,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagReact">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagReact"
                                                             value="React">
                                                         <div class="innerImg">
@@ -265,7 +265,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagSass">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagSass"
                                                             value="Sass">
                                                         <div class="innerImg">
@@ -280,7 +280,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagTypeScript">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagTypeScript"
                                                             value="TypeScript">
                                                         <div class="innerImg">
@@ -295,7 +295,7 @@
                                             <div class="col">
                                                 <div class="form-check tagBtn">
                                                     <label class="form-check-label image-checkbox" for="tagVue">
-                                                        <input class="form-check-input teacher-will-input"
+                                                        <input class="form-check-input create-book-club"
                                                             name="tutoringTags" type="checkbox" id="tagVue" value="Vue">
                                                         <div class="innerImg">
                                                             <div class="image"
@@ -308,7 +308,6 @@
                                             </div>
                                         </div>
                                     </article>
-
                                 </div>
                             </div>
                             <div class="row border-top pt-5 mt-5">
@@ -318,29 +317,35 @@
                                 <div class="col-lg-7">
                                     <article>
                                         <div class="mb-3">
-                                            <label for="leanTitle" class="form-label">約定日期</label>
-                                            <input type="date" class="form-control" id="leanTitle"
-                                                aria-describedby="textHelp">
+                                            <label for="leanDate" class="form-label">約定日期<span
+                                                    class="need-star">*</span></label>
+                                            <input type="date" class="form-control" id="leanDate" name="date">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="leanTitle" class="form-label">約定時間</label>
-                                            <input type="time" value="13:30" min="09:00" max="18:00" class="form-control" id="leanTitle"
-                                                aria-describedby="textHelp">
+                                            <label for="leanTime" class="form-label">約定時間<span
+                                                    class="need-star">*</span></label>
+                                            <input type="time" class="form-control" id="leanTime" name="time">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="leanTitle" class="form-label">約定地點</label>
-                                            
-
-                                            <input type="text" class="form-control" id="leanTitle"
-                                                aria-describedby="textHelp">
+                                            <label for="leanArea" class="form-label">約定地點<span
+                                                    class="need-star">*</span></label>
+                                            <input type="text" class="form-control" id="leanArea" name="location"
+                                                maxlength="20" onkeydown="return event.key !== 'Enter';">
                                         </div>
                                         <div class="mb-3">
-                                            <label for="leanTitle" class="form-label">開團人數</label>
-                                            <input type="number" class="form-control" id="leanTitle" min="1" max="5"
-                                                aria-describedby="textHelp">
+                                            <label class="form-label" style="margin-bottom: 1rem;">開團人數<span
+                                                    style="font-size: 12px;">(含主揪)</span><span
+                                                    class="need-star">*</span></label>
+                                            <br>
+                                            <select id="leanCount" name="number" class="form-control"
+                                                style="width: 120px;border: 1px solid rgb(199, 190, 190);">
+                                                <option value="" disabled selected>未選擇</option>
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                            </select>
                                         </div>
-
-
                                     </article>
                                 </div>
                             </div>
@@ -353,8 +358,8 @@
                                     <a href="#" class="btn px-5 btn-danger">刪除讀書會</a>
                                 </div>
                                 <div class="col-lg-6 text-lg-end text-center mb-2">
-                                    <a href="#" class="btn px-5 btn-light">取消</a>
-                                    <a href="#" class="btn px-5 btn-primary">發布</a>
+                                    <a href="bookClub.html" class="btn px-5 btn-light">取消</a>
+                                    <button class="btn px-5 btn-primary release-article">發布</button>
                                 </div>
                             </div>
                         </div>
@@ -362,9 +367,53 @@
                 </form>
             </main>
             <%- include('./layout/footer'); -%>
-                <script>
-                    const imageCheckbox = document.querySelectorAll(".image-checkbox");
+                <script type="module">
+                    import { createBookArticle } from "/api/_bookclub.js";
 
+                    const imageCheckbox = document.querySelectorAll('.image-checkbox');
+                    const releaseArticle = document.querySelector('.release-article');
+                    const userId = sessionStorage.getItem("id");
+
+                    //送出
+                    releaseArticle.addEventListener('click', createArticle);
+                    function createArticle(e) {
+                        e.preventDefault();
+                        const createTag = [...document.querySelectorAll('.create-book-club:checked')];
+                        const editForm = document.querySelector('.formBox');
+                        const formData = new FormData(editForm);
+                        const user = {};
+                        let boolStatus = true;
+
+                        console.log('---開始建立資料格式---');
+                        user.learningTag = createTag.map(e => e.value).join(',');
+                        user.userId = parseInt(userId);
+                        user.teamstatus = 0;
+                        user.createtime = nowTime();
+                        //0為揪團中 1為已成團 2為活動結束 3為主揪取消
+                        //前台列表畫面基本只看的到0揪團中
+                        for (let pair of formData.entries()) {
+                            if (pair[1].trim() === '') boolStatus = false;
+                            user[pair[0]] = pair[1];
+                        }
+
+                        console.log('---檢查欄位填寫---');
+                        (!(createTag.find(e => e.checked === true) === undefined) && boolStatus) ?
+                            createBookArticle(user) :
+                            alert('創建失敗，請檢查欄位是否填寫確實。');
+                    }
+
+                    function nowTime() {
+                        const currentDate = new Date();
+                        const year = currentDate.getFullYear();
+                        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+                        const day = String(currentDate.getDate()).padStart(2, '0');
+                        const hours = String(currentDate.getHours()).padStart(2, '0');
+                        const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+
+                        return `${year}.${month}.${day} ${hours}:${minutes}`;
+                    }
+
+                    //checkbox
                     imageCheckbox.forEach(function (checkbox) {
                         checkbox.addEventListener("click", function (e) {
                             checkbox.classList.toggle('image-checkbox-checked');

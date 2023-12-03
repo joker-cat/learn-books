@@ -14,145 +14,55 @@
 
 <body>
     <%- include('./layout/navbar'); -%>
-    <%- include('./layout/banner'); -%>
-        <aside>
-            <div class="container">
-                <div class="row justify-content-between">
-                    <div class="col-lg-6">
-                        <div class="input-group mb-3 ">
-                            <span class="input-group-text bg-primary text-white" id="basic-addon1"><i
-                                    class="bi bi-search"></i></span>
-                            <input type="text" class="form-control bg-white" placeholder="尋找學習類型" aria-label="LearnType"
-                                aria-describedby="basic-addon1">
-                            <button class="btn btn-primary px-5">搜尋</button>
+        <%- include('./layout/banner'); -%>
+            <aside>
+                <div class="container">
+                    <div class="row justify-content-between">
+                        <div class="col-lg-6">
+                            <div class="input-group mb-3 ">
+                                <span class="input-group-text bg-primary text-white" id="basic-addon1"><i
+                                        class="bi bi-search"></i></span>
+                                <input type="text" class="form-control bg-white" placeholder="尋找學習類型"
+                                    aria-label="LearnType" aria-describedby="basic-addon1">
+                                <button class="btn btn-primary px-5">搜尋</button>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 text-lg-end ">
-                        <div class="d-grid">
-                            <a href="bookClub-edit.html"><button style="width: 100%;" class="btn btn-primary px-5">＋發起讀書會</button></a>
+                        <div class="col-lg-3 col-md-4 text-lg-end ">
+                            <div class="d-grid">
+                                <a href="bookClub-edit.html" class="create-article">
+                                    <button style="width: 100%;" class="btn btn-primary px-5">＋發起讀書會</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </aside>
-        <main class="infoCardArea">
-            <div class="container">
-                <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1 infoCardList">
-                    <div class="col">
-                        <a href="./bookClub-detail.html" class="infoCard">
-                            <div class="infoState">
-                                <span class="cardType">讀書會</span>
-                                <span class="cardState">揪團中</span>
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(/assets/images/profile-pic.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="TxtCard">
-                                <h3 class="infoTitle">JavaScript 夏季學習會：精通前端開發</h3>
-                                <ul class="infoDetail">
-                                    <li><span>日期</span>2023 01 01</li>
-                                    <li><span>地點</span>星巴克喵喵門市</li>
-                                    <li><span>時間</span>10：00 am</li>
-                                    <li><span>人數</span>3/4</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./bookClub-detail.html" class="infoCard">
-                            <div class="infoState">
-                                <span class="cardType">讀書會</span>
-                                <span class="cardState">揪團中</span>
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(/assets/images/profile-pic.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="TxtCard">
-                                <h3 class="infoTitle">JavaScript 夏季學習會：精通前端開發</h3>
-                                <ul class="infoDetail">
-                                    <li><span>日期</span>2023 01 01</li>
-                                    <li><span>地點</span>星巴克喵喵門市</li>
-                                    <li><span>時間</span>10：00 am</li>
-                                    <li><span>人數</span>3/4</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./bookClub-detail.html" class="infoCard">
-                            <div class="infoState">
-                                <span class="cardType">讀書會</span>
-                                <span class="cardState">揪團中</span>
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(/assets/images/profile-pic.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="TxtCard">
-                                <h3 class="infoTitle">JavaScript 夏季學習會：精通前端開發</h3>
-                                <ul class="infoDetail">
-                                    <li><span>日期</span>2023 01 01</li>
-                                    <li><span>地點</span>星巴克喵喵門市</li>
-                                    <li><span>時間</span>10：00 am</li>
-                                    <li><span>人數</span>3/4</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./bookClub-detail.html" class="infoCard">
-                            <div class="infoState">
-                                <span class="cardType">讀書會</span>
-                                <span class="cardState">揪團中</span>
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(/assets/images/profile-pic.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="TxtCard">
-                                <h3 class="infoTitle">JavaScript 夏季學習會：精通前端開發</h3>
-                                <ul class="infoDetail">
-                                    <li><span>日期</span>2023 01 01</li>
-                                    <li><span>地點</span>星巴克喵喵門市</li>
-                                    <li><span>時間</span>10：00 am</li>
-                                    <li><span>人數</span>3/4</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col">
-                        <a href="./bookClub-detail.html" class="infoCard">
-                            <div class="infoState">
-                                <span class="cardType">讀書會</span>
-                                <span class="cardState">揪團中</span>
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(/assets/images/profile-pic.jpg);">
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="TxtCard">
-                                <h3 class="infoTitle">JavaScript 夏季學習會：精通前端開發</h3>
-                                <ul class="infoDetail">
-                                    <li><span>日期</span>2023 01 01</li>
-                                    <li><span>地點</span>星巴克喵喵門市</li>
-                                    <li><span>時間</span>10：00 am</li>
-                                    <li><span>人數</span>3/4</li>
-                                </ul>
-                            </div>
-                        </a>
-                    </div>
+            </aside>
+            <main class="infoCardArea">
+                <div class="container">
+                    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-1 infoCardList"></div>
                 </div>
-            </div>
-        </main>
-        <%- include('./layout/footer'); -%>
-        <script type="module" src="../main.js"></script>
+            </main>
+            <%- include('./layout/footer'); -%>
+                <script type="module">
+                    import { init, renderData, getInfoStatus } from "/api/_bookclub.js";
+                    const infoRender = document.querySelector('.infoCardList');
+                    const createArticle = document.querySelector('.create-article');
+                    const userId = sessionStorage.getItem("id");
+
+                    async function bookInit(params) {
+                        const result = await init();
+                        const infoStatus = await getInfoStatus(userId);
+                        const renderView = await renderData(result);
+                        if (infoStatus === 0) {
+                            createArticle.setAttribute("onclick", "return false;");
+                        }
+                        createArticle.addEventListener('click', () => {
+                            (infoStatus === 0)?alert('請到"帳號設定"裡面填寫基本必填項目。'):null;
+                        })
+                        infoRender.innerHTML = renderView;
+                    }
+                    bookInit();
+                </script>
 </body>
 
 </html>

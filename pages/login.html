@@ -76,8 +76,8 @@
 
             comparison({ "email": inputAccount, "password": inputPassword })
                 .then((isLoginSuccess) => {
-                    const { email, id } = isLoginSuccess.data.user;
-                    (isLoginSuccess.status === 200) ?
+                    const { email, id, infoConfirm } = isLoginSuccess.data.user;
+                    (isLoginSuccess.status === 200 && infoConfirm !== 1) ?
                         mySessionStorage({ email, id }, "setting", isLoginSuccess.data.accessToken) :
                         mySessionStorage({ email, id }, "index", isLoginSuccess.data.accessToken);
                 });

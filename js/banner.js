@@ -21,6 +21,7 @@ const updateBannerTitle = (route) => {
       break;
     case 'bookClub-edit.html':
     case 'bookClub.html':
+    case 'bookClub-detail.html':
       title.innerText = 'BOOK CLUB';
       subTitle.innerText = '揪團讀書會';
       rendering([...smallTag], title.textContent);
