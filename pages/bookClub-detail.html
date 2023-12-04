@@ -321,7 +321,26 @@
             <%- include('./layout/footer'); -%>
 
                 <script type="module">
-                    
+                    import { getArticle } from "/api/_bookclub.js";
+
+                    //獲取參數
+                    function parseNumber() {
+                        // 獲取 URL 中的 search 部分
+                        const queryString = window.location.search;
+                        // 使用 URLSearchParams 解析 search 部分
+                        const urlParams = new URLSearchParams(queryString);
+                        // 獲取特定參數的值並回傳
+                        return urlParams.get('dataArticle');
+                    }
+
+                    async function init() {
+                        const getNumber = await parseNumber();
+                        const getArticleInfo = await getArticle(getNumber);
+                        console.log(getArticleInfo);
+                        
+                        //之後要撈個資
+                    }
+                    init();
                 </script>
 </body>
 

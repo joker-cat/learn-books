@@ -2,7 +2,7 @@
   "users": [
     {
       "email": "aa@gmail.com",
-      "password": "$2a$10$uBgOjBMPn/WwMphkT9lJr.P3GsnCdlHIfE4WUi7m0P43Hjj28/e1G",
+      "password": "$2a$10$E9.uAYact7Oaded2HuwI1OiwB5RJj.nQD5pvUlZCZJRz5Q9IiKOZi",
       "infoConfirm": 1,
       "teacherInfo": 0,
       "level": 1,
@@ -10,20 +10,20 @@
     },
     {
       "email": "bb@gmail.com",
-      "password": "$2a$10$0TXd4clTZocrFCv9kAOhH.Z1ACth6jCc0KhNTflfwyjzVjpxIYbMy",
+      "password": "$2a$10$zmCk4RH0WRGhdK1VvKIt1u3MU1fwxTPYUxaS6wda/TEgjYjVxxX9e",
       "infoConfirm": 1,
       "teacherInfo": 0,
       "level": 1,
       "id": 2
     }
   ],
-  "information": [
+  "informations": [
     {
       "photo": "",
-      "userName": "我是A",
-      "phoneNumber": "112233",
-      "shortInfo": "哈囉",
-      "learningTag": "C,CSS3,Git",
+      "userName": "小明",
+      "phoneNumber": "0900123456",
+      "shortInfo": "我是小明",
+      "learningTag": "AngularJS,Bootstrap,C",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -36,10 +36,10 @@
     },
     {
       "photo": "",
-      "userName": "小b",
-      "phoneNumber": "123666",
-      "shortInfo": "哈囉",
-      "learningTag": "Bootstrap,C",
+      "userName": "B先生",
+      "phoneNumber": "12121212",
+      "shortInfo": "我是B",
+      "learningTag": "C,CSS3,Git",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -51,20 +51,48 @@
       "id": 2
     }
   ],
-  "bookClub": [
+  "bookClubs": [
     {
-      "learningTag": "C",
+      "learningTag": "AngularJS",
       "userId": 1,
       "teamstatus": 0,
-      "createtime": "2023.12.03 23:21",
-      "title": "徵台中一起學C",
-      "description": "我想學C",
-      "tutoringTags": "C",
-      "date": "2023-12-19",
-      "time": "14:25",
-      "location": "台中市政府廣場前",
-      "number": "4",
+      "createtime": "2023.12.05 01:02",
+      "title": "台中JS一日遊",
+      "description": "台中JS一日遊台中JS一日遊",
+      "tutoringTags": "AngularJS",
+      "date": "2023-12-08",
+      "time": "01:02",
+      "location": "台中",
+      "number": "2",
       "id": 1
+    },
+    {
+      "learningTag": "Vue",
+      "userId": 1,
+      "teamstatus": 0,
+      "createtime": "2023.12.05 01:31",
+      "title": "學VUE",
+      "description": "學VUE學VUE",
+      "tutoringTags": "Vue",
+      "date": "2023-12-16",
+      "time": "05:30",
+      "location": "台北",
+      "number": "4",
+      "id": 2
+    },
+    {
+      "learningTag": "C",
+      "userId": 2,
+      "teamstatus": 0,
+      "createtime": "2023.12.05 01:33",
+      "title": "學C++",
+      "description": "學C++學C++學C++",
+      "tutoringTags": "C",
+      "date": "2023-12-22",
+      "time": "01:39",
+      "location": "台東",
+      "number": "3",
+      "id": 3
     }
   ],
   "tutoringPlatform": [
@@ -123,5 +151,17 @@
       "content": "第二團讀書會，想參加",
       "id": 6
     }
-  ]
+  ],
+  "relations": {
+    "informations": {
+      "property": "id",
+      "relatedTo": "bookClubs",
+      "keyInRelatedTo": "informationId"
+    },
+    "bookClubs": {
+      "property": "informationId",
+      "relatedTo": "informations",
+      "keyInRelatedTo": "id"
+    }
+  }
 }

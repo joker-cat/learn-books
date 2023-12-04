@@ -21,7 +21,6 @@ export function newSignup(inputEmail, inputPassword) {
         .then((res) => {
             console.log('---帳號沒註冊過---');
             console.log(res);
-            debugger
             if (res.status === 201) {
                 newInfomation(res.data.user.id);
                 mySessionStorage(res.data.user, "setting", res.data.accessToken);
@@ -36,7 +35,7 @@ export function newSignup(inputEmail, inputPassword) {
 function newInfomation(getId) {
     console.log('---註冊完成，建立基本資料欄位---');
     axios
-        .post(`${jsonUrl}/information`, {
+        .post(`${jsonUrl}/informations`, {
             "photo": "",
             "userName": "",
             "phoneNumber": "",
@@ -125,7 +124,7 @@ export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     }
     updateObj.learningTag = isStudentTag.map(e => e.value).join(','); // 學生標籤
     updateObj.tutoringTags = isTeacherTag.map(e => e.value).join(','); // 老師標籤
-    axios.patch(`${jsonUrl}/information/${sessionStorage.getItem("id")}`, updateObj)
+    axios.patch(`${jsonUrl}/informations/${sessionStorage.getItem("id")}`, updateObj)
         .then(function (res) {
             if (res.status === 200) infoConfirm(`${sessionStorage.getItem("id")}`);
         })

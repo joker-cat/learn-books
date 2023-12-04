@@ -2,13 +2,14 @@ import { axios } from "/main.js";
 
 //json-server:port
 import { jsonUrl } from "/api/_sharedvariables.js";
+import { Axios } from "axios";
 
 
 //建立讀書會文章
 export function createBookArticle(obj) {
     console.log('---開始新增讀書會貼文---');
     axios
-        .post(`${jsonUrl}/bookClub`, obj)
+        .post(`${jsonUrl}/bookClubs`, obj)
         .then((res) => {
             if (res.status === 201) {
                 console.log('---讀書會文章創立成功---');
@@ -26,7 +27,7 @@ export function createBookArticle(obj) {
 export async function init() {
     function getBookArticle(str) {
         return new Promise((resolve, reject) => {
-            axios.get(`${jsonUrl}/bookClub`)
+            axios.get(`${jsonUrl}/bookClubs`)
                 .then(res => {
                     (res.status === 200) ? resolve(res.data) : null;
                 })
@@ -48,7 +49,7 @@ export function renderData(arrData) {
     arrData.forEach(ele => {
         str += `
         <div class="col" data-article="${ele.id}">
-        <a href="./bookClub-detail.html" class="infoCard">
+        <a href="./bookClub-detail.html?dataArticle=${ele.id}" class="infoCard">
             <div class="infoState">
                 <span class="cardType">讀書會</span>
                 <span class="cardState">揪團中</span>
@@ -73,6 +74,22 @@ export function renderData(arrData) {
     });
     return str;
 }
+
+//撈取點選貼文資訊
+export function getArticle(num) {
+    console.log(num);
+    axios.get(`${jsonUrl}/bookClubs/${num}?_expand=user`)
+        .then(res => {
+            if (res.status === 200) {
+                console.log(res);
+                return res.data
+            }
+        })
+        .catch(error => {
+            console.log(error);
+        });
+}
+
 
 //判斷是否有填寫個資 infoConfirm
 export async function getInfoStatus(id) {
