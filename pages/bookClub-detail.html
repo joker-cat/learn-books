@@ -259,7 +259,8 @@
                         </div>
 
                         <div class="row col-lg-7 justify-content-center mx-auto pb-5">
-                            <div class="col-12 QA-Box">
+
+                            <div class="col-12 QA-Box user-comments">
                                 <div class="userName">
                                     <div class="profile-pic">
                                         <div class="innerImg"
@@ -277,43 +278,39 @@
                                     </div>
                                 </div>
                             </div>
-
-                            <div class="col-12 QA-Box">
-                                <div class="userName">
-                                    <div class="profile-pic">
-                                        <div class="innerImg"
-                                            style="background-image: url(../assets/images/profile-pic-2.jpg);"></div>
+                            <section class="msg-section">
+                                <div class="col-12 QA-Box">
+                                    <div class="userName">
+                                        <div class="profile-pic">
+                                            <div class="innerImg"
+                                                style="background-image: url(../assets/images/profile-pic-2.jpg);">
+                                            </div>
+                                        </div>
+                                        <div class="profile-name">橘貓妞妞 <time>2023-01-01 12:30 </time></div>
                                     </div>
-                                    <div class="profile-name">橘貓妞妞 <time>2023-01-01 12:30 </time></div>
-                                </div>
-                                <p class="mess-content">
-                                    你是否有使用過任何 JavaScript 的測試框架或工具？如果有，請分享你的經驗。
-                                </p>
-                                <div class="replyContent">
-                                    <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                    <p class="mess-content">
-                                        有的，我有很多經驗。
-                                    </p>
-                                </div>
-
-                                <a href="#" class="btn-reply"><i class="bi bi-reply-fill"></i>回覆</a>
-
-
-                                <hr>
-                                <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                <textarea class="form-control reply" rows="5"></textarea>
-                                <div class="row mt-3">
-                                    <div class="col-auto">
-                                        <small>0 / 300</small>
+                                    <p class="mess-content">你是否有使用過任何 JavaScript 的測試框架或工具？如果有，請分享你的經驗。</p>
+                                    <div class="replyContent">
+                                        <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
+                                        <p class="mess-content">有的，我有很多經驗。</p>
                                     </div>
-                                    <div class="col text-lg-end text-end">
-                                        <a href="#" class="btn px-5 btn-light">取消</a>
-                                        <a href="#" class="btn px-5 btn-primary">留言</a>
+                                    <span class="btn-reply" style="cursor:pointer;"><i
+                                            class="bi bi-reply-fill"></i>回覆</span>
+                                    <div class="reply-content" style="height: 0; overflow: hidden;">
+                                        <hr>
+                                        <div class="profile-name pb-2">糖糖喵<time>2023-01-01 12:30</time></div>
+                                        <textarea class="form-control reply" rows="5"></textarea>
+                                        <div class="row mt-3">
+                                            <div class="col-auto">
+                                                <small class="word-count">0 / 300</small>
+                                            </div>
+                                            <div class="col text-lg-end text-end">
+                                                <a class="btn px-5 btn-light cancel">取消</a>
+                                                <a href="#" class="btn px-5 btn-primary">留言</a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-
-                            </div>
-
+                            </section>
                         </div>
                     </div>
                 </section>
@@ -321,7 +318,7 @@
             <%- include('./layout/footer'); -%>
 
                 <script type="module">
-                    import { getArticle, getWhoArticle, createMessage,getMessage } from "/api/_bookclub.js";
+                    import { getArticle, getWhoArticle, createMessage, getMessage } from "/api/_bookclub.js";
                     /* 優化版
                     const elements = {
                         learnTitle: '.Learn-title',
@@ -348,12 +345,16 @@
                     const progressText = document.querySelector('.progress-text');
                     const messageTxt = document.querySelector('.message-txt');
                     const messageBtn = document.querySelector('.message-btn');
+                    const btnReply = document.querySelector('.btn-reply');
+                    const replyContent = document.querySelector('.reply-content');
+                    const cancelBtn = document.querySelector('.cancel');
+
 
                     //推送留言
                     messageBtn.addEventListener('click', messagePush);
                     function messagePush() {
                         if (messageTxt.value.trim() === '') return;
-                        const userId = sessionStorage.getItem('id');
+                        const informationId = sessionStorage.getItem('id');
                         const content = messageTxt.value;
                         const bookClubId = parseNumber();
                         const obj = { userId, content, bookClubId };
@@ -361,7 +362,7 @@
                     }
 
                     //填入撈取資訊
-                    function FillinValue(obj) {
+                    function fillinValue(obj) {
                         learnTitle.textContent = obj.title;
                         profileName.textContent = obj["0"].userName;
                         activityTitle.textContent = obj.title;
@@ -402,20 +403,74 @@
                         return urlParams.get('dataArticle');
                     }
 
+                    //填入留言
+                    function fillinMessage(arr) {
+                        console.log(arr);
+                        let str = '';
+                        arr.forEach(eMsg => {
+                            str += `
+                            <div class="col-12 QA-Box">
+                            <div class="userName">
+                                <div class="profile-pic">
+                                    <div class="innerImg"
+                                        style="background-image: url(../assets/images/profile-pic-2.jpg);">
+                                    </div>
+                                </div>
+                                <div class="profile-name">橘貓妞妞 <time>2023-01-01 12:30 </time></div>
+                            </div>
+                            <p class="mess-content">你是否有使用過任何 JavaScript 的測試框架或工具？如果有，請分享你的經驗。</p>
+                            <div class="replyContent">
+                                <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
+                                <p class="mess-content">有的，我有很多經驗。</p>
+                            </div>
+                            <a href="#" class="btn-reply"><i class="bi bi-reply-fill"></i>回覆</a>
+                            
+                            
+                            
+                            
+                            
+                            <div class="reply-content" style="height: 0; overflow: hidden;">
+                                <hr>
+                                <div class="profile-name pb-2">糖糖喵<time>2023-01-01 12:30</time></div>
+                                <textarea class="form-control reply" rows="5"></textarea>
+                                <div class="row mt-3">
+                                    <div class="col-auto">
+                                        <small class="word-count">0 / 300</small>
+                                    </div>
+                                    <div class="col text-lg-end text-end">
+                                        <a class="btn px-5 btn-light cancel">取消</a>
+                                        <a href="#" class="btn px-5 btn-primary">留言</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                            `
+                        })
+                    }
+
+                    //留言訊息框開關
+                    function toggleReply() {
+                        replyContent.style.height = replyContent.style.height === '0px' ? 'initial' : '0px';
+                    }
+
                     async function init() {
                         try {
                             const getNumber = await parseNumber(); //抓參數
                             const getArticleInfo = await getArticle(getNumber); //抓文章
                             const getMsg = await getMessage(getNumber); //抓留言
                             const who = await getWhoArticle(getArticleInfo.userId); //抓發文者
-                            const fillin = await FillinValue({ ...who, ...getArticleInfo }); //填入撈取資訊
-                            
-                            console.log(getMsg);
+                            const fillinInfo = await fillinValue({ ...who, ...getArticleInfo }); //填入撈取資訊
+                            const fillinMsg = await fillinMessage(getMsg);
+
+                            //確保DOM仔入完成才綁JS事件
+                            btnReply.addEventListener('click', toggleReply);
+                            cancelBtn.addEventListener('click', toggleReply);
                         } catch (error) {
                             console.log(error);
                         }
                     }
                     init();
+
                 </script>
 </body>
 

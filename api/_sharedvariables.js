@@ -16,7 +16,6 @@ export function newSignup(inputEmail, inputPassword) {
             password: inputPassword,
             infoConfirm: 0, //1為有填寫完成基本資料
             teacherInfo: 0, //家教的部分是否有填寫
-            level: 1, //切換家教跟學生的頁面(暫不確定是否用到)
         })
         .then((res) => {
             console.log('---帳號沒註冊過---');
@@ -35,7 +34,7 @@ export function newSignup(inputEmail, inputPassword) {
 function newInfomation(getId) {
     console.log('---註冊完成，建立基本資料欄位---');
     axios
-        .post(`${jsonUrl}/informations`, {
+        .post(`${jsonUrl}/information`, {
             "photo": "",
             "userName": "",
             "phoneNumber": "",
@@ -124,7 +123,10 @@ export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     }
     updateObj.learningTag = isStudentTag.map(e => e.value).join(','); // 學生標籤
     updateObj.tutoringTags = isTeacherTag.map(e => e.value).join(','); // 老師標籤
-    axios.patch(`${jsonUrl}/informations/${sessionStorage.getItem("id")}`, updateObj)
+    
+    
+    
+    axios.patch(`${jsonUrl}/information/${sessionStorage.getItem("id")}`, updateObj)
         .then(function (res) {
             if (res.status === 200) infoConfirm(`${sessionStorage.getItem("id")}`);
         })

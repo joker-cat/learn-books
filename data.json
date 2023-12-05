@@ -2,28 +2,33 @@
   "users": [
     {
       "email": "aa@gmail.com",
-      "password": "$2a$10$E9.uAYact7Oaded2HuwI1OiwB5RJj.nQD5pvUlZCZJRz5Q9IiKOZi",
+      "password": "$2a$10$enEiN0oNoF7SZv8GoFOAsuft9jS9C5T0CG5Ggfm6M/e485YqWsU4K",
       "infoConfirm": 1,
       "teacherInfo": 0,
-      "level": 1,
       "id": 1
     },
     {
       "email": "bb@gmail.com",
-      "password": "$2a$10$zmCk4RH0WRGhdK1VvKIt1u3MU1fwxTPYUxaS6wda/TEgjYjVxxX9e",
+      "password": "$2a$10$63mM/6k71dPNT7XcvKeSFeljR73xRlDJr9o/JuBBIh7O4eB3ui9My",
       "infoConfirm": 1,
       "teacherInfo": 0,
-      "level": 1,
       "id": 2
+    },
+    {
+      "email": "cc@gmail.com",
+      "password": "$2a$10$xGKT1jJlJXjmnStB.GViKesE2oJAvxf400LkdK6oXrBYrmMhKGub2",
+      "infoConfirm": 1,
+      "teacherInfo": 0,
+      "id": 3
     }
   ],
-  "informations": [
+  "information": [
     {
       "photo": "",
-      "userName": "小明",
-      "phoneNumber": "0900123456",
-      "shortInfo": "我是小明",
-      "learningTag": "AngularJS,Bootstrap,C",
+      "userName": "小明A",
+      "phoneNumber": "0900111222",
+      "shortInfo": "我是AAAAAA",
+      "learningTag": "C,MySQL,Sass",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -36,10 +41,10 @@
     },
     {
       "photo": "",
-      "userName": "B先生",
-      "phoneNumber": "12121212",
-      "shortInfo": "我是B",
-      "learningTag": "C,CSS3,Git",
+      "userName": "小花B",
+      "phoneNumber": "0911345678",
+      "shortInfo": "小花BBBBBB",
+      "learningTag": "AngularJS,HTML5,PostgreSQL",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -49,67 +54,54 @@
       "tutoringTags": "",
       "userId": 2,
       "id": 2
+    },
+    {
+      "photo": "",
+      "userName": "小新",
+      "phoneNumber": "0966123456",
+      "shortInfo": "野原新之助",
+      "learningTag": "Bootstrap,React,Sass",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 3,
+      "id": 3
     }
   ],
   "bookClubs": [
     {
       "learningTag": "AngularJS",
-      "userId": 1,
-      "informationId":1,
+      "userId": 2,
+      "informationId": 2,
       "teamstatus": 0,
-      "createtime": "2023.12.05 01:02",
-      "title": "台中JS一日遊",
-      "description": "台中JS一日遊台中JS一日遊",
+      "createtime": "2023.12.05 23:43",
+      "title": "小花-JS一日讀書",
+      "description": "台中一起學",
       "tutoringTags": "AngularJS",
-      "date": "2023-12-08",
-      "time": "01:02",
-      "location": "台中",
-      "number": "2",
+      "date": "2023-12-06",
+      "time": "23:45",
+      "location": "台中星巴克",
+      "number": "4",
       "id": 1
     },
     {
       "learningTag": "Vue",
       "userId": 1,
-      "informationId":1,
+      "informationId": 1,
       "teamstatus": 0,
-      "createtime": "2023.12.05 01:31",
-      "title": "學VUE",
-      "description": "學VUE學VUE",
+      "createtime": "2023.12.05 23:47",
+      "title": "小明-我要學VUE",
+      "description": "VUEVUEVUE",
       "tutoringTags": "Vue",
-      "date": "2023-12-16",
-      "time": "05:30",
-      "location": "台北",
-      "number": "4",
+      "date": "2023-12-09",
+      "time": "11:50",
+      "location": "台南",
+      "number": "2",
       "id": 2
-    },
-    {
-      "learningTag": "C",
-      "userId": 2,
-      "informationId":2,
-      "teamstatus": 0,
-      "createtime": "2023.12.05 01:33",
-      "title": "學C++",
-      "description": "學C++學C++學C++",
-      "tutoringTags": "C",
-      "date": "2023-12-22",
-      "time": "01:39",
-      "location": "台東",
-      "number": "3",
-      "id": 3
-    },
-    {
-      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git",
-      "userId": 1,
-      "teamstatus": 0,
-      "createtime": "2023.12.05 14:41",
-      "title": "測試",
-      "description": "測試 我要學很多",
-      "tutoringTags": "Git",
-      "date": "2023-12-20",
-      "time": "19:45",
-      "location": "宜蘭",
-      "number": "4",
-      "id": 4
     }
   ],
   "tutoringPlatform": [
@@ -127,22 +119,16 @@
   ],
   "messageBooks": [
     {
-      "userId": "1",
-      "content": "測試123",
-      "bookClubId": "4",
+      "informationId": "1",
+      "content": "我是小明我有興趣 請問還有缺嗎?",
+      "bookClubId": "1",
       "id": 1
     },
     {
-      "userId": "2",
-      "content": "我是B B來留言了",
-      "bookClubId": "4",
+      "informationId": "3",
+      "content": "我是小新 我有框架經驗 請問還有缺嗎?",
+      "bookClubId": "1",
       "id": 2
-    },
-    {
-      "userId": "2",
-      "content": "這力士CCCCCC語言",
-      "bookClubId": "3",
-      "id": 3
     }
   ]
 }

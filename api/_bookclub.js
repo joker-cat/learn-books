@@ -125,7 +125,7 @@ export function getMessage(num) {
 //撈取誰發的文
 export function getWhoArticle(num) {
     return new Promise((rel, rej) => {
-        axios.get(`${jsonUrl}/informations/?id=${num}`)
+        axios.get(`${jsonUrl}/information/?id=${num}`)
             .then(res => {
                 if (res.status === 200) {
                     rel(res.data);
@@ -149,3 +149,6 @@ export async function getInfoStatus(id) {
         console.log(error);
     }
 }
+
+
+// http://localhost:3000/information/1/bookClubs
