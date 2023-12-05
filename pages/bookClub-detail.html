@@ -53,11 +53,11 @@
                                 <ul class="card-info-list">
                                     <li class="card-info-item">
                                         <span class="card-subTitle">讀書會標題</span>
-                                        <p>JavaScript 夏季學習會：精通前端開發</p>
+                                        <p class="activity-title">JavaScript 夏季學習會：精通前端開發</p>
                                     </li>
                                     <li class="card-info-item">
                                         <span class="card-subTitle">敘述說明</span>
-                                        <p>
+                                        <p class="activity-description">
                                             希望對JavaScript有興趣的人一起來討論！
                                             加入我們的夏季學習會，一同探索前端開發的奇妙世界。
                                             涼爽夏日，熱情掌握JavaScript技能！
@@ -152,17 +152,17 @@
                                 <ul class="card-info-list">
                                     <li class="card-info-item">
                                         <span class="card-subTitle">約定日期</span>
-                                        <p>2023.09.09</p>
+                                        <p class="activity-date">2023.09.09</p>
                                     </li>
                                     <li class="card-info-item">
                                         <span class="card-subTitle">約定時間</span>
-                                        <p>
+                                        <p class="activity-time">
                                             10:00 am
                                         </p>
                                     </li>
                                     <li class="card-info-item">
                                         <span class="card-subTitle">約定地點</span>
-                                        <p>
+                                        <p class="activity-area">
                                             星巴克喵喵門市
                                         </p>
                                     </li>
@@ -267,13 +267,13 @@
                                     </div>
                                     <div class="profile-name">糖糖喵</div>
                                 </div>
-                                <textarea class="form-control" rows="5"></textarea>
+                                <textarea class="form-control message-txt" rows="5"></textarea>
                                 <div class="row mt-3">
                                     <div class="col-auto">
                                         <small>0 / 300</small>
                                     </div>
                                     <div class="col text-lg-end text-end">
-                                        <a href="#" class="btn px-5 btn-primary">留言</a>
+                                        <button class="btn px-5 btn-primary message-btn">留言</button>
                                     </div>
                                 </div>
                             </div>
@@ -301,7 +301,7 @@
 
                                 <hr>
                                 <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                <textarea class="form-control" rows="5"></textarea>
+                                <textarea class="form-control reply" rows="5"></textarea>
                                 <div class="row mt-3">
                                     <div class="col-auto">
                                         <small>0 / 300</small>
@@ -321,7 +321,76 @@
             <%- include('./layout/footer'); -%>
 
                 <script type="module">
-                    import { getArticle } from "/api/_bookclub.js";
+                    import { getArticle, getWhoArticle, createMessage,getMessage } from "/api/_bookclub.js";
+                    /* 優化版
+                    const elements = {
+                        learnTitle: '.Learn-title',
+                        profileName: '.profile-name',
+                        activityTitle: '.activity-title',
+                        activityDescription: '.activity-description',
+                        tagList: '.tag-list',
+                        progressBar: '.progress-bar',
+                        progressText: '.progress-text',
+                    };
+
+                    const elementsArray = Array.from(document.querySelectorAll(Object.values(elements)));
+
+                    // 透過 elementsArray 對象簡單地訪問相應的元素
+                    console.log(elementsArray[0]); // Learn-title
+                    console.log(elementsArray[1]); // profile-name
+                    */
+                    const learnTitle = document.querySelector('.Learn-title');
+                    const profileName = document.querySelector('.profile-name');
+                    const activityTitle = document.querySelector('.activity-title');
+                    const activityDescription = document.querySelector('.activity-description');
+                    const tagList = document.querySelector('.tag-list');
+                    const progressBar = document.querySelector('.progress-bar');
+                    const progressText = document.querySelector('.progress-text');
+                    const messageTxt = document.querySelector('.message-txt');
+                    const messageBtn = document.querySelector('.message-btn');
+
+                    //推送留言
+                    messageBtn.addEventListener('click', messagePush);
+                    function messagePush() {
+                        if (messageTxt.value.trim() === '') return;
+                        const userId = sessionStorage.getItem('id');
+                        const content = messageTxt.value;
+                        const bookClubId = parseNumber();
+                        const obj = { userId, content, bookClubId };
+                        createMessage(obj);
+                    }
+
+                    //填入撈取資訊
+                    function FillinValue(obj) {
+                        learnTitle.textContent = obj.title;
+                        profileName.textContent = obj["0"].userName;
+                        activityTitle.textContent = obj.title;
+                        activityDescription.textContent = obj.description;
+                        progressBar.style.width = `${obj.number * 25}%`;
+                        progressText.textContent = `剩下${obj.number}位名額`;
+                        imageTag(obj.learningTag);
+                    }
+
+                    //學習標籤
+                    function imageTag(tagStr) {
+                        tagList.textContent = '';
+                        const tagArr = tagStr.split(',');
+                        console.log(tagArr);
+                        tagArr.forEach(eTag => {
+                            const li = document.createElement('li');
+                            const divContent = document.createElement('div');
+                            const divImage = document.createElement('div');
+                            const span = document.createElement('span');
+                            li.classList.add('tag-item');
+                            divContent.classList.add('innerImg');
+                            divImage.classList.add('image');
+                            divImage.style.backgroundImage = `url('/assets/images/icon/tag-${eTag}.svg')`;
+                            span.textContent = eTag;
+                            divContent.append(divImage);
+                            li.append(divContent, span);
+                            tagList.append(li);
+                        });
+                    }
 
                     //獲取參數
                     function parseNumber() {
@@ -334,11 +403,17 @@
                     }
 
                     async function init() {
-                        const getNumber = await parseNumber();
-                        const getArticleInfo = await getArticle(getNumber);
-                        console.log(getArticleInfo);
-                        
-                        //之後要撈個資
+                        try {
+                            const getNumber = await parseNumber(); //抓參數
+                            const getArticleInfo = await getArticle(getNumber); //抓文章
+                            const getMsg = await getMessage(getNumber); //抓留言
+                            const who = await getWhoArticle(getArticleInfo.userId); //抓發文者
+                            const fillin = await FillinValue({ ...who, ...getArticleInfo }); //填入撈取資訊
+                            
+                            console.log(getMsg);
+                        } catch (error) {
+                            console.log(error);
+                        }
                     }
                     init();
                 </script>

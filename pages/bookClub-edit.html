@@ -387,6 +387,7 @@
                         console.log('---開始建立資料格式---');
                         user.learningTag = createTag.map(e => e.value).join(',');
                         user.userId = parseInt(userId);
+                        user.informationId = parseInt(userId);
                         user.teamstatus = 0;
                         user.createtime = nowTime();
                         //0為揪團中 1為已成團 2為活動結束 3為主揪取消

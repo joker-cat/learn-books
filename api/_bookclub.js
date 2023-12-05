@@ -2,7 +2,6 @@ import { axios } from "/main.js";
 
 //json-server:port
 import { jsonUrl } from "/api/_sharedvariables.js";
-import { Axios } from "axios";
 
 
 //建立讀書會文章
@@ -15,6 +14,24 @@ export function createBookArticle(obj) {
                 console.log('---讀書會文章創立成功---');
                 setTimeout(() => {
                     window.location.href = `/learn-project/pages/bookClub.html`;
+                }, 200);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+        });
+}
+
+//建立讀書會文章留言
+export function createMessage(obj) {
+    console.log('---新增讀書會留言---');
+    axios
+        .post(`${jsonUrl}/messageBooks`, obj)
+        .then((res) => {
+            if (res.status === 201) {
+                console.log('---讀書會文章創立成功---');
+                setTimeout(() => {
+                    window.location.href = `/learn-project/pages/bookClub-detail.html?dataArticle=${obj.bookClubId}`;
                 }, 200);
             }
         })
@@ -77,19 +94,48 @@ export function renderData(arrData) {
 
 //撈取點選貼文資訊
 export function getArticle(num) {
-    console.log(num);
-    axios.get(`${jsonUrl}/bookClubs/${num}?_expand=user`)
-        .then(res => {
-            if (res.status === 200) {
-                console.log(res);
-                return res.data
-            }
-        })
-        .catch(error => {
-            console.log(error);
-        });
+    return new Promise((rel, rej) => {
+        axios.get(`${jsonUrl}/bookClubs/${num}?_expand=user`)
+            .then(res => {
+                if (res.status === 200) {
+                    rel(res.data);
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    })
 }
 
+//撈取點選貼文留言
+export function getMessage(num) {
+    return new Promise((rel, rej) => {
+        axios.get(`${jsonUrl}/bookClubs/${num}/messageBooks`)
+            .then(res => {
+                if (res.status === 200) {
+                    rel(res.data);
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    })
+}
+
+//撈取誰發的文
+export function getWhoArticle(num) {
+    return new Promise((rel, rej) => {
+        axios.get(`${jsonUrl}/informations/?id=${num}`)
+            .then(res => {
+                if (res.status === 200) {
+                    rel(res.data);
+                }
+            })
+            .catch(error => {
+                console.log(error);
+            });
+    })
+}
 
 //判斷是否有填寫個資 infoConfirm
 export async function getInfoStatus(id) {

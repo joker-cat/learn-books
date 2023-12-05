@@ -55,6 +55,7 @@
     {
       "learningTag": "AngularJS",
       "userId": 1,
+      "informationId":1,
       "teamstatus": 0,
       "createtime": "2023.12.05 01:02",
       "title": "台中JS一日遊",
@@ -69,6 +70,7 @@
     {
       "learningTag": "Vue",
       "userId": 1,
+      "informationId":1,
       "teamstatus": 0,
       "createtime": "2023.12.05 01:31",
       "title": "學VUE",
@@ -83,6 +85,7 @@
     {
       "learningTag": "C",
       "userId": 2,
+      "informationId":2,
       "teamstatus": 0,
       "createtime": "2023.12.05 01:33",
       "title": "學C++",
@@ -93,6 +96,20 @@
       "location": "台東",
       "number": "3",
       "id": 3
+    },
+    {
+      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git",
+      "userId": 1,
+      "teamstatus": 0,
+      "createtime": "2023.12.05 14:41",
+      "title": "測試",
+      "description": "測試 我要學很多",
+      "tutoringTags": "Git",
+      "date": "2023-12-20",
+      "time": "19:45",
+      "location": "宜蘭",
+      "number": "4",
+      "id": 4
     }
   ],
   "tutoringPlatform": [
@@ -108,60 +125,24 @@
       "id": 1
     }
   ],
-  "messageBoards": [
+  "messageBooks": [
     {
-      "bookClubId": 1,
-      "tutoringPlatformId": 0,
-      "userId": 3,
-      "content": "第一個留言讀書會，想參加",
+      "userId": "1",
+      "content": "測試123",
+      "bookClubId": "4",
       "id": 1
     },
     {
-      "bookClubId": 1,
-      "tutoringPlatformId": 0,
-      "userId": 4,
-      "content": "第二個留言讀書會，想參加",
+      "userId": "2",
+      "content": "我是B B來留言了",
+      "bookClubId": "4",
       "id": 2
     },
     {
-      "bookClubId": 0,
-      "tutoringPlatformId": 1,
-      "userId": 1,
-      "content": "第一個應徵家教，想應徵",
+      "userId": "2",
+      "content": "這力士CCCCCC語言",
+      "bookClubId": "3",
       "id": 3
-    },
-    {
-      "bookClubId": 1,
-      "tutoringPlatformId": 0,
-      "userId": 6,
-      "content": "第三個留言讀書會，想參加",
-      "id": 4
-    },
-    {
-      "bookClubId": 0,
-      "tutoringPlatformId": 1,
-      "userId": 5,
-      "content": "第二個應徵家教，想應徵",
-      "id": 5
-    },
-    {
-      "bookClubId": 2,
-      "tutoringPlatformId": 0,
-      "userId": 4,
-      "content": "第二團讀書會，想參加",
-      "id": 6
     }
-  ],
-  "relations": {
-    "informations": {
-      "property": "id",
-      "relatedTo": "bookClubs",
-      "keyInRelatedTo": "informationId"
-    },
-    "bookClubs": {
-      "property": "informationId",
-      "relatedTo": "informations",
-      "keyInRelatedTo": "id"
-    }
-  }
+  ]
 }
