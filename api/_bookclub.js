@@ -95,7 +95,7 @@ export function renderData(arrData) {
 //撈取點選貼文資訊
 export function getArticle(num) {
     return new Promise((rel, rej) => {
-        axios.get(`${jsonUrl}/bookClubs/${num}?_expand=user`)
+        axios.get(`${jsonUrl}/bookClubs/${num}?_expand=information`)
             .then(res => {
                 if (res.status === 200) {
                     rel(res.data);
@@ -110,7 +110,7 @@ export function getArticle(num) {
 //撈取點選貼文留言
 export function getMessage(num) {
     return new Promise((rel, rej) => {
-        axios.get(`${jsonUrl}/bookClubs/${num}/messageBooks`)
+        axios.get(`${jsonUrl}/bookClubs/${num}/messageBooks?_expand=information`)
             .then(res => {
                 if (res.status === 200) {
                     rel(res.data);

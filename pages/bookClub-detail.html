@@ -458,6 +458,9 @@
                             const getNumber = await parseNumber(); //抓參數
                             const getArticleInfo = await getArticle(getNumber); //抓文章
                             const getMsg = await getMessage(getNumber); //抓留言
+
+
+                            
                             const who = await getWhoArticle(getArticleInfo.userId); //抓發文者
                             const fillinInfo = await fillinValue({ ...who, ...getArticleInfo }); //填入撈取資訊
                             const fillinMsg = await fillinMessage(getMsg);
