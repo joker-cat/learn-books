@@ -65,7 +65,7 @@
     </section>
     <script type="module">
         console.log('---登入頁---');
-        import { comparison, alreadySignupEmail, jsonUrl, mySessionStorage } from "/api/_sharedvariables.js";
+        import { comparison, alreadySignupEmail, jsonUrl, mySessionStorage, getUserInfo } from "/api/_sharedvariables.js";
         let signinBtn = document.querySelector('.signin-btn');
 
         signinBtn.addEventListener('click', function (event) {
@@ -80,6 +80,10 @@
                     (isLoginSuccess.status === 200 && infoConfirm !== 1) ?
                         mySessionStorage({ email, id }, "setting", isLoginSuccess.data.accessToken) :
                         mySessionStorage({ email, id }, "index", isLoginSuccess.data.accessToken);
+                    return id;
+                    })
+                .then((getId) => {
+                    getUserInfo(getId);
                 });
         })
     </script>

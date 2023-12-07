@@ -368,7 +368,7 @@
             </main>
             <%- include('./layout/footer'); -%>
                 <script type="module">
-                    import { createBookArticle } from "/api/_bookclub.js";
+                    import { createBookArticle, nowTime } from "/api/_bookclub.js";
 
                     const imageCheckbox = document.querySelectorAll('.image-checkbox');
                     const releaseArticle = document.querySelector('.release-article');
@@ -403,16 +403,7 @@
                             alert('創建失敗，請檢查欄位是否填寫確實。');
                     }
 
-                    function nowTime() {
-                        const currentDate = new Date();
-                        const year = currentDate.getFullYear();
-                        const month = String(currentDate.getMonth() + 1).padStart(2, '0');
-                        const day = String(currentDate.getDate()).padStart(2, '0');
-                        const hours = String(currentDate.getHours()).padStart(2, '0');
-                        const minutes = String(currentDate.getMinutes()).padStart(2, '0');
 
-                        return `${year}.${month}.${day} ${hours}:${minutes}`;
-                    }
 
                     //checkbox
                     imageCheckbox.forEach(function (checkbox) {

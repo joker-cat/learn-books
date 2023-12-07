@@ -25,10 +25,10 @@
   "information": [
     {
       "photo": "",
-      "userName": "小明A",
-      "phoneNumber": "0900111222",
-      "shortInfo": "我是AAAAAA",
-      "learningTag": "C,MySQL,Sass",
+      "userName": "小西瓜",
+      "phoneNumber": "0900123456",
+      "shortInfo": "小西瓜小西瓜小西瓜",
+      "learningTag": "Git,Node,Vue",
       "youtubeLink": "",
       "igLink": "",
       "githubLink": "",
@@ -122,13 +122,25 @@
       "informationId": "1",
       "content": "我是小明我有興趣 請問還有缺嗎?",
       "bookClubId": "1",
+      "timeStamp": "2023.10.08 00:39",
+      "leaderReply": "test1",
       "id": 1
     },
     {
       "informationId": "3",
       "content": "我是小新 我有框架經驗 請問還有缺嗎?",
       "bookClubId": "1",
+      "timeStamp": "2023.05.08 00:39",
+      "leaderReply": "test2",
       "id": 2
+    },
+    {
+      "informationId": "1",
+      "content": "我好想去啊>\"<",
+      "bookClubId": "1",
+      "timeStamp": "2023.12.08 00:39",
+      "leaderReply": "test3",
+      "id": 3
     }
   ]
 }

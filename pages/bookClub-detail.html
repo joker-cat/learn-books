@@ -2,479 +2,450 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>享讀</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/assets/scss/all.scss">
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>享讀</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;500&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+	<link rel="stylesheet" href="/assets/scss/all.scss">
 </head>
 
 <body>
-    <%- include('./layout/navbar'); -%>
-        <%- include('./layout/banner'); -%>
-            <main class="Learn-detail mb-5 pb-lg-5 p-0">
-                <section class="Learn-detail-header">
-                    <div class="container border-bottom bg-white p-lg-5 p-3 pt-5">
-                        <div class="row  align-items-end">
-                            <div class="col-lg-8 mb-lg-2 mb-4 text-lg-start text-center">
-                                <h1 class="Learn-title h3 ">JavaScript 夏季學習會：精通前端開發</h1>
-                                <small class="create-time">發文時間：<time>2023.10.10 01:10</time></small>
-                            </div>
-                            <div class="col-lg-4 text-lg-end  text-center mb-2">
-                                <a href="#" class="btn px-5 btn-primary">關注讀書會</a>
-                                <a href="#" class="btn px-5 btn-primary">參加讀書會</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <section class="Learn-detail-info">
-                    <div class="container bg-white">
-                        <div class="row align-items-center mb-5 px-5 py-5  border-bottom">
-                            <div class="col-lg-3">
-                                <h3 class="sub-title h5">讀書會主揪</h3>
-                            </div>
-                            <div class="col-lg-9 d-flex flex-lg-row flex-column align-items-center">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic.jpg);"></div>
-                                </div>
-                                <h5 class="profile-name d-inline-block ps-lg-3 mb-0">糖糖喵</h5>
-                            </div>
-                        </div>
+	<%- include('./layout/navbar'); -%>
+		<%- include('./layout/banner'); -%>
+			<main class="Learn-detail mb-5 pb-lg-5 p-0">
+				<section class="Learn-detail-header">
+					<div class="container border-bottom bg-white p-lg-5 p-3 pt-5">
+						<div class="row  align-items-end">
+							<div class="col-lg-8 mb-lg-2 mb-4 text-lg-start text-center">
+								<h1 class="Learn-title h3 ">JavaScript 夏季學習會：精通前端開發</h1>
+								<small class="create-time">發文時間：<time>2023.10.10 01:10</time></small>
+							</div>
+							<div class="col-lg-4 text-lg-end  text-center mb-2">
+								<a href="#" class="btn px-5 btn-primary">關注讀書會</a>
+								<a href="#" class="btn px-5 btn-primary">參加讀書會</a>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section class="Learn-detail-info">
+					<div class="container bg-white">
+						<div class="row align-items-center mb-5 px-5 py-5  border-bottom">
+							<div class="col-lg-3">
+								<h3 class="sub-title h5">讀書會主揪</h3>
+							</div>
+							<div class="col-lg-9 d-flex flex-lg-row flex-column align-items-center">
+								<div class="profile-pic">
+									<div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);"></div>
+								</div>
+								<h5 class="profile-name d-inline-block ps-lg-3 mb-0">糖糖喵</h5>
+							</div>
+						</div>
 
-                        <div class="row mb-5  px-lg-5 px-3 py-3  border-bottom">
-                            <div class="col-lg-3 ">
-                                <h3 class="sub-title h5">讀書會主題</h3>
-                            </div>
-                            <div class="col-lg-7">
-                                <ul class="card-info-list">
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">讀書會標題</span>
-                                        <p class="activity-title">JavaScript 夏季學習會：精通前端開發</p>
-                                    </li>
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">敘述說明</span>
-                                        <p class="activity-description">
-                                            希望對JavaScript有興趣的人一起來討論！
-                                            加入我們的夏季學習會，一同探索前端開發的奇妙世界。
-                                            涼爽夏日，熱情掌握JavaScript技能！
-                                        </p>
-                                    </li>
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">學習標籤</span>
-                                        <ul class="tag-list">
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                            <li class="tag-item">
-                                                <div class="innerImg">
-                                                    <div class="image"
-                                                        style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
-                                                    </div>
-                                                </div>
-                                                <span>AngularJS</span>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
+						<div class="row mb-5  px-lg-5 px-3 py-3  border-bottom">
+							<div class="col-lg-3 ">
+								<h3 class="sub-title h5">讀書會主題</h3>
+							</div>
+							<div class="col-lg-7">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<span class="card-subTitle">讀書會標題</span>
+										<p class="activity-title">JavaScript 夏季學習會：精通前端開發</p>
+									</li>
+									<li class="card-info-item">
+										<span class="card-subTitle">敘述說明</span>
+										<p class="activity-description">
+											希望對JavaScript有興趣的人一起來討論！
+											加入我們的夏季學習會，一同探索前端開發的奇妙世界。
+											涼爽夏日，熱情掌握JavaScript技能！
+										</p>
+									</li>
+									<li class="card-info-item">
+										<span class="card-subTitle">學習標籤</span>
+										<ul class="tag-list">
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+											<li class="tag-item">
+												<div class="innerImg">
+													<div class="image" style="background-image: url(../assets/images/icon/tag-AngularJS.svg);">
+													</div>
+												</div>
+												<span>AngularJS</span>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</div>
+						</div>
 
-                        <div class="row  px-lg-5 px-3 py-3 pb-5  border-bottom">
-                            <div class="col-lg-3">
-                                <h3 class="sub-title h5">讀書會資訊</h3>
-                            </div>
-                            <div class="col-lg-7">
-                                <ul class="card-info-list">
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">約定日期</span>
-                                        <p class="activity-date">2023.09.09</p>
-                                    </li>
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">約定時間</span>
-                                        <p class="activity-time">
-                                            10:00 am
-                                        </p>
-                                    </li>
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">約定地點</span>
-                                        <p class="activity-area">
-                                            星巴克喵喵門市
-                                        </p>
-                                    </li>
-                                    <li class="card-info-item">
-                                        <span class="card-subTitle">開團人數</span>
-                                        <div class="progress-container">
-                                            <div class="progress">
-                                                <div class="progress-bar" style="width:50%;"></div>
-                                                <!-- 0% 25% 50% 75% 100% -->
-                                                <!-- 1   2   3   4   5 -->
-                                            </div>
-                                            <div class="progressDot-group">
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                                <span class="dot"></span>
-                                            </div>
-                                            <small class="progress-text">剩下2個名額</small>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container bg-white  p-lg-5 p-3">
-                        <h3 class="text-center mb-3">參加的成員</h3>
-                        <div class="member-group col-lg-8 m-auto row row-cols-lg-5 row-cols-3 justify-content-center">
-                            <div class="col member-item">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic-2.jpg);"></div>
-                                </div>
-                                <h6 class="profile-name">橘貓妞妞</h6>
-                            </div>
+						<div class="row  px-lg-5 px-3 py-3 pb-5  border-bottom">
+							<div class="col-lg-3">
+								<h3 class="sub-title h5">讀書會資訊</h3>
+							</div>
+							<div class="col-lg-7">
+								<ul class="card-info-list">
+									<li class="card-info-item">
+										<span class="card-subTitle">約定日期</span>
+										<p class="activity-date">2023.09.09</p>
+									</li>
+									<li class="card-info-item">
+										<span class="card-subTitle">約定時間</span>
+										<p class="activity-time">
+											10:00 am
+										</p>
+									</li>
+									<li class="card-info-item">
+										<span class="card-subTitle">約定地點</span>
+										<p class="activity-area">
+											星巴克喵喵門市
+										</p>
+									</li>
+									<li class="card-info-item">
+										<span class="card-subTitle">開團人數</span>
+										<div class="progress-container">
+											<div class="progress">
+												<div class="progress-bar" style="width:50%;"></div>
+												<!-- 0% 25% 50% 75% 100% -->
+												<!-- 1   2   3   4   5 -->
+											</div>
+											<div class="progressDot-group">
+												<span class="dot"></span>
+												<span class="dot"></span>
+												<span class="dot"></span>
+												<span class="dot"></span>
+												<span class="dot"></span>
+											</div>
+											<small class="progress-text">剩下2個名額</small>
+										</div>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<div class="container bg-white  p-lg-5 p-3">
+						<h3 class="text-center mb-3">參加的成員</h3>
+						<div class="member-group col-lg-8 m-auto row row-cols-lg-5 row-cols-3 justify-content-center">
+							<div class="col member-item">
+								<div class="profile-pic">
+									<div class="innerImg" style="background-image: url(../assets/images/profile-pic-2.jpg);"></div>
+								</div>
+								<h6 class="profile-name">橘貓妞妞</h6>
+							</div>
 
-                            <div class="col member-item">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic-3.jpg);"></div>
-                                </div>
-                                <h6 class="profile-name">腸腸樂樂</h6>
-                            </div>
+							<div class="col member-item">
+								<div class="profile-pic">
+									<div class="innerImg" style="background-image: url(../assets/images/profile-pic-3.jpg);"></div>
+								</div>
+								<h6 class="profile-name">腸腸樂樂</h6>
+							</div>
 
-                            <div class="col member-item">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic-4.jpg);"></div>
-                                </div>
-                                <h6 class="profile-name">腸腸咪咪</h6>
-                            </div>
+							<div class="col member-item">
+								<div class="profile-pic">
+									<div class="innerImg" style="background-image: url(../assets/images/profile-pic-4.jpg);"></div>
+								</div>
+								<h6 class="profile-name">腸腸咪咪</h6>
+							</div>
 
-                        </div>
-                    </div>
-                    <div class="container bg-white  p-lg-5 p-3">
-                        <h3 class="text-center mb-3">待核准的成員</h3>
-                        <div class="member-group col-lg-8 m-auto row row-cols-lg-5 row-cols-3 justify-content-center">
-                            <div class="col member-item">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic.jpg);"></div>
-                                </div>
-                                <h6 class="profile-name">橘貓妞妞</h6>
-                                <div class="d-grid">
-                                    <button class="btn btn-primary" type="button">確認參加</button>
-                                    <button class="btn btn-light" type="button">拒絕</button>
-                                </div>
-                            </div>
+						</div>
+					</div>
+					<div class="container bg-white  p-lg-5 p-3">
+						<h3 class="text-center mb-3">待核准的成員</h3>
+						<div class="member-group col-lg-8 m-auto row row-cols-lg-5 row-cols-3 justify-content-center">
+							<div class="col member-item">
+								<div class="profile-pic">
+									<div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);"></div>
+								</div>
+								<h6 class="profile-name">橘貓妞妞</h6>
+								<div class="d-grid">
+									<button class="btn btn-primary" type="button">確認參加</button>
+									<button class="btn btn-light" type="button">拒絕</button>
+								</div>
+							</div>
 
-                        </div>
-                    </div>
-                </section>
-                <section class="Learn-detail-header ">
-                    <div class="container border-top bg-white p-lg-5 p-3 pt-5">
-                        <div class="row  align-items-end">
-                            <div class="col-lg-6 mb-2 text-lg-start text-center ">
-                                <a href="./bookClub-edit.html" class="btn px-5 btn-light">修改讀書會</a>
-                                <a href="#" class="btn px-5 btn-primary">確定成團</a>
-                            </div>
-                            <div class="col-lg-6 text-lg-end text-center mb-2 d-lg-block d-none">
-                                <a href="#" class="btn px-5 btn-primary">關注讀書會</a>
-                                <a href="#" class="btn px-5 btn-primary">參加讀書會</a>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+						</div>
+					</div>
+				</section>
+				<section class="Learn-detail-header ">
+					<div class="container border-top bg-white p-lg-5 p-3 pt-5">
+						<div class="row  align-items-end">
+							<div class="col-lg-6 mb-2 text-lg-start text-center ">
+								<a href="./bookClub-edit.html" class="btn px-5 btn-light">修改讀書會</a>
+								<a href="#" class="btn px-5 btn-primary">確定成團</a>
+							</div>
+							<div class="col-lg-6 text-lg-end text-center mb-2 d-lg-block d-none">
+								<a href="#" class="btn px-5 btn-primary">關注讀書會</a>
+								<a href="#" class="btn px-5 btn-primary">參加讀書會</a>
+							</div>
+						</div>
+					</div>
+				</section>
 
-                <section class="QA-Area">
-                    <div class="container bg-white py-5 mt-5 mb-5">
-                        <div class="row">
-                            <div class="col-12">
-                                <h3 class="text-center pt-5 pb-3">讀書會問與答</h3>
-                            </div>
-                        </div>
+				<section class="QA-Area">
+					<div class="container bg-white py-5 mt-5 mb-5">
+						<div class="row">
+							<div class="col-12">
+								<h3 class="text-center pt-5 pb-3">讀書會問與答</h3>
+							</div>
+						</div>
 
-                        <div class="row col-lg-7 justify-content-center mx-auto pb-5">
+						<div class="row col-lg-7 justify-content-center mx-auto pb-5">
 
-                            <div class="col-12 QA-Box user-comments">
-                                <div class="userName">
-                                    <div class="profile-pic">
-                                        <div class="innerImg"
-                                            style="background-image: url(../assets/images/profile-pic.jpg);"></div>
-                                    </div>
-                                    <div class="profile-name">糖糖喵</div>
-                                </div>
-                                <textarea class="form-control message-txt" rows="5"></textarea>
-                                <div class="row mt-3">
-                                    <div class="col-auto">
-                                        <small>0 / 300</small>
-                                    </div>
-                                    <div class="col text-lg-end text-end">
-                                        <button class="btn px-5 btn-primary message-btn">留言</button>
-                                    </div>
-                                </div>
-                            </div>
-                            <section class="msg-section">
-                                <div class="col-12 QA-Box">
-                                    <div class="userName">
-                                        <div class="profile-pic">
-                                            <div class="innerImg"
-                                                style="background-image: url(../assets/images/profile-pic-2.jpg);">
-                                            </div>
-                                        </div>
-                                        <div class="profile-name">橘貓妞妞 <time>2023-01-01 12:30 </time></div>
-                                    </div>
-                                    <p class="mess-content">你是否有使用過任何 JavaScript 的測試框架或工具？如果有，請分享你的經驗。</p>
-                                    <div class="replyContent">
-                                        <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                        <p class="mess-content">有的，我有很多經驗。</p>
-                                    </div>
-                                    <span class="btn-reply" style="cursor:pointer;"><i
-                                            class="bi bi-reply-fill"></i>回覆</span>
-                                    <div class="reply-content" style="height: 0; overflow: hidden;">
-                                        <hr>
-                                        <div class="profile-name pb-2">糖糖喵<time>2023-01-01 12:30</time></div>
-                                        <textarea class="form-control reply" rows="5"></textarea>
-                                        <div class="row mt-3">
-                                            <div class="col-auto">
-                                                <small class="word-count">0 / 300</small>
-                                            </div>
-                                            <div class="col text-lg-end text-end">
-                                                <a class="btn px-5 btn-light cancel">取消</a>
-                                                <a href="#" class="btn px-5 btn-primary">留言</a>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </section>
-                        </div>
-                    </div>
-                </section>
-            </main>
-            <%- include('./layout/footer'); -%>
+							<div class="col-12 QA-Box user-comments">
+								<div class="userName">
+									<div class="profile-pic">
+										<div class="innerImg" style="background-image: url(../assets/images/profile-pic.jpg);"></div>
+									</div>
+									<div class="profile-name">糖糖喵</div>
+								</div>
+								<textarea class="form-control message-txt" rows="5"></textarea>
+								<div class="row mt-3">
+									<div class="col-auto">
+										<small>0 / 300</small>
+									</div>
+									<div class="col text-lg-end text-end">
+										<button class="btn px-5 btn-primary message-btn">留言</button>
+									</div>
+								</div>
+							</div>
+							<section class="msg-section">
 
-                <script type="module">
-                    import { getArticle, getWhoArticle, createMessage, getMessage } from "/api/_bookclub.js";
-                    /* 優化版
-                    const elements = {
-                        learnTitle: '.Learn-title',
-                        profileName: '.profile-name',
-                        activityTitle: '.activity-title',
-                        activityDescription: '.activity-description',
-                        tagList: '.tag-list',
-                        progressBar: '.progress-bar',
-                        progressText: '.progress-text',
-                    };
+							</section>
+						</div>
+					</div>
+				</section>
+			</main>
+			<%- include('./layout/footer'); -%>
 
-                    const elementsArray = Array.from(document.querySelectorAll(Object.values(elements)));
+				<script type="module">
+					import { getArticle, createMessage, getMessage, nowTime } from "/api/_bookclub.js";
+					/* 優化版
+					const elements = {
+							learnTitle: '.Learn-title',
+							profileName: '.profile-name',
+							activityTitle: '.activity-title',
+							activityDescription: '.activity-description',
+							tagList: '.tag-list',
+							progressBar: '.progress-bar',
+							progressText: '.progress-text',
+					};
 
-                    // 透過 elementsArray 對象簡單地訪問相應的元素
-                    console.log(elementsArray[0]); // Learn-title
-                    console.log(elementsArray[1]); // profile-name
-                    */
-                    const learnTitle = document.querySelector('.Learn-title');
-                    const profileName = document.querySelector('.profile-name');
-                    const activityTitle = document.querySelector('.activity-title');
-                    const activityDescription = document.querySelector('.activity-description');
-                    const tagList = document.querySelector('.tag-list');
-                    const progressBar = document.querySelector('.progress-bar');
-                    const progressText = document.querySelector('.progress-text');
-                    const messageTxt = document.querySelector('.message-txt');
-                    const messageBtn = document.querySelector('.message-btn');
-                    const btnReply = document.querySelector('.btn-reply');
-                    const replyContent = document.querySelector('.reply-content');
-                    const cancelBtn = document.querySelector('.cancel');
+					const elementsArray = Array.from(document.querySelectorAll(Object.values(elements)));
 
+					// 透過 elementsArray 對象簡單地訪問相應的元素
+					console.log(elementsArray[0]); // Learn-title
+					console.log(elementsArray[1]); // profile-name
+					*/
+					const learnTitle = document.querySelector('.Learn-title');
+					const profileName = document.querySelector('.profile-name');
+					const activityTitle = document.querySelector('.activity-title');
+					const activityDescription = document.querySelector('.activity-description');
+					const tagList = document.querySelector('.tag-list');
+					const progressBar = document.querySelector('.progress-bar');
+					const progressText = document.querySelector('.progress-text');
+					const messageTxt = document.querySelector('.message-txt');
+					const messageBtn = document.querySelector('.message-btn');
+					const msgSection = document.querySelector('.msg-section');
+					let whoPost = '';
 
-                    //推送留言
-                    messageBtn.addEventListener('click', messagePush);
-                    function messagePush() {
-                        if (messageTxt.value.trim() === '') return;
-                        const informationId = sessionStorage.getItem('id');
-                        const content = messageTxt.value;
-                        const bookClubId = parseNumber();
-                        const obj = { userId, content, bookClubId };
-                        createMessage(obj);
-                    }
+					//推送留言
+					messageBtn.addEventListener('click', messagePush);
+					function messagePush() {
+						if (messageTxt.value.trim() === '' || sessionStorage.getItem('user') === null) {
+							alert('請檢察輸入內容是否為空 or 請到"帳號設定"檢查"會員姓名"')
+							return;
+						}
+						const informationId = sessionStorage.getItem('id');
+						const content = messageTxt.value;
+						const bookClubId = parseNumber();
+						const timeStamp = nowTime();
+						const leaderReply = "";
+						const obj = { informationId, content, bookClubId, timeStamp, leaderReply };
+						createMessage(obj);
+					}
 
-                    //填入撈取資訊
-                    function fillinValue(obj) {
-                        learnTitle.textContent = obj.title;
-                        profileName.textContent = obj["0"].userName;
-                        activityTitle.textContent = obj.title;
-                        activityDescription.textContent = obj.description;
-                        progressBar.style.width = `${obj.number * 25}%`;
-                        progressText.textContent = `剩下${obj.number}位名額`;
-                        imageTag(obj.learningTag);
-                    }
+					//填入撈取資訊
+					function fillinValue(obj) {
+						learnTitle.textContent = obj.title;
+						profileName.textContent = obj.information.userName
+						activityTitle.textContent = obj.title;
+						activityDescription.textContent = obj.description;
+						progressBar.style.width = `${obj.number * 25}%`;
+						progressText.textContent = `剩下${obj.number}位名額`;
+						imageTag(obj.learningTag);
+					}
 
-                    //學習標籤
-                    function imageTag(tagStr) {
-                        tagList.textContent = '';
-                        const tagArr = tagStr.split(',');
-                        console.log(tagArr);
-                        tagArr.forEach(eTag => {
-                            const li = document.createElement('li');
-                            const divContent = document.createElement('div');
-                            const divImage = document.createElement('div');
-                            const span = document.createElement('span');
-                            li.classList.add('tag-item');
-                            divContent.classList.add('innerImg');
-                            divImage.classList.add('image');
-                            divImage.style.backgroundImage = `url('/assets/images/icon/tag-${eTag}.svg')`;
-                            span.textContent = eTag;
-                            divContent.append(divImage);
-                            li.append(divContent, span);
-                            tagList.append(li);
-                        });
-                    }
+					//學習標籤
+					function imageTag(tagStr) {
+						tagList.textContent = '';
+						const tagArr = tagStr.split(',');
+						console.log(tagArr);
+						tagArr.forEach(eTag => {
+							const li = document.createElement('li');
+							const divContent = document.createElement('div');
+							const divImage = document.createElement('div');
+							const span = document.createElement('span');
+							li.classList.add('tag-item');
+							divContent.classList.add('innerImg');
+							divImage.classList.add('image');
+							divImage.style.backgroundImage = `url('/assets/images/icon/tag-${eTag}.svg')`;
+							span.textContent = eTag;
+							divContent.append(divImage);
+							li.append(divContent, span);
+							tagList.append(li);
+						});
+					}
 
-                    //獲取參數
-                    function parseNumber() {
-                        // 獲取 URL 中的 search 部分
-                        const queryString = window.location.search;
-                        // 使用 URLSearchParams 解析 search 部分
-                        const urlParams = new URLSearchParams(queryString);
-                        // 獲取特定參數的值並回傳
-                        return urlParams.get('dataArticle');
-                    }
+					//獲取參數
+					function parseNumber() {
+						// 獲取 URL 中的 search 部分
+						const queryString = window.location.search;
+						// 使用 URLSearchParams 解析 search 部分
+						const urlParams = new URLSearchParams(queryString);
+						// 獲取特定參數的值並回傳
+						return urlParams.get('dataArticle');
+					}
 
-                    //填入留言
-                    function fillinMessage(arr) {
-                        console.log(arr);
-                        let str = '';
-                        arr.forEach(eMsg => {
-                            str += `
-                            <div class="col-12 QA-Box">
-                            <div class="userName">
-                                <div class="profile-pic">
-                                    <div class="innerImg"
-                                        style="background-image: url(../assets/images/profile-pic-2.jpg);">
-                                    </div>
-                                </div>
-                                <div class="profile-name">橘貓妞妞 <time>2023-01-01 12:30 </time></div>
-                            </div>
-                            <p class="mess-content">你是否有使用過任何 JavaScript 的測試框架或工具？如果有，請分享你的經驗。</p>
-                            <div class="replyContent">
-                                <div class="profile-name pb-2">糖糖喵 <time>2023-01-01 12:30 </time></div>
-                                <p class="mess-content">有的，我有很多經驗。</p>
-                            </div>
-                            <a href="#" class="btn-reply"><i class="bi bi-reply-fill"></i>回覆</a>
-                            
-                            
-                            
-                            
-                            
-                            <div class="reply-content" style="height: 0; overflow: hidden;">
-                                <hr>
-                                <div class="profile-name pb-2">糖糖喵<time>2023-01-01 12:30</time></div>
-                                <textarea class="form-control reply" rows="5"></textarea>
-                                <div class="row mt-3">
-                                    <div class="col-auto">
-                                        <small class="word-count">0 / 300</small>
-                                    </div>
-                                    <div class="col text-lg-end text-end">
-                                        <a class="btn px-5 btn-light cancel">取消</a>
-                                        <a href="#" class="btn px-5 btn-primary">留言</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                            `
-                        })
-                    }
-
-                    //留言訊息框開關
-                    function toggleReply() {
-                        replyContent.style.height = replyContent.style.height === '0px' ? 'initial' : '0px';
-                    }
-
-                    async function init() {
-                        try {
-                            const getNumber = await parseNumber(); //抓參數
-                            const getArticleInfo = await getArticle(getNumber); //抓文章
-                            const getMsg = await getMessage(getNumber); //抓留言
+					//填入留言
+					function fillinMessage(arr) {
+						console.log(arr);
+						const storageUuser = sessionStorage.getItem('user');
+						let str = '';
+						arr.forEach(eMsg => {
+							str += `
+								<div class="col-12 QA-Box">
+								<div class="userName">
+										<div class="profile-pic">
+												<div class="innerImg"
+														style="background-image: url(../assets/images/profile-pic-2.jpg);">
+												</div>
+										</div>
+										<div class="profile-name">${eMsg.information.userName}<time>${eMsg.timeStamp}</time></div>
+								</div>
+								<p class="mess-content">${eMsg.content}</p>
+								
+								
+								<div class="replyContent">
+										<div class="profile-name pb-2">${whoPost}<time>2023-01-01 12:30 </time></div>
+										<p class="mess-content">${eMsg.leaderReply}</p>
+								</div>
 
 
-                            
-                            const who = await getWhoArticle(getArticleInfo.userId); //抓發文者
-                            const fillinInfo = await fillinValue({ ...who, ...getArticleInfo }); //填入撈取資訊
-                            const fillinMsg = await fillinMessage(getMsg);
+								<a data-msg="${eMsg.id}" class="btn-reply"><i class="bi bi-reply-fill"></i>回覆</a>
+								
+								
+								<div class="reply-content" style="height: 0; overflow: hidden;">
+										<hr>
+										<div class="profile-name pb-2">糖糖喵<time>2023-01-01 12:30</time></div>
+										<textarea class="form-control reply" rows="5"></textarea>
+										<div class="row mt-3">
+												<div class="col-auto">
+														<small class="word-count">0 / 300</small>
+												</div>
+												<div class="col text-lg-end text-end">
+														<a class="btn px-5 btn-light cancel">取消</a>
+														<a href="#" class="btn px-5 btn-primary">留言</a>
+												</div>
+										</div>
+								</div>
+						</div>
+								`
+						})
+						msgSection.innerHTML = str;
+					}
 
-                            //確保DOM仔入完成才綁JS事件
-                            btnReply.addEventListener('click', toggleReply);
-                            cancelBtn.addEventListener('click', toggleReply);
-                        } catch (error) {
-                            console.log(error);
-                        }
-                    }
-                    init();
+					//按鈕forEach
+					function bindingReply() {
+						const btnReply = document.querySelectorAll('.btn-reply');
+						const cancelBtn = document.querySelectorAll('.cancel');
 
-                </script>
+						btnReply.forEach((e,i)=>e.addEventListener('click', ()=>toggleReply(i)));
+						cancelBtn.forEach((e,i)=>e.addEventListener('click', ()=>toggleReply(i)));
+						
+					}
+					
+					//留言訊息框開關
+					function toggleReply(idx) {
+						console.log(idx);
+						const replyContent = document.querySelectorAll('.reply-content');
+						replyContent[idx].style.height = replyContent[idx].style.height === '0px' ? 'initial' : '0px';
+					}
+
+					async function init() {
+						try {
+							const getNumber = await parseNumber(); //抓參數
+							const getArticleInfo = await getArticle(getNumber); //抓文章
+							const getMsg = await getMessage(getNumber); //抓留言
+							whoPost = getArticleInfo.information.userName;
+
+							const fillinInfo = await fillinValue({ ...getArticleInfo }); //填入撈取資訊
+							const fillinMsg = await fillinMessage(getMsg); //填入留言
+							//確保DOM仔入完成才綁JS事件
+
+							bindingReply();
+
+						} catch (error) {
+							console.log(error);
+						}
+					}
+					init();
+
+				</script>
 </body>
 
 </html>

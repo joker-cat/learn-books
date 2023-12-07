@@ -123,17 +123,32 @@ export function updateInfo(willInput, isStudentTag, isTeacherTag) {
     }
     updateObj.learningTag = isStudentTag.map(e => e.value).join(','); // 學生標籤
     updateObj.tutoringTags = isTeacherTag.map(e => e.value).join(','); // 老師標籤
-    
-    
-    
+
+
+
     axios.patch(`${jsonUrl}/information/${sessionStorage.getItem("id")}`, updateObj)
         .then(function (res) {
-            if (res.status === 200) infoConfirm(`${sessionStorage.getItem("id")}`);
+            if (res.status === 200) {
+                console.log(res);
+                infoConfirm(`${sessionStorage.getItem("id")}`);
+                sessionStorage.setItem('user', res.data.userName);
+            }
         })
         .catch(function (error) {
             console.log(error);
         });
     //-----結束更新基本資料-----
+}
+
+//獲取個人基本資料
+export function getUserInfo(userId) {
+    axios.get(`${jsonUrl}/information?userId=${userId}`)
+        .then(res => {
+            sessionStorage.setItem('user', res.data[0].userName);
+        })
+        .catch(error => {
+            console.log(error);
+        });
 }
 
 //設定SessionStorage
@@ -156,6 +171,7 @@ export function clearSessionStorage() {
     sessionStorage.removeItem('token');
     sessionStorage.removeItem('email');
     sessionStorage.removeItem('id');
+    sessionStorage.removeItem('user');
     console.log('---清除完畢，準備跳轉---');
     setTimeout(() => {
         window.location.href = `/learn-project/pages/index.html`;

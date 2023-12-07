@@ -3,6 +3,17 @@ import { axios } from "/main.js";
 //json-server:port
 import { jsonUrl } from "/api/_sharedvariables.js";
 
+//時間戳
+export function nowTime() {
+    const currentDate = new Date();
+    const year = currentDate.getFullYear();
+    const month = String(currentDate.getMonth() + 1).padStart(2, '0');
+    const day = String(currentDate.getDate()).padStart(2, '0');
+    const hours = String(currentDate.getHours()).padStart(2, '0');
+    const minutes = String(currentDate.getMinutes()).padStart(2, '0');
+
+    return `${year}.${month}.${day} ${hours}:${minutes}`;
+}
 
 //建立讀書會文章
 export function createBookArticle(obj) {
@@ -122,20 +133,20 @@ export function getMessage(num) {
     })
 }
 
-//撈取誰發的文
-export function getWhoArticle(num) {
-    return new Promise((rel, rej) => {
-        axios.get(`${jsonUrl}/information/?id=${num}`)
-            .then(res => {
-                if (res.status === 200) {
-                    rel(res.data);
-                }
-            })
-            .catch(error => {
-                console.log(error);
-            });
-    })
-}
+// //撈取誰發的文
+// export function getWhoArticle(num) {
+//     return new Promise((rel, rej) => {
+//         axios.get(`${jsonUrl}/information/?id=${num}`)
+//             .then(res => {
+//                 if (res.status === 200) {
+//                     rel(res.data);
+//                 }
+//             })
+//             .catch(error => {
+//                 console.log(error);
+//             });
+//     })
+// }
 
 //判斷是否有填寫個資 infoConfirm
 export async function getInfoStatus(id) {
