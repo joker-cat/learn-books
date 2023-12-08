@@ -105,7 +105,7 @@ function infoConfirm(getId) {
         })
         .then(function (res) {
             setTimeout(() => {
-                window.location.href = `/learn-project/pages/index.html`;
+                window.location.href = `/learn-books/pages/index.html`;
             }, 600);
         })
         .catch(function (error) {
@@ -161,7 +161,7 @@ export function mySessionStorage(inputRes, hrefPage, token) {
     sessionStorage.setItem('id', inputRes.id);
     console.log('---設定完畢，準備跳轉---');
     setTimeout(() => {
-        window.location.href = `/learn-project/pages/${hrefPage}.html`;
+        window.location.href = `/learn-books/pages/${hrefPage}.html`;
     }, 500);
 }
 
@@ -174,6 +174,6 @@ export function clearSessionStorage() {
     sessionStorage.removeItem('user');
     console.log('---清除完畢，準備跳轉---');
     setTimeout(() => {
-        window.location.href = `/learn-project/pages/index.html`;
+        window.location.href = `/learn-books/pages/index.html`;
     }, 200);
 }

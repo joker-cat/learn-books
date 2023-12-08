@@ -8,7 +8,7 @@ import liveReload from "vite-plugin-live-reload";
 
 function moveOutputPlugin() {
   return {
-    name: "learn-project",
+    name: "learn-books",
     enforce: "post",
     apply: "build",
     async generateBundle(options, bundle) {

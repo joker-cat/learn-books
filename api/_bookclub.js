@@ -24,7 +24,7 @@ export function createBookArticle(obj) {
             if (res.status === 201) {
                 console.log('---讀書會文章創立成功---');
                 setTimeout(() => {
-                    window.location.href = `/learn-project/pages/bookClub.html`;
+                    window.location.href = `/learn-books/pages/bookClub.html`;
                 }, 200);
             }
         })
@@ -42,7 +42,7 @@ export function createMessage(obj) {
             if (res.status === 201) {
                 console.log('---讀書會文章創立成功---');
                 setTimeout(() => {
-                    window.location.href = `/learn-project/pages/bookClub-detail.html?dataArticle=${obj.bookClubId}`;
+                    window.location.href = `/learn-books/pages/bookClub-detail.html?dataArticle=${obj.bookClubId}`;
                 }, 200);
             }
         })
