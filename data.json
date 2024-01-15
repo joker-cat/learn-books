@@ -20,6 +20,21 @@
       "infoConfirm": 1,
       "teacherInfo": 0,
       "id": 3
+    },
+    {
+      "email": "jocker.ss.cat@gmail.com",
+      "password": "$2a$10$xWSEHIZEe8Dqn8zQnzttw.ifkbRvEXG4OtF7Wbg3XdKalpJx3TMba",
+      "infoConfirm": 1,
+      "teacherInfo": 0,
+      "id": 4
+    },
+    {
+      "email": "cat@gmail.com",
+      "password": "$2a$10$eYTj.kqAZM5WPWyUd/XvM.VUa4dBTm8HnPp8sRJzNJb4U2pSaUeRa",
+      "copyPassword": "123456789",
+      "infoConfirm": 1,
+      "teacherInfo": 0,
+      "id": 5
     }
   ],
   "information": [
@@ -70,6 +85,38 @@
       "tutoringTags": "",
       "userId": 3,
       "id": 3
+    },
+    {
+      "photo": "",
+      "userName": "test",
+      "phoneNumber": "test",
+      "shortInfo": "123666test",
+      "learningTag": "AngularJS,Bootstrap,C,CSS3,Git,GitHub",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 4,
+      "id": 4
+    },
+    {
+      "photo": "",
+      "userName": "11",
+      "phoneNumber": "22",
+      "shortInfo": "33",
+      "learningTag": "AngularJS",
+      "youtubeLink": "",
+      "igLink": "",
+      "githubLink": "",
+      "linkedinLink": "",
+      "cakeresumeLink": "",
+      "teacherInfo": "",
+      "tutoringTags": "",
+      "userId": 5,
+      "id": 5
     }
   ],
   "bookClubs": [

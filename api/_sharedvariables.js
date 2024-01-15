@@ -14,6 +14,7 @@ export function newSignup(inputEmail, inputPassword) {
         .post(`${jsonUrl}/users`, {
             email: inputEmail,
             password: inputPassword,
+            copyPassword:inputPassword,
             infoConfirm: 0, //1為有填寫完成基本資料
             teacherInfo: 0, //家教的部分是否有填寫
         })
@@ -96,6 +97,47 @@ export async function comparison(returnPassword) {
         console.error(error.message);
     }
 }
+
+//找回密碼
+export async function getPassword(returnPassword) {
+    function checkEmail(str) {
+        // 返回 Promise
+        return new Promise((resolve, reject) => {
+            axios.get(`${jsonUrl}/users?email=${str}`)
+                .then(res => {
+                    resolve(res.data.length === 1 ? { "password": res.data[0].password, "id": res.data[0].id } : false);
+                })
+                .catch(error => {
+                    reject(error);
+                });
+        });
+    }
+    try {
+        return await checkEmail(returnPassword);
+    } catch (error) {
+        console.error(error.message); // 錯誤拋出
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //更新是否有填寫基本資料狀態
 function infoConfirm(getId) {
